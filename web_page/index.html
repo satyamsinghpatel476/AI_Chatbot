@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Multi-Domain Assistant Evaluation Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">AI Robotics Assistant</p>
+      <h1>Local Multi-Domain Assistant Evaluation Dashboard</h1>
+      <p class="meta-line" id="lastUpdated">Loading latest exported results...</p>
+    </div>
+    <aside class="source-box">
+      <span>Results source</span>
+      <code>evaluator/results/results.json</code>
+      <p>Run <code>python web_page/export_results.py</code>, then refresh this page.</p>
+    </aside>
+  </header>
+
+  <main>
+    <section class="summary-grid" id="summaryCards" aria-label="Summary metrics"></section>
+
+    <section class="panel">
+      <div class="section-title">
+        <h2>System-wise Comparison</h2>
+      </div>
+      <div class="table-wrap">
+        <table id="comparisonTable"></table>
+      </div>
+    </section>
+
+    <section class="charts-grid" aria-label="Evaluation charts">
+      <article class="chart-card">
+        <h2>Average Accuracy</h2>
+        <div class="chart-frame"><canvas id="accuracyChart"></canvas></div>
+      </article>
+      <article class="chart-card">
+        <h2>Average Latency</h2>
+        <div class="chart-frame"><canvas id="latencyChart"></canvas></div>
+      </article>
+      <article class="chart-card">
+        <h2>Contamination Count</h2>
+        <div class="chart-frame"><canvas id="contaminationChart"></canvas></div>
+      </article>
+      <article class="chart-card">
+        <h2>Hallucination Count</h2>
+        <div class="chart-frame"><canvas id="hallucinationChart"></canvas></div>
+        <p class="zero-note" id="hallucinationNote"></p>
+      </article>
+      <article class="chart-card">
+        <h2>Leakage Count</h2>
+        <div class="chart-frame"><canvas id="leakageChart"></canvas></div>
+        <p class="zero-note" id="leakageNote"></p>
+      </article>
+      <article class="chart-card">
+        <h2>Cross-domain Robustness</h2>
+        <div class="chart-frame"><canvas id="robustnessChart"></canvas></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">
+        <h2>Question-wise Results</h2>
+      </div>
+      <div class="table-wrap">
+        <table id="questionTable"></table>
+      </div>
+    </section>
+  </main>
+
+  <div class="error-box" id="errorBox" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

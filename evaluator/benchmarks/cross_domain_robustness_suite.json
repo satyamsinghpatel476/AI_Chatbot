@@ -1,0 +1,1458 @@
+[
+  {
+    "id": "cross-direct-01",
+    "suite": "cross_domain_robustness",
+    "query": "Can an authorized GNSS receiver provide a robot position measurement?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "position measurement",
+      "uncertainty"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-02",
+    "suite": "cross_domain_robustness",
+    "query": "Can a robot use its onboard camera for visual localization?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "camera",
+      "localization"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-03",
+    "suite": "cross_domain_robustness",
+    "query": "Can wheel encoders provide odometry input?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "encoder",
+      "odometry"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-04",
+    "suite": "cross_domain_robustness",
+    "query": "Can LiDAR scans support obstacle detection?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "LiDAR",
+      "obstacle"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-05",
+    "suite": "cross_domain_robustness",
+    "query": "Can an IMU provide angular velocity measurements?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "IMU",
+      "angular velocity"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-06",
+    "suite": "cross_domain_robustness",
+    "query": "Can a depth camera provide obstacle geometry?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "depth",
+      "geometry"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-07",
+    "suite": "cross_domain_robustness",
+    "query": "Can a motor current sensor indicate actuator load?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "current",
+      "load"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-08",
+    "suite": "cross_domain_robustness",
+    "query": "Can a bumper switch detect contact?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "contact",
+      "safety"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-09",
+    "suite": "cross_domain_robustness",
+    "query": "Can AprilTags provide pose observations?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "AprilTags",
+      "pose"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-10",
+    "suite": "cross_domain_robustness",
+    "query": "Can a controller use measured error for feedback?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "measured error",
+      "feedback"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-11",
+    "suite": "cross_domain_robustness",
+    "query": "Can an authorized GNSS receiver provide a robot position measurement?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "position measurement",
+      "uncertainty"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-12",
+    "suite": "cross_domain_robustness",
+    "query": "Can a robot use its onboard camera for visual localization?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "camera",
+      "localization"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-13",
+    "suite": "cross_domain_robustness",
+    "query": "Can wheel encoders provide odometry input?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "encoder",
+      "odometry"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-14",
+    "suite": "cross_domain_robustness",
+    "query": "Can LiDAR scans support obstacle detection?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "LiDAR",
+      "obstacle"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-15",
+    "suite": "cross_domain_robustness",
+    "query": "Can an IMU provide angular velocity measurements?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "IMU",
+      "angular velocity"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-16",
+    "suite": "cross_domain_robustness",
+    "query": "Can a depth camera provide obstacle geometry?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "depth",
+      "geometry"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-17",
+    "suite": "cross_domain_robustness",
+    "query": "Can a motor current sensor indicate actuator load?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "current",
+      "load"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-18",
+    "suite": "cross_domain_robustness",
+    "query": "Can a bumper switch detect contact?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "contact",
+      "safety"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-19",
+    "suite": "cross_domain_robustness",
+    "query": "Can AprilTags provide pose observations?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "AprilTags",
+      "pose"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-direct-20",
+    "suite": "cross_domain_robustness",
+    "query": "Can a controller use measured error for feedback?",
+    "gold_relationship": "direct",
+    "required_points": [
+      "measured error",
+      "feedback"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-01",
+    "suite": "cross_domain_robustness",
+    "query": "Could delivery travel times inform fleet scheduling?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "travel times",
+      "scheduling",
+      "not perception"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-02",
+    "suite": "cross_domain_robustness",
+    "query": "Could traffic speed data inform high-level route planning?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "speed",
+      "location",
+      "time"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-03",
+    "suite": "cross_domain_robustness",
+    "query": "Can weather forecasts help plan outdoor robot operations?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "weather",
+      "operating limits"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-04",
+    "suite": "cross_domain_robustness",
+    "query": "Could accessibility data inform route constraints?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "constraints",
+      "local validation"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-05",
+    "suite": "cross_domain_robustness",
+    "query": "Can anonymized outcomes train task-allocation models?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "outcomes",
+      "labels",
+      "privacy"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-06",
+    "suite": "cross_domain_robustness",
+    "query": "Could public event schedules inform robot deployment times?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "schedule",
+      "time",
+      "not sensing"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-07",
+    "suite": "cross_domain_robustness",
+    "query": "Can maintenance tickets inform reliability planning?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "tickets",
+      "failure labels"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-08",
+    "suite": "cross_domain_robustness",
+    "query": "Could delivery demand forecasts inform charging schedules?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "demand",
+      "charging",
+      "not localization"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-09",
+    "suite": "cross_domain_robustness",
+    "query": "Can crowd-density estimates inform high-level route choices?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "density",
+      "route",
+      "local validation"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-10",
+    "suite": "cross_domain_robustness",
+    "query": "Could traffic incidents affect outdoor robot dispatch?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "incidents",
+      "dispatch",
+      "limitations"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-11",
+    "suite": "cross_domain_robustness",
+    "query": "Could delivery travel times inform fleet scheduling?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "travel times",
+      "scheduling",
+      "not perception"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-12",
+    "suite": "cross_domain_robustness",
+    "query": "Could traffic speed data inform high-level route planning?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "speed",
+      "location",
+      "time"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-13",
+    "suite": "cross_domain_robustness",
+    "query": "Can weather forecasts help plan outdoor robot operations?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "weather",
+      "operating limits"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-14",
+    "suite": "cross_domain_robustness",
+    "query": "Could accessibility data inform route constraints?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "constraints",
+      "local validation"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-15",
+    "suite": "cross_domain_robustness",
+    "query": "Can anonymized outcomes train task-allocation models?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "outcomes",
+      "labels",
+      "privacy"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-16",
+    "suite": "cross_domain_robustness",
+    "query": "Could public event schedules inform robot deployment times?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "schedule",
+      "time",
+      "not sensing"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-17",
+    "suite": "cross_domain_robustness",
+    "query": "Can maintenance tickets inform reliability planning?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "tickets",
+      "failure labels"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-18",
+    "suite": "cross_domain_robustness",
+    "query": "Could delivery demand forecasts inform charging schedules?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "demand",
+      "charging",
+      "not localization"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-19",
+    "suite": "cross_domain_robustness",
+    "query": "Can crowd-density estimates inform high-level route choices?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "density",
+      "route",
+      "local validation"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-indirect-20",
+    "suite": "cross_domain_robustness",
+    "query": "Could traffic incidents affect outdoor robot dispatch?",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "incidents",
+      "dispatch",
+      "limitations"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-01",
+    "suite": "cross_domain_robustness",
+    "query": "Can phone GPS update a robot particle filter?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "timestamp",
+      "coordinate frame",
+      "uncertainty"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-02",
+    "suite": "cross_domain_robustness",
+    "query": "Could a building API provide door state to a robot?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "permission",
+      "freshness",
+      "validation"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-03",
+    "suite": "cross_domain_robustness",
+    "query": "Can a mapping app provide a coarse navigation prior?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "alignment",
+      "license",
+      "onboard localization"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-04",
+    "suite": "cross_domain_robustness",
+    "query": "Could driver trajectories train robot route choice?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "authorized",
+      "domain mismatch",
+      "labels"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-05",
+    "suite": "cross_domain_robustness",
+    "query": "Can elevator status data support indoor planning?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "timestamp",
+      "availability",
+      "onboard sensing"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-06",
+    "suite": "cross_domain_robustness",
+    "query": "Can food delivery routes train robot navigation?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "authorized routes",
+      "timestamps",
+      "domain mismatch"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-07",
+    "suite": "cross_domain_robustness",
+    "query": "Can ride-hailing GPS traces improve path planning?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "authorization",
+      "coordinates",
+      "labels"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-08",
+    "suite": "cross_domain_robustness",
+    "query": "Can phone compass data help robot heading estimation?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "calibration",
+      "mounting",
+      "uncertainty"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-09",
+    "suite": "cross_domain_robustness",
+    "query": "Could a warehouse API provide shelf locations?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "permission",
+      "freshness",
+      "local verification"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-10",
+    "suite": "cross_domain_robustness",
+    "query": "Can a city curb database constrain sidewalk navigation?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "coordinates",
+      "license",
+      "onboard sensing"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-11",
+    "suite": "cross_domain_robustness",
+    "query": "Can phone GPS update a robot particle filter?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "timestamp",
+      "coordinate frame",
+      "uncertainty"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-12",
+    "suite": "cross_domain_robustness",
+    "query": "Could a building API provide door state to a robot?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "permission",
+      "freshness",
+      "validation"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-13",
+    "suite": "cross_domain_robustness",
+    "query": "Can a mapping app provide a coarse navigation prior?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "alignment",
+      "license",
+      "onboard localization"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-14",
+    "suite": "cross_domain_robustness",
+    "query": "Could driver trajectories train robot route choice?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "authorized",
+      "domain mismatch",
+      "labels"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-15",
+    "suite": "cross_domain_robustness",
+    "query": "Can elevator status data support indoor planning?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "timestamp",
+      "availability",
+      "onboard sensing"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-16",
+    "suite": "cross_domain_robustness",
+    "query": "Can food delivery routes train robot navigation?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "authorized routes",
+      "timestamps",
+      "domain mismatch"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-17",
+    "suite": "cross_domain_robustness",
+    "query": "Can ride-hailing GPS traces improve path planning?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "authorization",
+      "coordinates",
+      "labels"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-18",
+    "suite": "cross_domain_robustness",
+    "query": "Can phone compass data help robot heading estimation?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "calibration",
+      "mounting",
+      "uncertainty"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-19",
+    "suite": "cross_domain_robustness",
+    "query": "Could a warehouse API provide shelf locations?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "permission",
+      "freshness",
+      "local verification"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-conditional-20",
+    "suite": "cross_domain_robustness",
+    "query": "Can a city curb database constrain sidewalk navigation?",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "coordinates",
+      "license",
+      "onboard sensing"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-01",
+    "suite": "cross_domain_robustness",
+    "query": "Can WhatsApp perform SLAM?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "onboard sensors"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-02",
+    "suite": "cross_domain_robustness",
+    "query": "Can Spotify tune PID gains?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "controller measurements"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-03",
+    "suite": "cross_domain_robustness",
+    "query": "Can restaurant ratings replace obstacle sensing?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "geometry"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-04",
+    "suite": "cross_domain_robustness",
+    "query": "Can a payment app run ROS2 nodes?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "robot compute"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-05",
+    "suite": "cross_domain_robustness",
+    "query": "Can shopping history replace robot perception?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "sensor data"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-06",
+    "suite": "cross_domain_robustness",
+    "query": "Can Uber GPS replace SLAM?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "SLAM",
+      "onboard localization"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-07",
+    "suite": "cross_domain_robustness",
+    "query": "Can Google Maps replace LiDAR?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "range measurements"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-08",
+    "suite": "cross_domain_robustness",
+    "query": "Can social media replace perception?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "camera or sensor data"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-09",
+    "suite": "cross_domain_robustness",
+    "query": "Can app permissions replace ROS permissions?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "different systems"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-10",
+    "suite": "cross_domain_robustness",
+    "query": "Can delivery coupons improve loop closure?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "place-recognition evidence"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-11",
+    "suite": "cross_domain_robustness",
+    "query": "Can WhatsApp perform SLAM?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "onboard sensors"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-12",
+    "suite": "cross_domain_robustness",
+    "query": "Can Spotify tune PID gains?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "controller measurements"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-13",
+    "suite": "cross_domain_robustness",
+    "query": "Can restaurant ratings replace obstacle sensing?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "geometry"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-14",
+    "suite": "cross_domain_robustness",
+    "query": "Can a payment app run ROS2 nodes?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "robot compute"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-15",
+    "suite": "cross_domain_robustness",
+    "query": "Can shopping history replace robot perception?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "sensor data"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-16",
+    "suite": "cross_domain_robustness",
+    "query": "Can Uber GPS replace SLAM?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "SLAM",
+      "onboard localization"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-17",
+    "suite": "cross_domain_robustness",
+    "query": "Can Google Maps replace LiDAR?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "range measurements"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-18",
+    "suite": "cross_domain_robustness",
+    "query": "Can social media replace perception?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "camera or sensor data"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-19",
+    "suite": "cross_domain_robustness",
+    "query": "Can app permissions replace ROS permissions?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "different systems"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-incompatible-20",
+    "suite": "cross_domain_robustness",
+    "query": "Can delivery coupons improve loop closure?",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "cannot",
+      "place-recognition evidence"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-01",
+    "suite": "cross_domain_robustness",
+    "query": "Could a proprietary mobility dataset help this robot?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "fields",
+      "permissions"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-02",
+    "suite": "cross_domain_robustness",
+    "query": "Can external app data improve navigation?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "data type",
+      "robot task"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-03",
+    "suite": "cross_domain_robustness",
+    "query": "Would a city platform help localization?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "uncertain",
+      "measurements",
+      "coordinate frame"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-04",
+    "suite": "cross_domain_robustness",
+    "query": "Can service logs improve autonomy?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "labels",
+      "limitations"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-05",
+    "suite": "cross_domain_robustness",
+    "query": "Could online records support robot learning?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "relevance",
+      "privacy"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-06",
+    "suite": "cross_domain_robustness",
+    "query": "Can third-party map metadata help this indoor robot?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "coverage",
+      "freshness"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-07",
+    "suite": "cross_domain_robustness",
+    "query": "Would restaurant footfall data help robot scheduling?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "task",
+      "time"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-08",
+    "suite": "cross_domain_robustness",
+    "query": "Can a phone navigation trace help my robot?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "coordinate frame",
+      "uncertainty"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-09",
+    "suite": "cross_domain_robustness",
+    "query": "Could vendor telemetry improve controller tuning?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "signals",
+      "permissions"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-10",
+    "suite": "cross_domain_robustness",
+    "query": "Can an unknown app API support obstacle avoidance?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "uncertain",
+      "fields",
+      "documentation"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-11",
+    "suite": "cross_domain_robustness",
+    "query": "Could a proprietary mobility dataset help this robot?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "fields",
+      "permissions"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-12",
+    "suite": "cross_domain_robustness",
+    "query": "Can external app data improve navigation?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "data type",
+      "robot task"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-13",
+    "suite": "cross_domain_robustness",
+    "query": "Would a city platform help localization?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "uncertain",
+      "measurements",
+      "coordinate frame"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-14",
+    "suite": "cross_domain_robustness",
+    "query": "Can service logs improve autonomy?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "labels",
+      "limitations"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-15",
+    "suite": "cross_domain_robustness",
+    "query": "Could online records support robot learning?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "relevance",
+      "privacy"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-16",
+    "suite": "cross_domain_robustness",
+    "query": "Can third-party map metadata help this indoor robot?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "coverage",
+      "freshness"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-17",
+    "suite": "cross_domain_robustness",
+    "query": "Would restaurant footfall data help robot scheduling?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "task",
+      "time"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-18",
+    "suite": "cross_domain_robustness",
+    "query": "Can a phone navigation trace help my robot?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "coordinate frame",
+      "uncertainty"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-19",
+    "suite": "cross_domain_robustness",
+    "query": "Could vendor telemetry improve controller tuning?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "depends",
+      "signals",
+      "permissions"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  },
+  {
+    "id": "cross-uncertain-20",
+    "suite": "cross_domain_robustness",
+    "query": "Can an unknown app API support obstacle avoidance?",
+    "gold_relationship": "uncertain",
+    "required_points": [
+      "uncertain",
+      "fields",
+      "documentation"
+    ],
+    "forbidden_claims": [
+      "consumer apps are physical robot sensors",
+      "external data replaces onboard safety or perception without qualification"
+    ]
+  }
+]

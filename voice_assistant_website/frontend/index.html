@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Multi-Domain AI Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside id="appSidebar" class="sidebar" aria-label="Conversation sidebar">
+      <div class="sidebar-rail" aria-label="Sidebar shortcuts">
+        <button class="rail-logo" type="button" title="Local Assistant" aria-label="Local Assistant">AI</button>
+
+        <div class="rail-actions">
+          <button id="newChatBtn" class="rail-button new-chat-btn" type="button" title="New Chat" aria-label="New Chat">
+            <span class="plus-only" aria-hidden="true">+</span>
+          </button>
+          <button id="settingsBtn" class="rail-button" type="button" title="Settings" aria-label="Settings">
+            <span aria-hidden="true">&#9881;</span>
+          </button>
+          <button id="researchToolsBtn" class="rail-button" type="button" title="Research Tools" aria-label="Research Tools">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M2 14h4M10 8h4M18 16h4"></path>
+            </svg>
+          </button>
+          <button id="metricsDashboardBtn" class="rail-button" type="button" title="Metrics Dashboard" aria-label="Metrics Dashboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 19V5M4 19h16M8 16V9M13 16V7M18 16v-4"></path>
+            </svg>
+          </button>
+          <button id="exportCsvBtn" class="rail-button" type="button" title="Export CSV" aria-label="Export CSV">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v12M8 11l4 4 4-4M5 21h14"></path>
+            </svg>
+          </button>
+          <button id="downloadPdfBtn" class="rail-button" type="button" title="Download PDF" aria-label="Download PDF">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"></path>
+              <path d="M14 3v5h5M9 15h6M9 18h4"></path>
+            </svg>
+          </button>
+          <button id="clearSessionBtn" class="rail-button danger" type="button" title="Clear Session" aria-label="Clear Session">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 6h18M8 6V4h8v2M6 6l1 15h10l1-15M10 11v6M14 11v6"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="sidebar-panel">
+        <div class="sidebar-top">
+          <div class="panel-brand">
+            <p class="eyebrow">Local Assistant</p>
+            <h1>Multi-Domain AI</h1>
+          </div>
+
+          <label class="history-search" for="historySearch">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z"></path>
+            </svg>
+            <input id="historySearch" type="search" placeholder="Search history">
+          </label>
+        </div>
+
+        <nav class="history-panel" aria-label="Chat history">
+          <div class="history-section-title">Today</div>
+          <div id="historyList" class="history-list">
+            <button class="history-item active" type="button">
+              <span class="history-title">Current session</span>
+              <span class="history-meta">Ready</span>
+            </button>
+          </div>
+        </nav>
+
+        <div class="sidebar-status">
+          <div class="session-card">
+            <div class="session-card-header">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Session</span>
+            </div>
+            <p id="statusText">Ready</p>
+          </div>
+
+          <div class="evaluation-mode-control">
+            <label class="toggle-control" for="researchModeToggle">
+              <input id="researchModeToggle" type="checkbox">
+              <span class="toggle-track" aria-hidden="true"><span></span></span>
+              <span>Research Mode</span>
+            </label>
+            <p id="researchModeNote">Research Mode OFF: Demo metrics only</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="chat-workspace" aria-label="Assistant workspace">
+      <header class="topbar">
+        <div class="assistant-identity">
+          <div id="assistantStage" class="assistant-stage">
+            <div class="assistant-glow"></div>
+            <img id="assistantImage" class="assistant-img" src="/static/assets/assistant.png" alt="AI assistant">
+            <div id="assistantFallback" class="assistant-fallback" aria-hidden="true">
+              <span>AI</span>
+            </div>
+            <div class="speaking-meter" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div>
+            <p class="eyebrow">Private localhost session</p>
+            <h2>Local Multi-Domain Assistant</h2>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <span id="assistantBadge" class="assistant-badge">Ready</span>
+          <button id="mobileSidebarButton" class="icon-button" type="button" title="Open sidebar" aria-label="Open sidebar">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 5h16M4 12h16M4 19h16"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <section class="chat-panel" aria-label="Chat panel">
+        <div id="chatLog" class="chat-log">
+          <div class="empty-state">
+            <div class="empty-orb" aria-hidden="true">AI</div>
+            <h2>How can I help?</h2>
+            <p>Message Local Multi-Domain Assistant, use voice input, or add temporary file context.</p>
+          </div>
+        </div>
+
+        <form id="chatForm" class="composer">
+          <div class="composer-controls">
+            <label class="select-control" for="systemSelect">
+              <span>System</span>
+              <select id="systemSelect">
+                <option value="C" selected>System C</option>
+                <option value="A">System A</option>
+                <option value="B">System B</option>
+                <option value="all">All systems</option>
+              </select>
+            </label>
+            <label class="select-control voice-control" for="voiceSelect">
+              <span>Voice</span>
+              <select id="voiceSelect" title="Text-to-speech voice">
+                <option value="american">American English</option>
+                <option value="indian">Indian English</option>
+                <option value="british">British English</option>
+              </select>
+            </label>
+            <small id="voiceFallbackNote" class="voice-fallback-note" hidden>Using closest available browser voice.</small>
+          </div>
+
+          <div class="composer-box">
+            <textarea id="questionInput" rows="1" placeholder="Message Local Multi-Domain Assistant..."></textarea>
+
+            <div class="composer-footer">
+              <div class="composer-left-actions">
+                <div class="upload-menu-wrap">
+                  <button id="uploadButton" class="icon-button" type="button" title="Upload file" aria-label="Upload file" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="m21.44 11.05-8.49 8.49a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 1 1-2.83-2.83l8.49-8.48"></path>
+                    </svg>
+                  </button>
+                  <div id="uploadMenu" class="upload-menu" role="menu" aria-label="Upload menu">
+                    <button type="button" data-accept=".pdf">Upload PDF</button>
+                    <button type="button" data-accept=".docx">Upload DOCX</button>
+                    <button type="button" data-accept=".txt">Upload TXT</button>
+                    <button type="button" data-accept=".csv">Upload CSV</button>
+                    <button type="button" data-accept=".json">Upload JSON</button>
+                  </div>
+                </div>
+                <input id="fileInput" type="file" accept=".pdf,.txt,.csv,.docx,.json">
+                <button type="button" id="micButton" class="icon-button" title="Start voice input" aria-label="Start voice input">Mic</button>
+              </div>
+
+              <div class="composer-right-actions">
+                <div id="voiceSupportMessage" class="support-message"></div>
+                <button type="submit" id="sendButton" class="send-button" title="Send message" aria-label="Send message">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 19V5M6 11l6-6 6 6"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <p id="uploadStatus" class="upload-status"></p>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <div id="sidebarScrim" class="sidebar-scrim" aria-hidden="true"></div>
+
+  <aside id="researchDrawer" class="research-drawer" aria-hidden="true" aria-label="Research tools drawer">
+    <div class="drawer-panel">
+      <header class="drawer-header">
+        <div>
+          <p class="eyebrow">Research Tools</p>
+          <h2>PDF Auto-Question Runner</h2>
+        </div>
+        <button id="closeResearchToolsButton" class="icon-button" type="button" title="Close research tools" aria-label="Close research tools">X</button>
+      </header>
+
+      <section class="pdf-auto-panel" aria-label="PDF Auto-Question Runner">
+        <div class="pdf-auto-header">
+          <div>
+            <h3>PDF Runner</h3>
+            <p>Extract questions from a PDF and run them through the live session.</p>
+          </div>
+          <button id="autoPdfClearButton" class="ghost-button" type="button">Clear Extracted Questions</button>
+        </div>
+
+        <div class="pdf-auto-grid">
+          <label for="autoPdfInput">PDF</label>
+          <input id="autoPdfInput" type="file" accept=".pdf">
+
+          <label for="autoPdfSystem">System</label>
+          <select id="autoPdfSystem">
+            <option value="A">System A</option>
+            <option value="B">System B</option>
+            <option value="C" selected>System C</option>
+            <option value="all">All systems</option>
+          </select>
+
+          <label for="autoPdfCount">Question Count</label>
+          <input id="autoPdfCount" type="text" inputmode="numeric" value="10" placeholder="10 or all">
+
+          <label for="autoPdfPosition">Start/Middle/End</label>
+          <select id="autoPdfPosition">
+            <option value="start" selected>Start</option>
+            <option value="middle">Middle</option>
+            <option value="end">End</option>
+          </select>
+        </div>
+
+        <div class="pdf-auto-actions">
+          <button id="autoPdfExtractButton" class="ghost-button" type="button">Extract Questions</button>
+          <button id="autoPdfRunButton" class="primary-button" type="button">Auto Run</button>
+          <button id="autoPdfStopButton" class="stop-auto-button" type="button" hidden>Stop Run</button>
+        </div>
+
+        <p id="autoPdfProgress" class="pdf-auto-progress"></p>
+        <div class="pdf-auto-preview" aria-live="polite">
+          <strong id="autoPdfSummary">No PDF questions extracted.</strong>
+          <ol id="autoPdfPreviewList"></ol>
+        </div>
+      </section>
+    </div>
+  </aside>
+
+  <div id="dashboardModal" class="modal-overlay" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="dashboardTitle">
+      <header class="modal-header">
+        <div>
+          <p class="eyebrow">Current localhost session only</p>
+          <h2 id="dashboardTitle">Metrics Dashboard</h2>
+        </div>
+        <button id="closeDashboardButton" class="icon-button" title="Close dashboard" aria-label="Close dashboard">X</button>
+      </header>
+
+      <div class="modal-actions">
+        <button class="ghost-button modal-forward-button" type="button" data-forward="exportCsvBtn">Export CSV</button>
+        <button class="ghost-button modal-forward-button" type="button" data-forward="downloadPdfBtn">Download PDF</button>
+      </div>
+
+      <div id="dashboardEvaluationBanner" class="dashboard-mode-banner">Evaluation mode: Demo metrics only</div>
+      <div id="metricCards" class="metric-grid"></div>
+      <div id="noSessionMessage" class="dashboard-empty">
+        No session results yet. Ask a question first.
+      </div>
+
+      <div class="dashboard-table-grid">
+        <section class="table-card">
+          <h3>Main Comparison</h3>
+          <div id="mainComparisonTable" class="table-scroll"></div>
+        </section>
+        <section class="table-card">
+          <h3>Dimension Scores</h3>
+          <div id="dimensionTable" class="table-scroll"></div>
+        </section>
+        <section class="table-card">
+          <h3>Special Metrics</h3>
+          <div id="specialMetricsTable" class="table-scroll"></div>
+        </section>
+        <section class="table-card">
+          <h3>Category-wise Accuracy</h3>
+          <div id="categoryAccuracyTable" class="table-scroll"></div>
+        </section>
+      </div>
+
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h3>Average Accuracy</h3>
+          <div class="metrics-chart-container">
+            <canvas id="accuracyChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h3>Average Latency</h3>
+          <div class="metrics-chart-container">
+            <canvas id="latencyChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h3>Reliability Counts</h3>
+          <div class="metrics-chart-container">
+            <canvas id="reliabilityChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h3>Dimension Scores</h3>
+          <div class="metrics-chart-container">
+            <canvas id="dimensionChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h3>Cross-domain Robustness</h3>
+          <div class="metrics-chart-container">
+            <canvas id="crossDomainChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h3>Category-wise Accuracy</h3>
+          <div class="metrics-chart-container">
+            <canvas id="categoryChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="settingsModal" class="modal-overlay" aria-hidden="true">
+    <section class="modal settings-modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <header class="modal-header">
+        <div>
+          <p class="eyebrow">Local controls</p>
+          <h2 id="settingsTitle">Settings</h2>
+        </div>
+        <button id="closeSettingsButton" class="icon-button" type="button" title="Close settings" aria-label="Close settings">X</button>
+      </header>
+
+      <div class="settings-grid">
+        <section class="settings-section">
+          <h3>Chat</h3>
+          <label class="settings-control" for="settingsSystemSelect">
+            <span>System</span>
+            <select id="settingsSystemSelect">
+              <option value="C">System C</option>
+              <option value="A">System A</option>
+              <option value="B">System B</option>
+              <option value="all">All systems</option>
+            </select>
+          </label>
+          <label class="settings-control" for="settingsVoiceSelect">
+            <span>Voice</span>
+            <select id="settingsVoiceSelect">
+              <option value="american">American English</option>
+              <option value="indian">Indian English</option>
+              <option value="british">British English</option>
+            </select>
+          </label>
+          <label class="settings-toggle" for="settingsResearchModeToggle">
+            <input id="settingsResearchModeToggle" type="checkbox">
+            <span>Research Mode</span>
+          </label>
+          <p id="settingsResearchModeNote" class="settings-note">Research Mode OFF: Demo metrics only</p>
+        </section>
+
+        <section class="settings-section">
+          <h3>System Health</h3>
+          <div class="health-summary">
+            <div><span>Main Project RAG</span><strong id="mainRagStatus">Not checked</strong></div>
+            <div><span>Temporary RAG</span><strong id="tempRagStatus">Not checked</strong></div>
+            <div><span>Evaluator</span><strong id="evaluatorStatus">Not checked</strong></div>
+          </div>
+          <button id="healthCheckButton" class="primary-button" type="button">System Health Check</button>
+          <pre id="healthOutput" class="health-output" aria-live="polite">Click System Health Check to verify runtime status.</pre>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

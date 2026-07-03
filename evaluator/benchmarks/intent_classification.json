@@ -1,0 +1,722 @@
+[
+  {
+    "id": "intent-robotics-01",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "Why does wheel slip affect odometry?"
+  },
+  {
+    "id": "intent-robotics-02",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "Explain occupancy grid mapping."
+  },
+  {
+    "id": "intent-robotics-03",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "How should an EKF handle noisy IMU data?"
+  },
+  {
+    "id": "intent-robotics-04",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "What is inverse kinematics?"
+  },
+  {
+    "id": "intent-robotics-05",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "Why is loop closure important in SLAM?"
+  },
+  {
+    "id": "intent-robotics-06",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "How do ROS2 QoS settings affect sensor messages?"
+  },
+  {
+    "id": "intent-robotics-07",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "What causes a mobile robot to miss its goal?"
+  },
+  {
+    "id": "intent-robotics-08",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "How can I calibrate a wheel encoder?"
+  },
+  {
+    "id": "intent-robotics-09",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "Compare LiDAR and ultrasonic mapping."
+  },
+  {
+    "id": "intent-robotics-10",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "What does a local planner do?"
+  },
+  {
+    "id": "intent-robotics-11",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "How does AMCL use a particle filter?"
+  },
+  {
+    "id": "intent-robotics-12",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "Why can an IMU bias hurt localization?"
+  },
+  {
+    "id": "intent-robotics-13",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "What should I check when a robot map has duplicate walls?"
+  },
+  {
+    "id": "intent-robotics-14",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "How does a differential drive robot turn?"
+  },
+  {
+    "id": "intent-robotics-15",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "What is sensor fusion in mobile robotics?"
+  },
+  {
+    "id": "intent-robotics-16",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "Why does obstacle inflation matter in navigation?"
+  },
+  {
+    "id": "intent-robotics-17",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "How can timestamp mismatch affect SLAM?"
+  },
+  {
+    "id": "intent-robotics-18",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "What is a robot footprint in path planning?"
+  },
+  {
+    "id": "intent-robotics-19",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "How do wheel encoders estimate motion?"
+  },
+  {
+    "id": "intent-robotics-20",
+    "suite": "intent_classification",
+    "gold_intent": "robotics",
+    "query": "Explain controller saturation for a beginner."
+  },
+  {
+    "id": "intent-daily-01",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "How can I reduce screen time?"
+  },
+  {
+    "id": "intent-daily-02",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "What should I compare in ride apps?"
+  },
+  {
+    "id": "intent-daily-03",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "Why do delivery prices differ?"
+  },
+  {
+    "id": "intent-daily-04",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "How can I improve online privacy?"
+  },
+  {
+    "id": "intent-daily-05",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "What makes a mapping app reliable?"
+  },
+  {
+    "id": "intent-daily-06",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "How do I detect suspicious reviews?"
+  },
+  {
+    "id": "intent-daily-07",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "Why does my phone GPS jump?"
+  },
+  {
+    "id": "intent-daily-08",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "How should I organize digital notes?"
+  },
+  {
+    "id": "intent-daily-09",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "What are the risks of app permissions?"
+  },
+  {
+    "id": "intent-daily-10",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "Which grocery service should I compare?"
+  },
+  {
+    "id": "intent-daily-11",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "How can I save battery while using navigation?"
+  },
+  {
+    "id": "intent-daily-12",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "What should I check before installing a new app?"
+  },
+  {
+    "id": "intent-daily-13",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "Why do ride pickups sometimes appear on the wrong street?"
+  },
+  {
+    "id": "intent-daily-14",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "How can I manage notification overload?"
+  },
+  {
+    "id": "intent-daily-15",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "What makes a password manager useful?"
+  },
+  {
+    "id": "intent-daily-16",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "How can I compare food delivery fees?"
+  },
+  {
+    "id": "intent-daily-17",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "Why might an online review be unreliable?"
+  },
+  {
+    "id": "intent-daily-18",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "How should I back up important phone notes?"
+  },
+  {
+    "id": "intent-daily-19",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "What privacy settings matter for social media?"
+  },
+  {
+    "id": "intent-daily-20",
+    "suite": "intent_classification",
+    "gold_intent": "daily",
+    "query": "How can I choose a payment app safely?"
+  },
+  {
+    "id": "intent-personal-01",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "My preferred language is Tamil."
+  },
+  {
+    "id": "intent-personal-02",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "Remember that I live in Pune."
+  },
+  {
+    "id": "intent-personal-03",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "What is my favorite robot?"
+  },
+  {
+    "id": "intent-personal-04",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "My operating system is Fedora."
+  },
+  {
+    "id": "intent-personal-05",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "What do I study?"
+  },
+  {
+    "id": "intent-personal-06",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "My name is Asha."
+  },
+  {
+    "id": "intent-personal-07",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "Which app do I like most?"
+  },
+  {
+    "id": "intent-personal-08",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "Please remember my city."
+  },
+  {
+    "id": "intent-personal-09",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "What is my preferred language?"
+  },
+  {
+    "id": "intent-personal-10",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "Tell me about my saved preferences."
+  },
+  {
+    "id": "intent-personal-11",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "Remember that I study robotics."
+  },
+  {
+    "id": "intent-personal-12",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "My favorite app is Signal."
+  },
+  {
+    "id": "intent-personal-13",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "Where do I live?"
+  },
+  {
+    "id": "intent-personal-14",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "What is my operating system?"
+  },
+  {
+    "id": "intent-personal-15",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "Remember that my favorite robot is TurtleBot3."
+  },
+  {
+    "id": "intent-personal-16",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "What is my name?"
+  },
+  {
+    "id": "intent-personal-17",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "My preferred language is English."
+  },
+  {
+    "id": "intent-personal-18",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "Remember that I live in Kochi."
+  },
+  {
+    "id": "intent-personal-19",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "Which robot do I like?"
+  },
+  {
+    "id": "intent-personal-20",
+    "suite": "intent_classification",
+    "gold_intent": "personal",
+    "query": "What is my favorite app?"
+  },
+  {
+    "id": "intent-mixed-01",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can Uber replace robot localization?"
+  },
+  {
+    "id": "intent-mixed-02",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Could delivery routes inform robot planning?"
+  },
+  {
+    "id": "intent-mixed-03",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can social media replace robot perception?"
+  },
+  {
+    "id": "intent-mixed-04",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Which ride app performs SLAM?"
+  },
+  {
+    "id": "intent-mixed-05",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can traffic data conditionally help fleet scheduling?"
+  },
+  {
+    "id": "intent-mixed-06",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Could a phone GPS observation update a robot filter?"
+  },
+  {
+    "id": "intent-mixed-07",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can restaurant ratings improve obstacle avoidance?"
+  },
+  {
+    "id": "intent-mixed-08",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can WhatsApp run ROS2 nodes?"
+  },
+  {
+    "id": "intent-mixed-09",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Could building data inform an indoor robot route?"
+  },
+  {
+    "id": "intent-mixed-10",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can a payment app tune PID gains?"
+  },
+  {
+    "id": "intent-mixed-11",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can Google Maps replace LiDAR?"
+  },
+  {
+    "id": "intent-mixed-12",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can food delivery routes train robot navigation?"
+  },
+  {
+    "id": "intent-mixed-13",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can ride-hailing drivers improve robot path planning?"
+  },
+  {
+    "id": "intent-mixed-14",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Are app permissions and ROS permissions interchangeable?"
+  },
+  {
+    "id": "intent-mixed-15",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Does Instagram provide obstacle measurements for robots?"
+  },
+  {
+    "id": "intent-mixed-16",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can Uber GPS replace SLAM?"
+  },
+  {
+    "id": "intent-mixed-17",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Could weather data affect outdoor robot scheduling?"
+  },
+  {
+    "id": "intent-mixed-18",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can delivery coupons improve loop closure?"
+  },
+  {
+    "id": "intent-mixed-19",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can phone navigation data replace onboard localization?"
+  },
+  {
+    "id": "intent-mixed-20",
+    "suite": "intent_classification",
+    "gold_intent": "mixed",
+    "query": "Can social posts train perception without camera data?"
+  },
+  {
+    "id": "intent-general-01",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Hello there."
+  },
+  {
+    "id": "intent-general-02",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Thank you for your help."
+  },
+  {
+    "id": "intent-general-03",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Who are you?"
+  },
+  {
+    "id": "intent-general-04",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "What can you do?"
+  },
+  {
+    "id": "intent-general-05",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Good morning."
+  },
+  {
+    "id": "intent-general-06",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Please introduce yourself."
+  },
+  {
+    "id": "intent-general-07",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Can you help me?"
+  },
+  {
+    "id": "intent-general-08",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Nice to meet you."
+  },
+  {
+    "id": "intent-general-09",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "How are you?"
+  },
+  {
+    "id": "intent-general-10",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Goodbye."
+  },
+  {
+    "id": "intent-general-11",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Hi."
+  },
+  {
+    "id": "intent-general-12",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Thanks."
+  },
+  {
+    "id": "intent-general-13",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "What kind of assistant are you?"
+  },
+  {
+    "id": "intent-general-14",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Can we start?"
+  },
+  {
+    "id": "intent-general-15",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Please keep the answer short."
+  },
+  {
+    "id": "intent-general-16",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "I need some help."
+  },
+  {
+    "id": "intent-general-17",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Are you available?"
+  },
+  {
+    "id": "intent-general-18",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Good evening."
+  },
+  {
+    "id": "intent-general-19",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "See you later."
+  },
+  {
+    "id": "intent-general-20",
+    "suite": "intent_classification",
+    "gold_intent": "general",
+    "query": "Please answer clearly."
+  },
+  {
+    "id": "intent-unknown-01",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Explain the ZephyrQ lattice."
+  },
+  {
+    "id": "intent-unknown-02",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "What does this unnamed process mean?"
+  },
+  {
+    "id": "intent-unknown-03",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Tell me about an unspecified device."
+  },
+  {
+    "id": "intent-unknown-04",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Describe QX-Null protocol."
+  },
+  {
+    "id": "intent-unknown-05",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "What is the Arkon Veil?"
+  },
+  {
+    "id": "intent-unknown-06",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Explain this without any context."
+  },
+  {
+    "id": "intent-unknown-07",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "What happened to the thing?"
+  },
+  {
+    "id": "intent-unknown-08",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Describe FluxMorrow."
+  },
+  {
+    "id": "intent-unknown-09",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "What is process Z-19?"
+  },
+  {
+    "id": "intent-unknown-10",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Tell me something about Xelora."
+  },
+  {
+    "id": "intent-unknown-11",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "What is the Varnix Loop?"
+  },
+  {
+    "id": "intent-unknown-12",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Explain protocol Alpha-Null."
+  },
+  {
+    "id": "intent-unknown-13",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Describe the unnamed calibration idea."
+  },
+  {
+    "id": "intent-unknown-14",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "What does that unknown module do?"
+  },
+  {
+    "id": "intent-unknown-15",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Tell me about Loroq Engine."
+  },
+  {
+    "id": "intent-unknown-16",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "What is the thing I mentioned earlier?"
+  },
+  {
+    "id": "intent-unknown-17",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Explain NemiDrive without documentation."
+  },
+  {
+    "id": "intent-unknown-18",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Describe process Y-77."
+  },
+  {
+    "id": "intent-unknown-19",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "What is Qorva Mesh?"
+  },
+  {
+    "id": "intent-unknown-20",
+    "suite": "intent_classification",
+    "gold_intent": "unknown",
+    "query": "Tell me about a system with no details."
+  }
+]

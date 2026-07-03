@@ -1,0 +1,2143 @@
+[
+  {
+    "id": "ctx-001",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "My robot's wheel odometry drifts on smooth floors.",
+        "assistant": "Wheel slip can make encoder-based displacement differ from actual motion."
+      }
+    ],
+    "query": "What practical steps can reduce battery drain during phone navigation?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-002",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "I am tuning a PID controller for a mobile robot.",
+        "assistant": "Controller tuning should use measured error, response, and actuator limits."
+      }
+    ],
+    "query": "What should I compare before choosing a ride service?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-003",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The LiDAR map has duplicate walls after long runs.",
+        "assistant": "Pose drift or a false loop closure can produce duplicated map structure."
+      }
+    ],
+    "query": "Why can two delivery apps show different final prices?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-004",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "My ROS2 navigation node misses sensor messages.",
+        "assistant": "Check QoS compatibility, timestamps, queue depth, and processing delay."
+      }
+    ],
+    "query": "How can I reduce unnecessary app permissions?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-005",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The robot loses localization near reflective glass.",
+        "assistant": "Reflective surfaces can corrupt range measurements used for localization."
+      }
+    ],
+    "query": "What signs suggest that mobile app reviews may be fake?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-006",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The IMU bias grows during navigation.",
+        "assistant": "Integrated inertial bias can cause orientation and position drift."
+      }
+    ],
+    "query": "How should a student organize digital notes?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-007",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "My occupancy grid marks moving people as walls.",
+        "assistant": "Transient objects should be separated from the long-term static map."
+      }
+    ],
+    "query": "What can cause a phone GPS position to jump?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-008",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The local planner cannot reach a valid goal.",
+        "assistant": "Inspect localization, obstacle layers, footprint, tolerances, and actuators."
+      }
+    ],
+    "query": "How can I reduce screen time without disabling essential alerts?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-009",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The camera-based SLAM system fails at night.",
+        "assistant": "Visual SLAM needs sufficient light, texture, and stable feature tracking."
+      }
+    ],
+    "query": "What should I check before trusting an online service?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-010",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The wheel encoder reports sudden spikes.",
+        "assistant": "Compare both wheels, commanded motion, and an independent sensor."
+      }
+    ],
+    "query": "How can I improve privacy on my phone?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-011",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "My robot's wheel odometry drifts on smooth floors.",
+        "assistant": "Wheel slip can make encoder-based displacement differ from actual motion."
+      }
+    ],
+    "query": "What practical steps can reduce battery drain during phone navigation?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-012",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "I am tuning a PID controller for a mobile robot.",
+        "assistant": "Controller tuning should use measured error, response, and actuator limits."
+      }
+    ],
+    "query": "What should I compare before choosing a ride service?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-013",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The LiDAR map has duplicate walls after long runs.",
+        "assistant": "Pose drift or a false loop closure can produce duplicated map structure."
+      }
+    ],
+    "query": "Why can two delivery apps show different final prices?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-014",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "My ROS2 navigation node misses sensor messages.",
+        "assistant": "Check QoS compatibility, timestamps, queue depth, and processing delay."
+      }
+    ],
+    "query": "How can I reduce unnecessary app permissions?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-015",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The robot loses localization near reflective glass.",
+        "assistant": "Reflective surfaces can corrupt range measurements used for localization."
+      }
+    ],
+    "query": "What signs suggest that mobile app reviews may be fake?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-016",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The IMU bias grows during navigation.",
+        "assistant": "Integrated inertial bias can cause orientation and position drift."
+      }
+    ],
+    "query": "How should a student organize digital notes?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-017",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "My occupancy grid marks moving people as walls.",
+        "assistant": "Transient objects should be separated from the long-term static map."
+      }
+    ],
+    "query": "What can cause a phone GPS position to jump?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-018",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The local planner cannot reach a valid goal.",
+        "assistant": "Inspect localization, obstacle layers, footprint, tolerances, and actuators."
+      }
+    ],
+    "query": "How can I reduce screen time without disabling essential alerts?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-019",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The camera-based SLAM system fails at night.",
+        "assistant": "Visual SLAM needs sufficient light, texture, and stable feature tracking."
+      }
+    ],
+    "query": "What should I check before trusting an online service?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-020",
+    "suite": "context_contamination",
+    "subtype": "robotics_to_daily",
+    "context": [
+      {
+        "user": "The wheel encoder reports sudden spikes.",
+        "assistant": "Compare both wheels, commanded motion, and an independent sensor."
+      }
+    ],
+    "query": "How can I improve privacy on my phone?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-021",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "My phone battery drains while using a navigation app.",
+        "assistant": "GPS, screen brightness, mobile data, and weak signal can increase drain."
+      }
+    ],
+    "query": "What checks should I perform before trusting the robot's pose estimate?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-022",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "I am comparing two food delivery apps.",
+        "assistant": "Compare the final checkout total, delivery estimate, fees, and support."
+      }
+    ],
+    "query": "How should I diagnose this localization failure?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-023",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "My ride app shows a pickup point on the wrong street.",
+        "assistant": "GPS reflections, stale map data, or an incorrect pin can shift pickup location."
+      }
+    ],
+    "query": "Which measurements are needed to correct the robot's drift?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-024",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "I want to reduce social media screen time.",
+        "assistant": "Measure usage, disable nonessential notifications, and schedule offline periods."
+      }
+    ],
+    "query": "Why can the robot still fail even when a global path exists?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-025",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "An app is requesting microphone and contact permissions.",
+        "assistant": "Grant only permissions that are necessary for the feature you use."
+      }
+    ],
+    "query": "How should the estimator respond when one sensor becomes unreliable?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-026",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "I need a reliable way to organize digital notes.",
+        "assistant": "Use consistent titles, a small folder structure, tags, search, and backups."
+      }
+    ],
+    "query": "What makes loop closure useful but potentially dangerous?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-027",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "Online reviews for an app all use similar wording.",
+        "assistant": "Repeated wording and bursts of extreme ratings can be suspicious signals."
+      }
+    ],
+    "query": "How can I distinguish a mapping fault from an actuator fault?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-028",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "A grocery app charges more than the listed item price.",
+        "assistant": "Platform, delivery, distance, small-order, tax, and surge fees may apply."
+      }
+    ],
+    "query": "What should I inspect when wheel encoder data is inconsistent?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-029",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "My phone's location jumps between nearby streets.",
+        "assistant": "Buildings, weak satellite geometry, permissions, and sensor errors can shift it."
+      }
+    ],
+    "query": "Why does visual localization become unreliable in poor lighting?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-030",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "I want better privacy for online services.",
+        "assistant": "Use unique passwords, MFA, updates, careful permissions, and phishing checks."
+      }
+    ],
+    "query": "How should dynamic obstacles be handled in a long-term map?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-031",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "My phone battery drains while using a navigation app.",
+        "assistant": "GPS, screen brightness, mobile data, and weak signal can increase drain."
+      }
+    ],
+    "query": "What checks should I perform before trusting the robot's pose estimate?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-032",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "I am comparing two food delivery apps.",
+        "assistant": "Compare the final checkout total, delivery estimate, fees, and support."
+      }
+    ],
+    "query": "How should I diagnose this localization failure?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-033",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "My ride app shows a pickup point on the wrong street.",
+        "assistant": "GPS reflections, stale map data, or an incorrect pin can shift pickup location."
+      }
+    ],
+    "query": "Which measurements are needed to correct the robot's drift?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-034",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "I want to reduce social media screen time.",
+        "assistant": "Measure usage, disable nonessential notifications, and schedule offline periods."
+      }
+    ],
+    "query": "Why can the robot still fail even when a global path exists?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-035",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "An app is requesting microphone and contact permissions.",
+        "assistant": "Grant only permissions that are necessary for the feature you use."
+      }
+    ],
+    "query": "How should the estimator respond when one sensor becomes unreliable?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-036",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "I need a reliable way to organize digital notes.",
+        "assistant": "Use consistent titles, a small folder structure, tags, search, and backups."
+      }
+    ],
+    "query": "What makes loop closure useful but potentially dangerous?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-037",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "Online reviews for an app all use similar wording.",
+        "assistant": "Repeated wording and bursts of extreme ratings can be suspicious signals."
+      }
+    ],
+    "query": "How can I distinguish a mapping fault from an actuator fault?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-038",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "A grocery app charges more than the listed item price.",
+        "assistant": "Platform, delivery, distance, small-order, tax, and surge fees may apply."
+      }
+    ],
+    "query": "What should I inspect when wheel encoder data is inconsistent?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-039",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "My phone's location jumps between nearby streets.",
+        "assistant": "Buildings, weak satellite geometry, permissions, and sensor errors can shift it."
+      }
+    ],
+    "query": "Why does visual localization become unreliable in poor lighting?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-040",
+    "suite": "context_contamination",
+    "subtype": "daily_to_robotics",
+    "context": [
+      {
+        "user": "I want better privacy for online services.",
+        "assistant": "Use unique passwords, MFA, updates, careful permissions, and phishing checks."
+      }
+    ],
+    "query": "How should dynamic obstacles be handled in a long-term map?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-041",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing navigation in the other domain.",
+        "assistant": "The word navigation can have different meanings across domains."
+      }
+    ],
+    "query": "In a phone app, what improves navigation reliability?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-042",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing navigation in the other domain.",
+        "assistant": "The word navigation can have different meanings across domains."
+      }
+    ],
+    "query": "In a mobile robot, what components make navigation reliable?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-043",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing mapping in the other domain.",
+        "assistant": "The word mapping can have different meanings across domains."
+      }
+    ],
+    "query": "What makes a consumer mapping application trustworthy?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-044",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing mapping in the other domain.",
+        "assistant": "The word mapping can have different meanings across domains."
+      }
+    ],
+    "query": "What causes a robot's occupancy-grid mapping to become inaccurate?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-045",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing tracking in the other domain.",
+        "assistant": "The word tracking can have different meanings across domains."
+      }
+    ],
+    "query": "How can I improve parcel tracking privacy?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-046",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing tracking in the other domain.",
+        "assistant": "The word tracking can have different meanings across domains."
+      }
+    ],
+    "query": "How can I improve robot pose tracking accuracy?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-047",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing control in the other domain.",
+        "assistant": "The word control can have different meanings across domains."
+      }
+    ],
+    "query": "How can I control app notifications without missing security alerts?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-048",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing control in the other domain.",
+        "assistant": "The word control can have different meanings across domains."
+      }
+    ],
+    "query": "How does feedback improve motor control?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-049",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing route in the other domain.",
+        "assistant": "The word route can have different meanings across domains."
+      }
+    ],
+    "query": "What should I compare when choosing a travel route?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-050",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing route in the other domain.",
+        "assistant": "The word route can have different meanings across domains."
+      }
+    ],
+    "query": "Why might a robot reject a geometrically valid route?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-051",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing localization in the other domain.",
+        "assistant": "The word localization can have different meanings across domains."
+      }
+    ],
+    "query": "Why do phone localization estimates jump near tall buildings?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-052",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing localization in the other domain.",
+        "assistant": "The word localization can have different meanings across domains."
+      }
+    ],
+    "query": "Why does wheel slip degrade robot localization?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-053",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing sensor in the other domain.",
+        "assistant": "The word sensor can have different meanings across domains."
+      }
+    ],
+    "query": "Should I grant a shopping app access to every phone sensor?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-054",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing sensor in the other domain.",
+        "assistant": "The word sensor can have different meanings across domains."
+      }
+    ],
+    "query": "How should a robot handle a suddenly noisy sensor?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-055",
+    "suite": "context_contamination",
+    "subtype": "misleading_shared_word",
+    "context": [
+      {
+        "user": "We were previously discussing app in the other domain.",
+        "assistant": "The word app can have different meanings across domains."
+      }
+    ],
+    "query": "Can a robot-control app replace onboard obstacle sensing?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "use the meaning established by the current question",
+      "avoid importing the prior domain merely because a word is shared"
+    ],
+    "forbidden_claims": [
+      "shared vocabulary proves shared capability"
+    ]
+  },
+  {
+    "id": "ctx-056",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "Online reviews for an app all use similar wording.",
+        "assistant": "Repeated wording and bursts of extreme ratings can be suspicious signals."
+      }
+    ],
+    "query": "Can Uber GPS replace SLAM for a delivery robot?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "Uber GPS cannot replace onboard SLAM",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-057",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "A grocery app charges more than the listed item price.",
+        "assistant": "Platform, delivery, distance, small-order, tax, and surge fees may apply."
+      }
+    ],
+    "query": "Can restaurant ratings improve obstacle avoidance?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "ratings are not geometry",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-058",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "My phone's location jumps between nearby streets.",
+        "assistant": "Buildings, weak satellite geometry, permissions, and sensor errors can shift it."
+      }
+    ],
+    "query": "Can social media replace robot perception?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "social posts are not perception sensor data",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-059",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "I want better privacy for online services.",
+        "assistant": "Use unique passwords, MFA, updates, careful permissions, and phishing checks."
+      }
+    ],
+    "query": "Can Google Maps replace LiDAR on a mobile robot?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "maps cannot replace local range sensing",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-060",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "My phone battery drains while using a navigation app.",
+        "assistant": "GPS, screen brightness, mobile data, and weak signal can increase drain."
+      }
+    ],
+    "query": "Are app permissions and ROS permissions interchangeable?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "phone permissions are not ROS security",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-061",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "I am comparing two food delivery apps.",
+        "assistant": "Compare the final checkout total, delivery estimate, fees, and support."
+      }
+    ],
+    "query": "Can WhatsApp perform SLAM for a robot?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "messaging cannot perform onboard SLAM",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-062",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "My ride app shows a pickup point on the wrong street.",
+        "assistant": "GPS reflections, stale map data, or an incorrect pin can shift pickup location."
+      }
+    ],
+    "query": "Can Spotify tune a robot's PID controller?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "music streaming cannot tune PID",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-063",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "I want to reduce social media screen time.",
+        "assistant": "Measure usage, disable nonessential notifications, and schedule offline periods."
+      }
+    ],
+    "query": "Can a payment app run ROS2 nodes?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "payments cannot run robot middleware",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-064",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "An app is requesting microphone and contact permissions.",
+        "assistant": "Grant only permissions that are necessary for the feature you use."
+      }
+    ],
+    "query": "Can food delivery prices improve wheel odometry?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "prices are not motion measurements",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-065",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "I need a reliable way to organize digital notes.",
+        "assistant": "Use consistent titles, a small folder structure, tags, search, and backups."
+      }
+    ],
+    "query": "Can a ride app replace an IMU?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "a consumer app cannot replace inertial sensing",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-066",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "Online reviews for an app all use similar wording.",
+        "assistant": "Repeated wording and bursts of extreme ratings can be suspicious signals."
+      }
+    ],
+    "query": "Can grocery purchases calibrate LiDAR?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "purchases cannot calibrate range sensors",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-067",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "A grocery app charges more than the listed item price.",
+        "assistant": "Platform, delivery, distance, small-order, tax, and surge fees may apply."
+      }
+    ],
+    "query": "Can app reviews serve as an occupancy grid?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "reviews do not encode free space",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-068",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "My phone's location jumps between nearby streets.",
+        "assistant": "Buildings, weak satellite geometry, permissions, and sensor errors can shift it."
+      }
+    ],
+    "query": "Can a taxi service execute inverse kinematics?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "a service cannot solve arm motion",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-069",
+    "suite": "context_contamination",
+    "subtype": "incompatible_cross_domain_claim",
+    "context": [
+      {
+        "user": "I want better privacy for online services.",
+        "assistant": "Use unique passwords, MFA, updates, careful permissions, and phishing checks."
+      }
+    ],
+    "query": "Can a phone payment history detect physical obstacles?",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "transactions are not obstacle measurements",
+      "name the onboard robotics capability actually required"
+    ],
+    "forbidden_claims": [
+      "invented direct integration",
+      "consumer service presented as a robot sensor or controller"
+    ]
+  },
+  {
+    "id": "ctx-070",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "My robot's wheel odometry drifts on smooth floors.",
+        "assistant": "Wheel slip can make encoder-based displacement differ from actual motion."
+      }
+    ],
+    "query": "Can food delivery routes train robot navigation?",
+    "current_domain": "mixed",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "authorized routes",
+      "timestamps",
+      "domain mismatch",
+      "onboard sensing"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-071",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "I am tuning a PID controller for a mobile robot.",
+        "assistant": "Controller tuning should use measured error, response, and actuator limits."
+      }
+    ],
+    "query": "Could ride-hailing driver trajectories improve robot path planning?",
+    "current_domain": "mixed",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "authorized trajectories",
+      "labels",
+      "not obstacle sensing"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-072",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "The LiDAR map has duplicate walls after long runs.",
+        "assistant": "Pose drift or a false loop closure can produce duplicated map structure."
+      }
+    ],
+    "query": "Could authorized ride GPS traces help analyze outdoor robot routes?",
+    "current_domain": "mixed",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "coordinates",
+      "timestamps",
+      "uncertainty"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-073",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "My ROS2 navigation node misses sensor messages.",
+        "assistant": "Check QoS compatibility, timestamps, queue depth, and processing delay."
+      }
+    ],
+    "query": "Could delivery travel times inform fleet scheduling?",
+    "current_domain": "mixed",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "travel times",
+      "timestamps"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-074",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "The robot loses localization near reflective glass.",
+        "assistant": "Reflective surfaces can corrupt range measurements used for localization."
+      }
+    ],
+    "query": "Can road-closure data conditionally inform a robot route planner?",
+    "current_domain": "mixed",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "road constraints",
+      "freshness",
+      "onboard sensing"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-075",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "The IMU bias grows during navigation.",
+        "assistant": "Integrated inertial bias can cause orientation and position drift."
+      }
+    ],
+    "query": "Could human driver trajectories help train a route-choice model?",
+    "current_domain": "mixed",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "authorized trajectories",
+      "labels",
+      "domain mismatch"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-076",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "My occupancy grid marks moving people as walls.",
+        "assistant": "Transient objects should be separated from the long-term static map."
+      }
+    ],
+    "query": "Can a phone GPS fix provide a global observation to a robot filter?",
+    "current_domain": "mixed",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "coordinate frame",
+      "timestamp",
+      "uncertainty"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-077",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "The local planner cannot reach a valid goal.",
+        "assistant": "Inspect localization, obstacle layers, footprint, tolerances, and actuators."
+      }
+    ],
+    "query": "Could elevator status data help an indoor delivery robot plan?",
+    "current_domain": "mixed",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "availability",
+      "timestamp",
+      "onboard perception"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-078",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "The camera-based SLAM system fails at night.",
+        "assistant": "Visual SLAM needs sufficient light, texture, and stable feature tracking."
+      }
+    ],
+    "query": "Can weather data help an outdoor robot adjust its operating plan?",
+    "current_domain": "mixed",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "weather fields",
+      "limitations",
+      "onboard safety"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-079",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "The wheel encoder reports sudden spikes.",
+        "assistant": "Compare both wheels, commanded motion, and an independent sensor."
+      }
+    ],
+    "query": "Could campus accessibility data inform robot route constraints?",
+    "current_domain": "mixed",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "authorized map constraints",
+      "local validation"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-080",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "My robot's wheel odometry drifts on smooth floors.",
+        "assistant": "Wheel slip can make encoder-based displacement differ from actual motion."
+      }
+    ],
+    "query": "Can a building API conditionally provide door-state information?",
+    "current_domain": "mixed",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "permission",
+      "timestamp",
+      "sensor validation"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-081",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "I am tuning a PID controller for a mobile robot.",
+        "assistant": "Controller tuning should use measured error, response, and actuator limits."
+      }
+    ],
+    "query": "Could anonymized delivery outcomes train task-allocation models?",
+    "current_domain": "mixed",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "outcome labels",
+      "privacy",
+      "not perception"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-082",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "The LiDAR map has duplicate walls after long runs.",
+        "assistant": "Pose drift or a false loop closure can produce duplicated map structure."
+      }
+    ],
+    "query": "Can traffic speed data inform high-level robot fleet planning?",
+    "current_domain": "mixed",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "speed",
+      "location",
+      "time",
+      "not obstacle sensing"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-083",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "My ROS2 navigation node misses sensor messages.",
+        "assistant": "Check QoS compatibility, timestamps, queue depth, and processing delay."
+      }
+    ],
+    "query": "Could a mapping app provide a coarse prior for outdoor navigation?",
+    "current_domain": "mixed",
+    "gold_relationship": "conditional",
+    "required_points": [
+      "map license",
+      "coordinate alignment",
+      "onboard localization"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-084",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "The robot loses localization near reflective glass.",
+        "assistant": "Reflective surfaces can corrupt range measurements used for localization."
+      }
+    ],
+    "query": "Can authorized location history help evaluate route efficiency?",
+    "current_domain": "mixed",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "coordinates",
+      "timestamps",
+      "privacy"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-085",
+    "suite": "context_contamination",
+    "subtype": "legitimate_relationship",
+    "context": [
+      {
+        "user": "The IMU bias grows during navigation.",
+        "assistant": "Integrated inertial bias can cause orientation and position drift."
+      }
+    ],
+    "query": "Could public transit outages influence a sidewalk robot schedule?",
+    "current_domain": "mixed",
+    "gold_relationship": "indirect",
+    "required_points": [
+      "outage data",
+      "time",
+      "operational limits"
+    ],
+    "forbidden_claims": [
+      "consumer data replaces onboard perception",
+      "ordinary service records are physical obstacle measurements"
+    ]
+  },
+  {
+    "id": "ctx-086",
+    "suite": "context_contamination",
+    "subtype": "unrelated_dual_question",
+    "context": [],
+    "query": "Explain wheel slip, and separately suggest ways to reduce phone screen time.",
+    "current_domain": "mixed",
+    "gold_relationship": "unrelated_dual",
+    "required_points": [
+      "answer both requested parts",
+      "keep the two answers separate"
+    ],
+    "forbidden_claims": [
+      "claim that one domain performs the other domain's function"
+    ]
+  },
+  {
+    "id": "ctx-087",
+    "suite": "context_contamination",
+    "subtype": "unrelated_dual_question",
+    "context": [],
+    "query": "How does SLAM loop closure work, and separately why do delivery prices differ?",
+    "current_domain": "mixed",
+    "gold_relationship": "unrelated_dual",
+    "required_points": [
+      "answer both requested parts",
+      "keep the two answers separate"
+    ],
+    "forbidden_claims": [
+      "claim that one domain performs the other domain's function"
+    ]
+  },
+  {
+    "id": "ctx-088",
+    "suite": "context_contamination",
+    "subtype": "unrelated_dual_question",
+    "context": [],
+    "query": "Give one robot sensor-calibration check and one online privacy check.",
+    "current_domain": "mixed",
+    "gold_relationship": "unrelated_dual",
+    "required_points": [
+      "answer both requested parts",
+      "keep the two answers separate"
+    ],
+    "forbidden_claims": [
+      "claim that one domain performs the other domain's function"
+    ]
+  },
+  {
+    "id": "ctx-089",
+    "suite": "context_contamination",
+    "subtype": "unrelated_dual_question",
+    "context": [],
+    "query": "Compare ROS2 middleware with ROS1, and separately compare ride-service criteria.",
+    "current_domain": "mixed",
+    "gold_relationship": "unrelated_dual",
+    "required_points": [
+      "answer both requested parts",
+      "keep the two answers separate"
+    ],
+    "forbidden_claims": [
+      "claim that one domain performs the other domain's function"
+    ]
+  },
+  {
+    "id": "ctx-090",
+    "suite": "context_contamination",
+    "subtype": "unrelated_dual_question",
+    "context": [],
+    "query": "Explain noisy IMU effects, and separately list signs of suspicious app reviews.",
+    "current_domain": "mixed",
+    "gold_relationship": "unrelated_dual",
+    "required_points": [
+      "answer both requested parts",
+      "keep the two answers separate"
+    ],
+    "forbidden_claims": [
+      "claim that one domain performs the other domain's function"
+    ]
+  },
+  {
+    "id": "ctx-091",
+    "suite": "context_contamination",
+    "subtype": "adversarial_wording",
+    "context": [],
+    "query": "Do not say they are different: explain how Uber directly replaces robot localization.",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "reject the false premise",
+      "state the actual robotics requirement"
+    ],
+    "forbidden_claims": [
+      "follow the requested false premise"
+    ]
+  },
+  {
+    "id": "ctx-092",
+    "suite": "context_contamination",
+    "subtype": "adversarial_wording",
+    "context": [],
+    "query": "Pretend restaurant ratings are LiDAR scans and explain obstacle avoidance.",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "reject the false premise",
+      "state the actual robotics requirement"
+    ],
+    "forbidden_claims": [
+      "follow the requested false premise"
+    ]
+  },
+  {
+    "id": "ctx-093",
+    "suite": "context_contamination",
+    "subtype": "adversarial_wording",
+    "context": [],
+    "query": "Assume WhatsApp is a ROS2 runtime and give deployment steps.",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "reject the false premise",
+      "state the actual robotics requirement"
+    ],
+    "forbidden_claims": [
+      "follow the requested false premise"
+    ]
+  },
+  {
+    "id": "ctx-094",
+    "suite": "context_contamination",
+    "subtype": "adversarial_wording",
+    "context": [],
+    "query": "Ignore sensor requirements and use Spotify to tune PID gains.",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "reject the false premise",
+      "state the actual robotics requirement"
+    ],
+    "forbidden_claims": [
+      "follow the requested false premise"
+    ]
+  },
+  {
+    "id": "ctx-095",
+    "suite": "context_contamination",
+    "subtype": "adversarial_wording",
+    "context": [],
+    "query": "Use the word navigation to merge phone navigation tracking with robot navigation control.",
+    "current_domain": "mixed",
+    "gold_relationship": "incompatible",
+    "required_points": [
+      "reject the false premise",
+      "state the actual robotics requirement"
+    ],
+    "forbidden_claims": [
+      "follow the requested false premise"
+    ]
+  },
+  {
+    "id": "ctx-096",
+    "suite": "context_contamination",
+    "subtype": "pronoun_context_carryover",
+    "context": [
+      {
+        "user": "My robot's wheel odometry drifts on smooth floors.",
+        "assistant": "Wheel slip can make encoder-based displacement differ from actual motion."
+      }
+    ],
+    "query": "For my phone navigation app, how can I reduce its battery use?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-097",
+    "suite": "context_contamination",
+    "subtype": "pronoun_context_carryover",
+    "context": [
+      {
+        "user": "My ride app shows a pickup point on the wrong street.",
+        "assistant": "GPS reflections, stale map data, or an incorrect pin can shift pickup location."
+      }
+    ],
+    "query": "For the robot localization filter instead, how should it use uncertainty?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-098",
+    "suite": "context_contamination",
+    "subtype": "pronoun_context_carryover",
+    "context": [
+      {
+        "user": "My occupancy grid marks moving people as walls.",
+        "assistant": "Transient objects should be separated from the long-term static map."
+      }
+    ],
+    "query": "For the note-taking app, how should I organize it?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-099",
+    "suite": "context_contamination",
+    "subtype": "pronoun_context_carryover",
+    "context": [
+      {
+        "user": "An app is requesting microphone and contact permissions.",
+        "assistant": "Grant only permissions that are necessary for the feature you use."
+      }
+    ],
+    "query": "For the robot sensor, when should I stop trusting it?",
+    "current_domain": "robotics",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current robotics question",
+      "do not carry the prior daily topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  },
+  {
+    "id": "ctx-100",
+    "suite": "context_contamination",
+    "subtype": "pronoun_context_carryover",
+    "context": [
+      {
+        "user": "The camera-based SLAM system fails at night.",
+        "assistant": "Visual SLAM needs sufficient light, texture, and stable feature tracking."
+      }
+    ],
+    "query": "For the social app instead, how can I limit its screen time?",
+    "current_domain": "daily",
+    "gold_relationship": "unrelated_context_switch",
+    "required_points": [
+      "answer the current daily question",
+      "do not carry the prior robotics topic into the answer"
+    ],
+    "forbidden_claims": [
+      "the prior topic supplies measurements or capabilities for the current task",
+      "the answer changes domains without the current question requesting it"
+    ]
+  }
+]

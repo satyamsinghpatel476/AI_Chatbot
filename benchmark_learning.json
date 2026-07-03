@@ -1,0 +1,22 @@
+[
+  "Learn that ABCXYZ means a project-specific graph search that prioritizes low-energy robot paths.",
+  "What is ABCXYZ?",
+  "Learn that RoboSensor500 means a project sensor package combining an IMU, wheel encoder, and range sensor.",
+  "What is RoboSensor500?",
+  "Learn that MyCustomFilter means a project filter that rejects sudden wheel-encoder spikes.",
+  "What is MyCustomFilter?",
+  "Learn that NavScoreLite means a project score for comparing route safety and battery cost.",
+  "What is NavScoreLite?",
+  "Learn that DriftGuard means a project diagnostic checklist for localization drift.",
+  "What is DriftGuard?",
+  "Learn that PathBudget means a project limit on travel distance, energy, and time.",
+  "What is PathBudget?",
+  "Learn that SensorNote means a project note format for recording sensor failures.",
+  "What is SensorNote?",
+  "Learn that RouteSanity means a project check for impossible route outputs.",
+  "What is RouteSanity?",
+  "Learn that MapTrust means a project rating for map freshness and obstacle reliability.",
+  "What is MapTrust?",
+  "Learn that QuietModePlan means a project study workflow that blocks distracting apps.",
+  "What is QuietModePlan?"
+]

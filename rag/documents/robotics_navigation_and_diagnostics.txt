@@ -1,0 +1,136 @@
+Robotics Navigation, Localization, and Diagnostics
+
+Localization and Navigation
+Localization estimates a robot's pose: its position and orientation relative to
+a map or reference frame. Navigation is the larger process of deciding where to
+go and safely executing motion toward that goal. A navigation system commonly
+uses localization, global path planning, local obstacle avoidance, and motion
+control. A robot can therefore have a valid global path but still fail to reach
+the goal because its pose estimate is wrong, a local planner cannot find safe
+commands, an obstacle blocks the route, an actuator cannot execute the command,
+or goal tolerances are configured incorrectly.
+
+Wheel Slip and Odometry Drift
+Wheel odometry converts encoder rotation into estimated motion. If a wheel
+spins without producing the expected ground motion, or slides sideways, the
+encoder still reports rotation and the estimated displacement becomes wrong.
+Small errors from slip, unequal wheel diameters, encoder quantization,
+calibration error, uneven terrain, and integration accumulate over time as
+drift. External observations from LiDAR, cameras, landmarks, GNSS, or other
+sensors are used to correct this unbounded error.
+
+Map Loss and Relocalization
+If a robot loses its current map or cannot match observations to it, recovery
+depends on what remains available. With a valid stored map, the robot can stop,
+collect a clear sensor scan, and perform global relocalization or particle
+filter reinitialization. If the map is corrupted or unavailable, it may need to
+load a backup, return to a known landmark, or build a new map with SLAM. Safe
+recovery should reduce speed and avoid continuing with a highly uncertain pose.
+
+LiDAR and Ultrasonic Mapping
+LiDAR generally provides many narrow, angularly resolved distance measurements
+per scan, giving better spatial resolution and range for detailed mapping than
+a small number of wide-beam ultrasonic sensors. Ultrasonic sensors are cheaper
+and useful for short-range detection, but broad beams, specular reflections,
+cross-talk, and lower angular resolution make precise geometry difficult.
+LiDAR also has limitations, including cost, reflective or transparent surfaces,
+weather sensitivity, and moving-object artifacts.
+
+Loop Closure in SLAM
+As a robot moves, small motion and measurement errors distort its estimated
+trajectory and map. Loop closure occurs when the system recognizes a previously
+visited place and adds a constraint connecting the current pose to the earlier
+pose. Graph optimization can then distribute the correction over the
+trajectory, reducing accumulated drift and making repeated structures align.
+False loop closures can severely damage a map, so place recognition must be
+verified geometrically.
+
+Navigation Without GPS
+GPS-denied robots use onboard and local sensing. Typical combinations include
+LiDAR or visual SLAM, wheel odometry, IMU measurements, visual-inertial
+odometry, known landmarks, beacons, or radio ranging. No single sensor is
+universally reliable: cameras need useful lighting and texture, LiDAR can
+struggle with some surfaces, and inertial or wheel integration drifts. Sensor
+fusion combines complementary measurements and tracks their uncertainty.
+
+Noisy IMU Measurements
+Accelerometer and gyroscope noise makes orientation, velocity, and position
+estimates fluctuate. Bias becomes especially damaging when measurements are
+integrated, because error grows over time. A system can reduce the effect by
+calibrating bias, filtering measurements, checking timestamps, estimating
+covariances correctly, rejecting outliers, and fusing the IMU with encoders,
+cameras, LiDAR, GNSS, or other independent observations. If noise suddenly
+increases, the estimator should lower trust in that sensor rather than treating
+every reading as equally reliable.
+
+Why Sensor Fusion Is Needed
+Sensors fail in different ways. Wheel encoders are responsive but drift with
+slip, IMUs capture fast motion but accumulate bias, cameras provide rich visual
+information but depend on lighting and texture, LiDAR measures geometry but can
+be affected by surfaces and weather, and GNSS provides a global reference but
+may be unavailable or imprecise. Fusion combines complementary measurements,
+weights them by uncertainty, and provides redundancy when one sensor degrades.
+
+Dynamic Environments
+Moving people, vehicles, doors, and furniture violate the assumption that the
+world is static. They can create inconsistent observations, false landmarks,
+ghost obstacles, and incorrect loop closures. Robust mapping detects or tracks
+dynamic objects, excludes transient measurements from the static map, uses
+time-aware occupancy representations, and updates local costmaps more quickly
+than long-term maps.
+
+Wheel Encoder Fault Detection
+A faulty encoder can be detected by comparing its counts and velocity with
+independent expectations. Useful checks include comparing left and right wheel
+behavior during straight motion, comparing encoder motion with IMU yaw or
+visual/LiDAR odometry, looking for frozen counts, impossible jumps, excessive
+noise, wrong direction, missing pulses, and disagreement with commanded motor
+motion. Hardware inspection should include wiring, connectors, supply voltage,
+mounting, and the encoder disk or magnet.
+
+Visual SLAM in Low Light
+Visual SLAM depends on detectable image features and reliable correspondence
+between frames. At night, low illumination, motion blur, sensor noise, glare,
+headlight exposure changes, and large dark regions reduce usable features.
+Possible mitigations include better exposure control, illumination, low-light
+cameras, thermal or event cameras, slower motion, and fusion with IMU or LiDAR.
+
+Map Resolution
+Grid resolution controls the physical area represented by each cell. Fine
+resolution preserves small obstacles and narrow passages but increases memory,
+processing cost, and sensitivity to noise. Coarse resolution is faster and
+smoother but can hide obstacles, close narrow routes, and reduce localization
+precision. Resolution should match robot size, sensor accuracy, environment
+scale, and available computation.
+
+Walls, Obstacles, and Perception
+Range sensors initially measure surfaces, not semantic categories. A wall often
+appears as a long, stable, planar structure, while a temporary obstacle may be
+compact, moving, or inconsistent over time. Geometry, persistence across
+frames, camera semantics, object tracking, and prior maps can help distinguish
+structural boundaries from movable objects. The distinction is probabilistic
+and depends on sensor coverage and environment conditions.
+
+Ambiguous Robotics Troubleshooting
+Questions such as "Why is my system drifting?", "How do I improve stability?",
+or "Which sensor is most reliable?" cannot be answered responsibly without the
+system type, sensors, environment, and performance goal. A useful answer should
+state plausible interpretations, identify measurements to inspect, and ask for
+the missing context. Reliability is application-specific; robust robots usually
+use complementary sensors rather than assuming one sensor is always best.
+
+External Consumer Data and Robotics
+A consumer application is not itself a robotics sensor or algorithm. External
+route, traffic, or fleet data can sometimes contribute indirectly to high-level
+planning or model training if it is legally obtained, relevant, accurately
+timestamped, and transformed into the robot's representation. Such data does
+not replace onboard perception, localization, obstacle avoidance, or real-time
+safety sensing. Restaurant ratings, social posts, and unrelated shopping data
+do not provide the physical observations required for local robot perception.
+
+Unverified Named Technologies
+Project names, research prototypes, and commercial products require supporting
+documentation before their architecture or capabilities can be described.
+When no trustworthy local evidence identifies a named technology, a calibrated
+assistant should say that it cannot verify the term, avoid inventing an acronym
+or specification, and ask for a paper, repository, vendor page, or definition.

@@ -1,0 +1,31 @@
+Robotics Basics
+
+What is a Robot?
+A robot is a programmable machine capable of carrying out tasks automatically or semi-automatically. Robots can sense their environment, process information, and perform actions using actuators.
+
+Degrees of Freedom (DOF)
+Degrees of freedom refer to the number of independent movements a robot can perform. For example, a robotic arm with six joints has six degrees of freedom, allowing movement in three-dimensional space.
+
+Actuators
+Actuators are components that convert energy into motion. Common actuators include electric motors, hydraulic cylinders, and pneumatic cylinders. They enable robots to move and interact with their environment.
+
+Manipulators
+Manipulators are robotic arms designed to perform tasks such as grasping, lifting, assembling, and welding. They are widely used in industrial automation.
+
+Mobile Robots
+Mobile robots can move from one location to another. Examples include autonomous vacuum cleaners, warehouse robots, and self-driving vehicles.
+
+Industrial Robots
+Industrial robots are used in manufacturing environments for repetitive and precise tasks such as assembly, painting, packaging, and welding.
+
+Service Robots
+Service robots assist humans in non-industrial settings. Examples include healthcare robots, delivery robots, educational robots, and domestic cleaning robots.
+
+Autonomous Robots
+Autonomous robots can operate without continuous human intervention by making decisions based on sensor data and programmed objectives.
+
+Teleoperated Robots
+Teleoperated robots are controlled remotely by human operators. They are commonly used in hazardous environments such as bomb disposal and space exploration.
+
+Humanoid Robots
+Humanoid robots are designed to resemble the human body structure. They are often used in research, education, and human-robot interaction studies.

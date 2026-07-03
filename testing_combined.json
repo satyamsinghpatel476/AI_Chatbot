@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 1,
+    "question": "Why does wheel slip affect robot localization accuracy?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 2,
+    "question": "How can a robot recover after losing its map?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 3,
+    "question": "Why is LiDAR preferred over ultrasonic sensors for mapping?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 4,
+    "question": "What causes drift in odometry systems?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 5,
+    "question": "Why is loop closure important in SLAM?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 6,
+    "question": "How would a robot navigate in a GPS-denied environment?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 7,
+    "question": "What happens if the IMU becomes noisy during navigation?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 8,
+    "question": "Why do autonomous robots need sensor fusion?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 9,
+    "question": "What challenges arise when mapping dynamic environments?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 10,
+    "question": "How does localization differ from navigation?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 11,
+    "question": "Why might a robot fail to reach a goal despite having a valid path?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 12,
+    "question": "How would you detect a faulty wheel encoder?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 13,
+    "question": "What are the limitations of visual SLAM at night?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 14,
+    "question": "Why is map resolution important in autonomous navigation?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 15,
+    "question": "How does a robot distinguish obstacles from walls?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 16,
+    "question": "How can I reduce mobile battery drain while using navigation apps?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 17,
+    "question": "What factors should I consider before choosing a ride-sharing app?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 18,
+    "question": "Why do food delivery prices differ between apps?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 19,
+    "question": "How can I improve privacy while using online services?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 20,
+    "question": "What makes one mapping application more reliable than another?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 21,
+    "question": "How should a student organize digital notes efficiently?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 22,
+    "question": "What are good strategies for reducing screen time?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 23,
+    "question": "How can I identify fake reviews on mobile applications?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 24,
+    "question": "Why do GPS apps sometimes show incorrect locations?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 25,
+    "question": "What are the risks of granting unnecessary app permissions?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 26,
+    "question": "How can I improve tracking accuracy?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 27,
+    "question": "What is the best way to reach my destination?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 28,
+    "question": "Why is my system drifting over time?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 29,
+    "question": "How do I reduce latency?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 30,
+    "question": "What is the most reliable sensor?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 31,
+    "question": "How can I improve stability?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 32,
+    "question": "Why is my map inaccurate?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 33,
+    "question": "What is the best path to follow?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 34,
+    "question": "How should I handle noisy data?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 35,
+    "question": "Why does my position estimate keep changing?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 36,
+    "question": "Can a ride-sharing service improve particle filter performance?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 37,
+    "question": "Which food delivery application is best for robot mapping?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 38,
+    "question": "Can online shopping data improve SLAM accuracy?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 39,
+    "question": "Should a robot use Uber instead of localization algorithms?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 40,
+    "question": "Can a navigation app replace sensor fusion?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 41,
+    "question": "Would food delivery routes help train autonomous robots?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 42,
+    "question": "Can ride-hailing drivers improve path-planning algorithms?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 43,
+    "question": "Can restaurant ratings improve obstacle avoidance?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 44,
+    "question": "Can social media data replace robot perception systems?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 45,
+    "question": "Can GPS from ride apps eliminate the need for SLAM?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 46,
+    "question": "Explain Quantum Mesh Localization.",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 47,
+    "question": "What is Recursive HyperSLAM?",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 48,
+    "question": "Describe Adaptive Cosmic Navigation Networks.",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 49,
+    "question": "Explain Temporal Flux Mapping in robotics.",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 50,
+    "question": "What is NeuroFusion-X autonomous planning?",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 51,
+    "question": "My robot reaches the goal in simulation but fails on real hardware. What should I check first?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 52,
+    "question": "Why does my robot localize correctly at slow speed but drift at high speed?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 53,
+    "question": "How can I distinguish wheel slip from encoder failure?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 54,
+    "question": "Why does AMCL lose localization when the robot rotates in place?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 55,
+    "question": "What should I check if LiDAR data looks correct but navigation still fails?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 56,
+    "question": "Why might a valid global path still produce unsafe local motion?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 57,
+    "question": "How can timestamp mismatch affect sensor fusion?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 58,
+    "question": "Why does EKF output become unstable when IMU and odometry are fused?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 59,
+    "question": "How do I debug a robot that oscillates near the goal?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 60,
+    "question": "Why does loop closure sometimes make the SLAM map worse?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 61,
+    "question": "How can dynamic obstacles corrupt a static map?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 62,
+    "question": "Why does visual SLAM fail in corridors with plain walls?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 63,
+    "question": "How do I choose between LiDAR SLAM and visual SLAM?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 64,
+    "question": "What happens if the robot footprint is configured incorrectly?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 65,
+    "question": "Why does costmap inflation affect narrow passage navigation?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 66,
+    "question": "How can I choose between two ride apps when one is cheaper but less reliable?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 67,
+    "question": "Why do GPS apps show different routes for the same destination?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 68,
+    "question": "How should I compare online course reviews before buying a course?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 69,
+    "question": "How can I reduce phone battery drain without losing important notifications?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 70,
+    "question": "What should I check before granting camera permission to an app?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 71,
+    "question": "How can I identify whether an app review is genuine or sponsored?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 72,
+    "question": "Why does my phone location jump even when I am standing still?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 73,
+    "question": "How should a student manage notes across laptop and mobile?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 74,
+    "question": "How can I safely use public Wi-Fi while travelling?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 75,
+    "question": "What factors make a food delivery app more trustworthy?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 76,
+    "question": "How can I decide whether to update an app immediately or wait?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 77,
+    "question": "Why do online prices change after I search repeatedly?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 78,
+    "question": "How can I reduce distractions while studying online?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 79,
+    "question": "How should I compare cloud storage apps for privacy?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 80,
+    "question": "What should I do if a navigation app sends me through unsafe roads?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 81,
+    "question": "How can I improve tracking accuracy?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 82,
+    "question": "Why is my system drifting over time?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 83,
+    "question": "How do I reduce latency?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 84,
+    "question": "What is the best way to reach my destination?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 85,
+    "question": "How can I improve mapping reliability?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 86,
+    "question": "Why does my navigation fail after an update?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 87,
+    "question": "How can I detect fake signals?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 88,
+    "question": "What should I do when localization is wrong?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 89,
+    "question": "How do I choose the best sensor?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 90,
+    "question": "Why does the assistant give wrong context?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 91,
+    "question": "How can I reduce noise in my system?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 92,
+    "question": "Why does my app show unstable position?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 93,
+    "question": "How do I recover after losing the map?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 94,
+    "question": "What should I check when the route looks wrong?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 95,
+    "question": "How can I make the system more reliable?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 96,
+    "question": "Earlier we discussed SLAM. Now suggest ways to reduce screen time without using robotics terms.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 97,
+    "question": "After explaining LiDAR, tell me how to choose a ride-sharing app.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 98,
+    "question": "After discussing food delivery apps, explain why wheel odometry drifts.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 99,
+    "question": "Compare phone GPS tracking and robot localization without mixing them.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 100,
+    "question": "A beginner asks about navigation. First explain the daily-life meaning, then the robotics meaning separately.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 101,
+    "question": "Why does a robot need both a global planner and a local planner?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 102,
+    "question": "How can wrong TF frames cause navigation failure in ROS?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 103,
+    "question": "Why does a robot rotate endlessly while trying to reach a goal?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 104,
+    "question": "How can poor wheel calibration affect odometry?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 105,
+    "question": "Why does LiDAR localization fail in glass-walled environments?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 106,
+    "question": "How do reflective surfaces affect LiDAR-based mapping?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 107,
+    "question": "Why can a robot get stuck even when no obstacle is visible?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 108,
+    "question": "How does sensor delay affect obstacle avoidance?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 109,
+    "question": "Why does a robot fail in real corridors after working in open spaces?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 110,
+    "question": "How can wrong map origin affect navigation?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 111,
+    "question": "Why does increasing robot speed reduce localization reliability?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 112,
+    "question": "How can I test whether my robot's IMU is drifting?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 113,
+    "question": "Why does visual odometry fail on shiny floors?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 114,
+    "question": "How can bad lighting affect robot perception?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 115,
+    "question": "Why should robots not rely on a single sensor?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 116,
+    "question": "How does wrong costmap resolution affect obstacle avoidance?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 117,
+    "question": "What happens if odometry and LiDAR disagree?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 118,
+    "question": "How can I debug a robot that keeps replanning?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 119,
+    "question": "Why does a robot stop before reaching the goal?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 120,
+    "question": "How can a robot estimate its position indoors without GPS?",
+    "category": "robotics",
+    "evaluation_goal": "Answer the robotics explanation, diagnosis, troubleshooting, comparison, or procedure using correct robotics concepts."
+  },
+  {
+    "id": 121,
+    "question": "How can I choose a safe password manager?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 122,
+    "question": "What should I check before installing a new mobile app?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 123,
+    "question": "How can I avoid scams while shopping online?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 124,
+    "question": "Why do apps ask for location permission even when they do not need it?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 125,
+    "question": "How can I compare two study apps?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 126,
+    "question": "How can I decide whether an online discount is genuine?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 127,
+    "question": "What should I do if my phone storage keeps filling up?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 128,
+    "question": "How can I keep my laptop and phone files synchronized safely?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 129,
+    "question": "Why does my internet speed change during the day?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 130,
+    "question": "How can I reduce mobile data usage while travelling?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 131,
+    "question": "What should I check before using a QR code payment?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 132,
+    "question": "How can I avoid fake job posts online?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 133,
+    "question": "Why do some websites show different prices on different devices?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 134,
+    "question": "How should I organize files for college projects?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 135,
+    "question": "How can I safely share documents online?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 136,
+    "question": "What makes a browser extension risky?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 137,
+    "question": "How can I check whether a download link is safe?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 138,
+    "question": "Why do apps become slow after updates?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 139,
+    "question": "How can I reduce eye strain while studying on a laptop?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 140,
+    "question": "What should I do if an app keeps crashing?",
+    "category": "daily",
+    "evaluation_goal": "Give practical beginner-friendly daily-life guidance without unnecessary robotics terms or unsupported live/private claims."
+  },
+  {
+    "id": 141,
+    "question": "How can I improve accuracy?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 142,
+    "question": "Why does my model give unstable output?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 143,
+    "question": "How should I handle missing data?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 144,
+    "question": "What should I do when the system fails suddenly?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 145,
+    "question": "How can I choose the right algorithm?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 146,
+    "question": "Why is my result inconsistent?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 147,
+    "question": "How can I improve response time?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 148,
+    "question": "What should I check when measurements look wrong?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 149,
+    "question": "How do I know if the data source is reliable?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 150,
+    "question": "Why does the system work in testing but fail in real use?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 151,
+    "question": "How can I reduce false positives?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 152,
+    "question": "How can I reduce false negatives?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 153,
+    "question": "What should I do if the output looks correct but the system behaves wrong?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 154,
+    "question": "How do I evaluate system reliability?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 155,
+    "question": "What is the safest option?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 156,
+    "question": "How can I improve user trust?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 157,
+    "question": "Why does the assistant misunderstand my question?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 158,
+    "question": "How should I separate different types of memory?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 159,
+    "question": "How can I stop irrelevant context from affecting answers?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 160,
+    "question": "Why does the answer change when I ask the same thing twice?",
+    "category": "ambiguous",
+    "evaluation_goal": "Recognize missing context and either ask a focused clarification or give separate conditional answers for plausible interpretations."
+  },
+  {
+    "id": 161,
+    "question": "Can restaurant delivery routes be directly used for robot path planning?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 162,
+    "question": "Can phone GPS replace LiDAR for indoor robot navigation?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 163,
+    "question": "Can app reviews be used as landmarks for SLAM?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 164,
+    "question": "Can ride-sharing drivers act as mobile robot sensors?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 165,
+    "question": "Can food delivery timing improve EKF localization?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 166,
+    "question": "Can online shopping behavior improve obstacle detection?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 167,
+    "question": "Can social media trends predict robot navigation failure?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 168,
+    "question": "Can public Wi-Fi signals replace robot odometry?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 169,
+    "question": "Can cloud storage metadata improve robot mapping?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 170,
+    "question": "Can student notes be used to train autonomous navigation?",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 171,
+    "question": "Earlier we discussed EKF. Now explain how to save mobile data without robotics terms.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 172,
+    "question": "Earlier we discussed food delivery apps. Now explain LiDAR mapping clearly.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 173,
+    "question": "Earlier we discussed phone GPS. Now explain robot localization separately.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 174,
+    "question": "Earlier we discussed ROS navigation. Now suggest a study schedule.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 175,
+    "question": "Earlier we discussed screen time. Now explain costmap inflation.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 176,
+    "question": "Explain navigation first as a travel app feature, then as a robotics function.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 177,
+    "question": "Compare noisy IMU data and noisy mobile GPS data without mixing their solutions.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 178,
+    "question": "Tell me whether ride app routes and robot paths are the same or different.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 179,
+    "question": "Explain why daily-life tracking and robot tracking should be evaluated separately.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 180,
+    "question": "Explain how an assistant should switch from robotics support to daily-life help.",
+    "category": "mixed",
+    "evaluation_goal": "Handle cross-domain relationships carefully. Separate robotics and daily-life contexts and avoid fabricating direct connections."
+  },
+  {
+    "id": 181,
+    "question": "Explain Quantum Odometry Fusion.",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 182,
+    "question": "What is Neural Cosmic SLAM?",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 183,
+    "question": "Describe HyperGraph Emotion Localization.",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 184,
+    "question": "What is Zero-Gravity Particle Mapping?",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 185,
+    "question": "Explain Astro-LiDAR Semantic Drift Correction.",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 186,
+    "question": "What is Recursive Meta-Robot Awareness?",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 187,
+    "question": "Describe Temporal Sensor Dream Fusion.",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 188,
+    "question": "What is Synthetic Intuition Navigation?",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 189,
+    "question": "Explain Self-Healing Quantum Costmaps.",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 190,
+    "question": "What is Bio-Spiritual Robot Localization?",
+    "category": "unverifiable",
+    "evaluation_goal": "Do not invent details for deliberately unverified or fictional technologies. State uncertainty and ask for a source if needed."
+  },
+  {
+    "id": 191,
+    "question": "Explain Ultra-Adaptive Memory Routing in beginner assistants.",
+    "category": "research_evaluation",
+    "evaluation_goal": "Evaluate system behavior, architecture trade-offs, latency, contamination, intent routing, and fair comparison methodology."
+  },
+  {
+    "id": 192,
+    "question": "What is Context Firewalling in multi-domain chatbots?",
+    "category": "research_evaluation",
+    "evaluation_goal": "Evaluate system behavior, architecture trade-offs, latency, contamination, intent routing, and fair comparison methodology."
+  },
+  {
+    "id": 193,
+    "question": "How can wrong memory retrieval contaminate a daily-life answer?",
+    "category": "research_evaluation",
+    "evaluation_goal": "Evaluate system behavior, architecture trade-offs, latency, contamination, intent routing, and fair comparison methodology."
+  },
+  {
+    "id": 194,
+    "question": "How can a chatbot know when not to use robotics knowledge?",
+    "category": "research_evaluation",
+    "evaluation_goal": "Evaluate system behavior, architecture trade-offs, latency, contamination, intent routing, and fair comparison methodology."
+  },
+  {
+    "id": 195,
+    "question": "Why should an assistant refuse to invent unknown technical terms?",
+    "category": "research_evaluation",
+    "evaluation_goal": "Evaluate system behavior, architecture trade-offs, latency, contamination, intent routing, and fair comparison methodology."
+  },
+  {
+    "id": 196,
+    "question": "How can RAG improve answers but also introduce wrong context?",
+    "category": "research_evaluation",
+    "evaluation_goal": "Evaluate system behavior, architecture trade-offs, latency, contamination, intent routing, and fair comparison methodology."
+  },
+  {
+    "id": 197,
+    "question": "How can intent classification mistakes affect final answers?",
+    "category": "research_evaluation",
+    "evaluation_goal": "Evaluate system behavior, architecture trade-offs, latency, contamination, intent routing, and fair comparison methodology."
+  },
+  {
+    "id": 198,
+    "question": "Why is latency important in local assistants?",
+    "category": "research_evaluation",
+    "evaluation_goal": "Evaluate system behavior, architecture trade-offs, latency, contamination, intent routing, and fair comparison methodology."
+  },
+  {
+    "id": 199,
+    "question": "How should I compare System A, System B, and System C fairly?",
+    "category": "research_evaluation",
+    "evaluation_goal": "Evaluate system behavior, architecture trade-offs, latency, contamination, intent routing, and fair comparison methodology."
+  },
+  {
+    "id": 200,
+    "question": "What conclusion can be drawn if System C is more accurate but slower?",
+    "category": "research_evaluation",
+    "evaluation_goal": "Evaluate system behavior, architecture trade-offs, latency, contamination, intent routing, and fair comparison methodology."
+  }
+]

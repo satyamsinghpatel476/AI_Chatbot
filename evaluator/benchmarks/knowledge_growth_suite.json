@@ -1,0 +1,852 @@
+[
+  {
+    "id": "know-01",
+    "suite": "knowledge_growth",
+    "concept": "Velora Grid",
+    "definition": "a project grid that marks low-energy traversal cells",
+    "teach": "Learn that Velora Grid means a project grid that marks low-energy traversal cells.",
+    "exact_recall": "What is Velora Grid?",
+    "paraphrased_recall": "Explain the project idea called Velora Grid in your own words.",
+    "unrelated_query": "What is Unlisted Grid 1?",
+    "required_terms": [
+      "grid",
+      "low-energy",
+      "cells"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-02",
+    "suite": "knowledge_growth",
+    "concept": "NexaPulse Filter",
+    "definition": "a project filter that rejects isolated encoder spikes",
+    "teach": "Learn that NexaPulse Filter means a project filter that rejects isolated encoder spikes.",
+    "exact_recall": "What is NexaPulse Filter?",
+    "paraphrased_recall": "Explain the project idea called NexaPulse Filter in your own words.",
+    "unrelated_query": "What is Unlisted Filter 2?",
+    "required_terms": [
+      "filter",
+      "encoder",
+      "spikes"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-03",
+    "suite": "knowledge_growth",
+    "concept": "OrbiLatch Latch",
+    "definition": "a project rule that locks a route after safety validation",
+    "teach": "Learn that OrbiLatch Latch means a project rule that locks a route after safety validation.",
+    "exact_recall": "What is OrbiLatch Latch?",
+    "paraphrased_recall": "Explain the project idea called OrbiLatch Latch in your own words.",
+    "unrelated_query": "What is Unlisted Latch 3?",
+    "required_terms": [
+      "route",
+      "safety",
+      "validation"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-04",
+    "suite": "knowledge_growth",
+    "concept": "Kappa Beacon",
+    "definition": "a project landmark broadcasting a signed floor identifier",
+    "teach": "Learn that Kappa Beacon means a project landmark broadcasting a signed floor identifier.",
+    "exact_recall": "What is Kappa Beacon?",
+    "paraphrased_recall": "Explain the project idea called Kappa Beacon in your own words.",
+    "unrelated_query": "What is Unlisted Beacon 4?",
+    "required_terms": [
+      "landmark",
+      "signed",
+      "floor"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-05",
+    "suite": "knowledge_growth",
+    "concept": "Mira Cost",
+    "definition": "a project path cost combining time, battery use, and risk",
+    "teach": "Learn that Mira Cost means a project path cost combining time, battery use, and risk.",
+    "exact_recall": "What is Mira Cost?",
+    "paraphrased_recall": "Explain the project idea called Mira Cost in your own words.",
+    "unrelated_query": "What is Unlisted Cost 5?",
+    "required_terms": [
+      "time",
+      "battery",
+      "risk"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-06",
+    "suite": "knowledge_growth",
+    "concept": "Ternion Map",
+    "definition": "a project map storing static, temporary, and uncertain cells",
+    "teach": "Learn that Ternion Map means a project map storing static, temporary, and uncertain cells.",
+    "exact_recall": "What is Ternion Map?",
+    "paraphrased_recall": "Explain the project idea called Ternion Map in your own words.",
+    "unrelated_query": "What is Unlisted Map 6?",
+    "required_terms": [
+      "static",
+      "temporary",
+      "uncertain"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-07",
+    "suite": "knowledge_growth",
+    "concept": "LumaTrace Trace",
+    "definition": "a project log linking sensor samples to synchronized poses",
+    "teach": "Learn that LumaTrace Trace means a project log linking sensor samples to synchronized poses.",
+    "exact_recall": "What is LumaTrace Trace?",
+    "paraphrased_recall": "Explain the project idea called LumaTrace Trace in your own words.",
+    "unrelated_query": "What is Unlisted Trace 7?",
+    "required_terms": [
+      "sensor",
+      "synchronized",
+      "poses"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-08",
+    "suite": "knowledge_growth",
+    "concept": "PicoGuard Guard",
+    "definition": "a project check that blocks motion when timestamps are stale",
+    "teach": "Learn that PicoGuard Guard means a project check that blocks motion when timestamps are stale.",
+    "exact_recall": "What is PicoGuard Guard?",
+    "paraphrased_recall": "Explain the project idea called PicoGuard Guard in your own words.",
+    "unrelated_query": "What is Unlisted Guard 8?",
+    "required_terms": [
+      "blocks",
+      "motion",
+      "timestamps"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-09",
+    "suite": "knowledge_growth",
+    "concept": "Astra Queue",
+    "definition": "a project scheduler prioritizing emergency robot tasks",
+    "teach": "Learn that Astra Queue means a project scheduler prioritizing emergency robot tasks.",
+    "exact_recall": "What is Astra Queue?",
+    "paraphrased_recall": "Explain the project idea called Astra Queue in your own words.",
+    "unrelated_query": "What is Unlisted Queue 9?",
+    "required_terms": [
+      "scheduler",
+      "emergency",
+      "tasks"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-10",
+    "suite": "knowledge_growth",
+    "concept": "DeltaNest Cache",
+    "definition": "a project cache for recently verified local map patches",
+    "teach": "Learn that DeltaNest Cache means a project cache for recently verified local map patches.",
+    "exact_recall": "What is DeltaNest Cache?",
+    "paraphrased_recall": "Explain the project idea called DeltaNest Cache in your own words.",
+    "unrelated_query": "What is Unlisted Cache 10?",
+    "required_terms": [
+      "cache",
+      "verified",
+      "map"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-11",
+    "suite": "knowledge_growth",
+    "concept": "Veda Grid",
+    "definition": "a project grid that marks low-energy traversal cells",
+    "teach": "Learn that Veda Grid means a project grid that marks low-energy traversal cells.",
+    "exact_recall": "What is Veda Grid?",
+    "paraphrased_recall": "Explain the project idea called Veda Grid in your own words.",
+    "unrelated_query": "What is Unlisted Grid 11?",
+    "required_terms": [
+      "grid",
+      "low-energy",
+      "cells"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-12",
+    "suite": "knowledge_growth",
+    "concept": "Quanta Filter",
+    "definition": "a project filter that rejects isolated encoder spikes",
+    "teach": "Learn that Quanta Filter means a project filter that rejects isolated encoder spikes.",
+    "exact_recall": "What is Quanta Filter?",
+    "paraphrased_recall": "Explain the project idea called Quanta Filter in your own words.",
+    "unrelated_query": "What is Unlisted Filter 12?",
+    "required_terms": [
+      "filter",
+      "encoder",
+      "spikes"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-13",
+    "suite": "knowledge_growth",
+    "concept": "Rivo Latch",
+    "definition": "a project rule that locks a route after safety validation",
+    "teach": "Learn that Rivo Latch means a project rule that locks a route after safety validation.",
+    "exact_recall": "What is Rivo Latch?",
+    "paraphrased_recall": "Explain the project idea called Rivo Latch in your own words.",
+    "unrelated_query": "What is Unlisted Latch 13?",
+    "required_terms": [
+      "route",
+      "safety",
+      "validation"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-14",
+    "suite": "knowledge_growth",
+    "concept": "Soma Beacon",
+    "definition": "a project landmark broadcasting a signed floor identifier",
+    "teach": "Learn that Soma Beacon means a project landmark broadcasting a signed floor identifier.",
+    "exact_recall": "What is Soma Beacon?",
+    "paraphrased_recall": "Explain the project idea called Soma Beacon in your own words.",
+    "unrelated_query": "What is Unlisted Beacon 14?",
+    "required_terms": [
+      "landmark",
+      "signed",
+      "floor"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-15",
+    "suite": "knowledge_growth",
+    "concept": "Tala Cost",
+    "definition": "a project path cost combining time, battery use, and risk",
+    "teach": "Learn that Tala Cost means a project path cost combining time, battery use, and risk.",
+    "exact_recall": "What is Tala Cost?",
+    "paraphrased_recall": "Explain the project idea called Tala Cost in your own words.",
+    "unrelated_query": "What is Unlisted Cost 15?",
+    "required_terms": [
+      "time",
+      "battery",
+      "risk"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-16",
+    "suite": "knowledge_growth",
+    "concept": "Prism Map",
+    "definition": "a project map storing static, temporary, and uncertain cells",
+    "teach": "Learn that Prism Map means a project map storing static, temporary, and uncertain cells.",
+    "exact_recall": "What is Prism Map?",
+    "paraphrased_recall": "Explain the project idea called Prism Map in your own words.",
+    "unrelated_query": "What is Unlisted Map 16?",
+    "required_terms": [
+      "static",
+      "temporary",
+      "uncertain"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-17",
+    "suite": "knowledge_growth",
+    "concept": "Cobalt Trace",
+    "definition": "a project log linking sensor samples to synchronized poses",
+    "teach": "Learn that Cobalt Trace means a project log linking sensor samples to synchronized poses.",
+    "exact_recall": "What is Cobalt Trace?",
+    "paraphrased_recall": "Explain the project idea called Cobalt Trace in your own words.",
+    "unrelated_query": "What is Unlisted Trace 17?",
+    "required_terms": [
+      "sensor",
+      "synchronized",
+      "poses"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-18",
+    "suite": "knowledge_growth",
+    "concept": "Nova Guard",
+    "definition": "a project check that blocks motion when timestamps are stale",
+    "teach": "Learn that Nova Guard means a project check that blocks motion when timestamps are stale.",
+    "exact_recall": "What is Nova Guard?",
+    "paraphrased_recall": "Explain the project idea called Nova Guard in your own words.",
+    "unrelated_query": "What is Unlisted Guard 18?",
+    "required_terms": [
+      "blocks",
+      "motion",
+      "timestamps"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-19",
+    "suite": "knowledge_growth",
+    "concept": "Eka Queue",
+    "definition": "a project scheduler prioritizing emergency robot tasks",
+    "teach": "Learn that Eka Queue means a project scheduler prioritizing emergency robot tasks.",
+    "exact_recall": "What is Eka Queue?",
+    "paraphrased_recall": "Explain the project idea called Eka Queue in your own words.",
+    "unrelated_query": "What is Unlisted Queue 19?",
+    "required_terms": [
+      "scheduler",
+      "emergency",
+      "tasks"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-20",
+    "suite": "knowledge_growth",
+    "concept": "Lyra Cache",
+    "definition": "a project cache for recently verified local map patches",
+    "teach": "Learn that Lyra Cache means a project cache for recently verified local map patches.",
+    "exact_recall": "What is Lyra Cache?",
+    "paraphrased_recall": "Explain the project idea called Lyra Cache in your own words.",
+    "unrelated_query": "What is Unlisted Cache 20?",
+    "required_terms": [
+      "cache",
+      "verified",
+      "map"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-21",
+    "suite": "knowledge_growth",
+    "concept": "Aero Grid",
+    "definition": "a project grid that marks low-energy traversal cells",
+    "teach": "Learn that Aero Grid means a project grid that marks low-energy traversal cells.",
+    "exact_recall": "What is Aero Grid?",
+    "paraphrased_recall": "Explain the project idea called Aero Grid in your own words.",
+    "unrelated_query": "What is Unlisted Grid 21?",
+    "required_terms": [
+      "grid",
+      "low-energy",
+      "cells"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-22",
+    "suite": "knowledge_growth",
+    "concept": "Banyan Filter",
+    "definition": "a project filter that rejects isolated encoder spikes",
+    "teach": "Learn that Banyan Filter means a project filter that rejects isolated encoder spikes.",
+    "exact_recall": "What is Banyan Filter?",
+    "paraphrased_recall": "Explain the project idea called Banyan Filter in your own words.",
+    "unrelated_query": "What is Unlisted Filter 22?",
+    "required_terms": [
+      "filter",
+      "encoder",
+      "spikes"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-23",
+    "suite": "knowledge_growth",
+    "concept": "Crescent Latch",
+    "definition": "a project rule that locks a route after safety validation",
+    "teach": "Learn that Crescent Latch means a project rule that locks a route after safety validation.",
+    "exact_recall": "What is Crescent Latch?",
+    "paraphrased_recall": "Explain the project idea called Crescent Latch in your own words.",
+    "unrelated_query": "What is Unlisted Latch 23?",
+    "required_terms": [
+      "route",
+      "safety",
+      "validation"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-24",
+    "suite": "knowledge_growth",
+    "concept": "Drona Beacon",
+    "definition": "a project landmark broadcasting a signed floor identifier",
+    "teach": "Learn that Drona Beacon means a project landmark broadcasting a signed floor identifier.",
+    "exact_recall": "What is Drona Beacon?",
+    "paraphrased_recall": "Explain the project idea called Drona Beacon in your own words.",
+    "unrelated_query": "What is Unlisted Beacon 24?",
+    "required_terms": [
+      "landmark",
+      "signed",
+      "floor"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-25",
+    "suite": "knowledge_growth",
+    "concept": "Ember Cost",
+    "definition": "a project path cost combining time, battery use, and risk",
+    "teach": "Learn that Ember Cost means a project path cost combining time, battery use, and risk.",
+    "exact_recall": "What is Ember Cost?",
+    "paraphrased_recall": "Explain the project idea called Ember Cost in your own words.",
+    "unrelated_query": "What is Unlisted Cost 25?",
+    "required_terms": [
+      "time",
+      "battery",
+      "risk"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-26",
+    "suite": "knowledge_growth",
+    "concept": "Faro Map",
+    "definition": "a project map storing static, temporary, and uncertain cells",
+    "teach": "Learn that Faro Map means a project map storing static, temporary, and uncertain cells.",
+    "exact_recall": "What is Faro Map?",
+    "paraphrased_recall": "Explain the project idea called Faro Map in your own words.",
+    "unrelated_query": "What is Unlisted Map 26?",
+    "required_terms": [
+      "static",
+      "temporary",
+      "uncertain"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-27",
+    "suite": "knowledge_growth",
+    "concept": "Gati Trace",
+    "definition": "a project log linking sensor samples to synchronized poses",
+    "teach": "Learn that Gati Trace means a project log linking sensor samples to synchronized poses.",
+    "exact_recall": "What is Gati Trace?",
+    "paraphrased_recall": "Explain the project idea called Gati Trace in your own words.",
+    "unrelated_query": "What is Unlisted Trace 27?",
+    "required_terms": [
+      "sensor",
+      "synchronized",
+      "poses"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-28",
+    "suite": "knowledge_growth",
+    "concept": "Helio Guard",
+    "definition": "a project check that blocks motion when timestamps are stale",
+    "teach": "Learn that Helio Guard means a project check that blocks motion when timestamps are stale.",
+    "exact_recall": "What is Helio Guard?",
+    "paraphrased_recall": "Explain the project idea called Helio Guard in your own words.",
+    "unrelated_query": "What is Unlisted Guard 28?",
+    "required_terms": [
+      "blocks",
+      "motion",
+      "timestamps"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-29",
+    "suite": "knowledge_growth",
+    "concept": "Indra Queue",
+    "definition": "a project scheduler prioritizing emergency robot tasks",
+    "teach": "Learn that Indra Queue means a project scheduler prioritizing emergency robot tasks.",
+    "exact_recall": "What is Indra Queue?",
+    "paraphrased_recall": "Explain the project idea called Indra Queue in your own words.",
+    "unrelated_query": "What is Unlisted Queue 29?",
+    "required_terms": [
+      "scheduler",
+      "emergency",
+      "tasks"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-30",
+    "suite": "knowledge_growth",
+    "concept": "Juno Cache",
+    "definition": "a project cache for recently verified local map patches",
+    "teach": "Learn that Juno Cache means a project cache for recently verified local map patches.",
+    "exact_recall": "What is Juno Cache?",
+    "paraphrased_recall": "Explain the project idea called Juno Cache in your own words.",
+    "unrelated_query": "What is Unlisted Cache 30?",
+    "required_terms": [
+      "cache",
+      "verified",
+      "map"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-31",
+    "suite": "knowledge_growth",
+    "concept": "Kite Grid",
+    "definition": "a project grid that marks low-energy traversal cells",
+    "teach": "Learn that Kite Grid means a project grid that marks low-energy traversal cells.",
+    "exact_recall": "What is Kite Grid?",
+    "paraphrased_recall": "Explain the project idea called Kite Grid in your own words.",
+    "unrelated_query": "What is Unlisted Grid 31?",
+    "required_terms": [
+      "grid",
+      "low-energy",
+      "cells"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-32",
+    "suite": "knowledge_growth",
+    "concept": "Lotus Filter",
+    "definition": "a project filter that rejects isolated encoder spikes",
+    "teach": "Learn that Lotus Filter means a project filter that rejects isolated encoder spikes.",
+    "exact_recall": "What is Lotus Filter?",
+    "paraphrased_recall": "Explain the project idea called Lotus Filter in your own words.",
+    "unrelated_query": "What is Unlisted Filter 32?",
+    "required_terms": [
+      "filter",
+      "encoder",
+      "spikes"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-33",
+    "suite": "knowledge_growth",
+    "concept": "Mango Latch",
+    "definition": "a project rule that locks a route after safety validation",
+    "teach": "Learn that Mango Latch means a project rule that locks a route after safety validation.",
+    "exact_recall": "What is Mango Latch?",
+    "paraphrased_recall": "Explain the project idea called Mango Latch in your own words.",
+    "unrelated_query": "What is Unlisted Latch 33?",
+    "required_terms": [
+      "route",
+      "safety",
+      "validation"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-34",
+    "suite": "knowledge_growth",
+    "concept": "Nimbus Beacon",
+    "definition": "a project landmark broadcasting a signed floor identifier",
+    "teach": "Learn that Nimbus Beacon means a project landmark broadcasting a signed floor identifier.",
+    "exact_recall": "What is Nimbus Beacon?",
+    "paraphrased_recall": "Explain the project idea called Nimbus Beacon in your own words.",
+    "unrelated_query": "What is Unlisted Beacon 34?",
+    "required_terms": [
+      "landmark",
+      "signed",
+      "floor"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-35",
+    "suite": "knowledge_growth",
+    "concept": "Onyx Cost",
+    "definition": "a project path cost combining time, battery use, and risk",
+    "teach": "Learn that Onyx Cost means a project path cost combining time, battery use, and risk.",
+    "exact_recall": "What is Onyx Cost?",
+    "paraphrased_recall": "Explain the project idea called Onyx Cost in your own words.",
+    "unrelated_query": "What is Unlisted Cost 35?",
+    "required_terms": [
+      "time",
+      "battery",
+      "risk"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-36",
+    "suite": "knowledge_growth",
+    "concept": "Pavo Map",
+    "definition": "a project map storing static, temporary, and uncertain cells",
+    "teach": "Learn that Pavo Map means a project map storing static, temporary, and uncertain cells.",
+    "exact_recall": "What is Pavo Map?",
+    "paraphrased_recall": "Explain the project idea called Pavo Map in your own words.",
+    "unrelated_query": "What is Unlisted Map 36?",
+    "required_terms": [
+      "static",
+      "temporary",
+      "uncertain"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-37",
+    "suite": "knowledge_growth",
+    "concept": "Quartz Trace",
+    "definition": "a project log linking sensor samples to synchronized poses",
+    "teach": "Learn that Quartz Trace means a project log linking sensor samples to synchronized poses.",
+    "exact_recall": "What is Quartz Trace?",
+    "paraphrased_recall": "Explain the project idea called Quartz Trace in your own words.",
+    "unrelated_query": "What is Unlisted Trace 37?",
+    "required_terms": [
+      "sensor",
+      "synchronized",
+      "poses"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-38",
+    "suite": "knowledge_growth",
+    "concept": "Raga Guard",
+    "definition": "a project check that blocks motion when timestamps are stale",
+    "teach": "Learn that Raga Guard means a project check that blocks motion when timestamps are stale.",
+    "exact_recall": "What is Raga Guard?",
+    "paraphrased_recall": "Explain the project idea called Raga Guard in your own words.",
+    "unrelated_query": "What is Unlisted Guard 38?",
+    "required_terms": [
+      "blocks",
+      "motion",
+      "timestamps"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-39",
+    "suite": "knowledge_growth",
+    "concept": "Saffron Queue",
+    "definition": "a project scheduler prioritizing emergency robot tasks",
+    "teach": "Learn that Saffron Queue means a project scheduler prioritizing emergency robot tasks.",
+    "exact_recall": "What is Saffron Queue?",
+    "paraphrased_recall": "Explain the project idea called Saffron Queue in your own words.",
+    "unrelated_query": "What is Unlisted Queue 39?",
+    "required_terms": [
+      "scheduler",
+      "emergency",
+      "tasks"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-40",
+    "suite": "knowledge_growth",
+    "concept": "Teal Cache",
+    "definition": "a project cache for recently verified local map patches",
+    "teach": "Learn that Teal Cache means a project cache for recently verified local map patches.",
+    "exact_recall": "What is Teal Cache?",
+    "paraphrased_recall": "Explain the project idea called Teal Cache in your own words.",
+    "unrelated_query": "What is Unlisted Cache 40?",
+    "required_terms": [
+      "cache",
+      "verified",
+      "map"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-41",
+    "suite": "knowledge_growth",
+    "concept": "Uma Grid",
+    "definition": "a project grid that marks low-energy traversal cells",
+    "teach": "Learn that Uma Grid means a project grid that marks low-energy traversal cells.",
+    "exact_recall": "What is Uma Grid?",
+    "paraphrased_recall": "Explain the project idea called Uma Grid in your own words.",
+    "unrelated_query": "What is Unlisted Grid 41?",
+    "required_terms": [
+      "grid",
+      "low-energy",
+      "cells"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-42",
+    "suite": "knowledge_growth",
+    "concept": "Vayu Filter",
+    "definition": "a project filter that rejects isolated encoder spikes",
+    "teach": "Learn that Vayu Filter means a project filter that rejects isolated encoder spikes.",
+    "exact_recall": "What is Vayu Filter?",
+    "paraphrased_recall": "Explain the project idea called Vayu Filter in your own words.",
+    "unrelated_query": "What is Unlisted Filter 42?",
+    "required_terms": [
+      "filter",
+      "encoder",
+      "spikes"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-43",
+    "suite": "knowledge_growth",
+    "concept": "Willow Latch",
+    "definition": "a project rule that locks a route after safety validation",
+    "teach": "Learn that Willow Latch means a project rule that locks a route after safety validation.",
+    "exact_recall": "What is Willow Latch?",
+    "paraphrased_recall": "Explain the project idea called Willow Latch in your own words.",
+    "unrelated_query": "What is Unlisted Latch 43?",
+    "required_terms": [
+      "route",
+      "safety",
+      "validation"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-44",
+    "suite": "knowledge_growth",
+    "concept": "Xeno Beacon",
+    "definition": "a project landmark broadcasting a signed floor identifier",
+    "teach": "Learn that Xeno Beacon means a project landmark broadcasting a signed floor identifier.",
+    "exact_recall": "What is Xeno Beacon?",
+    "paraphrased_recall": "Explain the project idea called Xeno Beacon in your own words.",
+    "unrelated_query": "What is Unlisted Beacon 44?",
+    "required_terms": [
+      "landmark",
+      "signed",
+      "floor"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-45",
+    "suite": "knowledge_growth",
+    "concept": "Yatra Cost",
+    "definition": "a project path cost combining time, battery use, and risk",
+    "teach": "Learn that Yatra Cost means a project path cost combining time, battery use, and risk.",
+    "exact_recall": "What is Yatra Cost?",
+    "paraphrased_recall": "Explain the project idea called Yatra Cost in your own words.",
+    "unrelated_query": "What is Unlisted Cost 45?",
+    "required_terms": [
+      "time",
+      "battery",
+      "risk"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-46",
+    "suite": "knowledge_growth",
+    "concept": "Zenith Map",
+    "definition": "a project map storing static, temporary, and uncertain cells",
+    "teach": "Learn that Zenith Map means a project map storing static, temporary, and uncertain cells.",
+    "exact_recall": "What is Zenith Map?",
+    "paraphrased_recall": "Explain the project idea called Zenith Map in your own words.",
+    "unrelated_query": "What is Unlisted Map 46?",
+    "required_terms": [
+      "static",
+      "temporary",
+      "uncertain"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-47",
+    "suite": "knowledge_growth",
+    "concept": "Arka Trace",
+    "definition": "a project log linking sensor samples to synchronized poses",
+    "teach": "Learn that Arka Trace means a project log linking sensor samples to synchronized poses.",
+    "exact_recall": "What is Arka Trace?",
+    "paraphrased_recall": "Explain the project idea called Arka Trace in your own words.",
+    "unrelated_query": "What is Unlisted Trace 47?",
+    "required_terms": [
+      "sensor",
+      "synchronized",
+      "poses"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-48",
+    "suite": "knowledge_growth",
+    "concept": "Bhoomi Guard",
+    "definition": "a project check that blocks motion when timestamps are stale",
+    "teach": "Learn that Bhoomi Guard means a project check that blocks motion when timestamps are stale.",
+    "exact_recall": "What is Bhoomi Guard?",
+    "paraphrased_recall": "Explain the project idea called Bhoomi Guard in your own words.",
+    "unrelated_query": "What is Unlisted Guard 48?",
+    "required_terms": [
+      "blocks",
+      "motion",
+      "timestamps"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-49",
+    "suite": "knowledge_growth",
+    "concept": "Chitra Queue",
+    "definition": "a project scheduler prioritizing emergency robot tasks",
+    "teach": "Learn that Chitra Queue means a project scheduler prioritizing emergency robot tasks.",
+    "exact_recall": "What is Chitra Queue?",
+    "paraphrased_recall": "Explain the project idea called Chitra Queue in your own words.",
+    "unrelated_query": "What is Unlisted Queue 49?",
+    "required_terms": [
+      "scheduler",
+      "emergency",
+      "tasks"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  },
+  {
+    "id": "know-50",
+    "suite": "knowledge_growth",
+    "concept": "Diya Cache",
+    "definition": "a project cache for recently verified local map patches",
+    "teach": "Learn that Diya Cache means a project cache for recently verified local map patches.",
+    "exact_recall": "What is Diya Cache?",
+    "paraphrased_recall": "Explain the project idea called Diya Cache in your own words.",
+    "unrelated_query": "What is Unlisted Cache 50?",
+    "required_terms": [
+      "cache",
+      "verified",
+      "map"
+    ],
+    "filler_turns": 30,
+    "restart_before_recall": true
+  }
+]

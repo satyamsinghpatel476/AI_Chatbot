@@ -1,0 +1,49 @@
+ROS Basics
+
+What is ROS?
+ROS (Robot Operating System) is an open-source framework that provides tools, libraries, and conventions for building robot applications. It is not a traditional operating system but a middleware for robotics development.
+
+ROS Nodes
+Nodes are individual programs that perform specific tasks within a ROS system. A robot application usually consists of multiple nodes communicating with each other.
+
+Topics
+Topics are named communication channels used to exchange messages between nodes. They follow a publish-subscribe model.
+
+Publishers
+Publishers are nodes that send messages to a topic. For example, a laser scanner node may publish sensor readings.
+
+Subscribers
+Subscribers are nodes that receive messages from topics they are interested in. For example, a navigation node may subscribe to laser scan data.
+
+Services
+Services provide synchronous communication between nodes using a request-response mechanism. They are useful for tasks requiring immediate feedback.
+
+Actions
+Actions are used for long-running tasks that provide feedback during execution. They allow goals to be sent, monitored, cancelled, and completed.
+
+Parameters
+Parameters are configuration values stored on the parameter server. They allow nodes to access settings such as thresholds, robot dimensions, and controller gains.
+
+Launch Files
+Launch files simplify the process of starting multiple ROS nodes together. They help organize complex robotic systems.
+
+ROS Master
+In ROS1, the ROS Master manages communication between nodes by helping them discover each other.
+
+ROS Workspace
+A workspace is a directory structure used to organize ROS packages and development files.
+
+ROS Packages
+Packages are the basic organizational units in ROS. They contain source code, launch files, configuration files, and dependencies.
+
+catkin Build System
+Catkin is the build system used in ROS1. It provides tools for compiling and managing ROS packages.
+
+ROS2 Basics
+ROS2 is the next generation of ROS. It introduces improved security, real-time support, better communication middleware, and enhanced scalability.
+
+DDS Middleware
+ROS2 uses DDS (Data Distribution Service) for communication between nodes, eliminating the need for a central ROS Master.
+
+QoS (Quality of Service)
+QoS policies in ROS2 control communication reliability, message history, durability, and delivery behavior between publishers and subscribers.

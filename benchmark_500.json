@@ -1,0 +1,2502 @@
+[
+  {
+    "id": 1,
+    "category": "robotics",
+    "question": "Why does SLAM fail in real-world environments?"
+  },
+  {
+    "id": 2,
+    "category": "robotics",
+    "question": "How can a beginner debug SLAM?"
+  },
+  {
+    "id": 3,
+    "category": "robotics",
+    "question": "What are the common causes of error in SLAM?"
+  },
+  {
+    "id": 4,
+    "category": "robotics",
+    "question": "How can SLAM improve autonomous robot performance?"
+  },
+  {
+    "id": 5,
+    "category": "robotics",
+    "question": "What are the limitations of SLAM?"
+  },
+  {
+    "id": 6,
+    "category": "robotics",
+    "question": "Why does LiDAR mapping fail in real-world environments?"
+  },
+  {
+    "id": 7,
+    "category": "robotics",
+    "question": "How can a beginner debug LiDAR mapping?"
+  },
+  {
+    "id": 8,
+    "category": "robotics",
+    "question": "What are the common causes of error in LiDAR mapping?"
+  },
+  {
+    "id": 9,
+    "category": "robotics",
+    "question": "How can LiDAR mapping improve autonomous robot performance?"
+  },
+  {
+    "id": 10,
+    "category": "robotics",
+    "question": "What are the limitations of LiDAR mapping?"
+  },
+  {
+    "id": 11,
+    "category": "robotics",
+    "question": "Why does AMCL localization fail in real-world environments?"
+  },
+  {
+    "id": 12,
+    "category": "robotics",
+    "question": "How can a beginner debug AMCL localization?"
+  },
+  {
+    "id": 13,
+    "category": "robotics",
+    "question": "What are the common causes of error in AMCL localization?"
+  },
+  {
+    "id": 14,
+    "category": "robotics",
+    "question": "How can AMCL localization improve autonomous robot performance?"
+  },
+  {
+    "id": 15,
+    "category": "robotics",
+    "question": "What are the limitations of AMCL localization?"
+  },
+  {
+    "id": 16,
+    "category": "robotics",
+    "question": "Why does EKF sensor fusion fail in real-world environments?"
+  },
+  {
+    "id": 17,
+    "category": "robotics",
+    "question": "How can a beginner debug EKF sensor fusion?"
+  },
+  {
+    "id": 18,
+    "category": "robotics",
+    "question": "What are the common causes of error in EKF sensor fusion?"
+  },
+  {
+    "id": 19,
+    "category": "robotics",
+    "question": "How can EKF sensor fusion improve autonomous robot performance?"
+  },
+  {
+    "id": 20,
+    "category": "robotics",
+    "question": "What are the limitations of EKF sensor fusion?"
+  },
+  {
+    "id": 21,
+    "category": "robotics",
+    "question": "Why does wheel odometry fail in real-world environments?"
+  },
+  {
+    "id": 22,
+    "category": "robotics",
+    "question": "How can a beginner debug wheel odometry?"
+  },
+  {
+    "id": 23,
+    "category": "robotics",
+    "question": "What are the common causes of error in wheel odometry?"
+  },
+  {
+    "id": 24,
+    "category": "robotics",
+    "question": "How can wheel odometry improve autonomous robot performance?"
+  },
+  {
+    "id": 25,
+    "category": "robotics",
+    "question": "What are the limitations of wheel odometry?"
+  },
+  {
+    "id": 26,
+    "category": "robotics",
+    "question": "Why does visual SLAM fail in real-world environments?"
+  },
+  {
+    "id": 27,
+    "category": "robotics",
+    "question": "How can a beginner debug visual SLAM?"
+  },
+  {
+    "id": 28,
+    "category": "robotics",
+    "question": "What are the common causes of error in visual SLAM?"
+  },
+  {
+    "id": 29,
+    "category": "robotics",
+    "question": "How can visual SLAM improve autonomous robot performance?"
+  },
+  {
+    "id": 30,
+    "category": "robotics",
+    "question": "What are the limitations of visual SLAM?"
+  },
+  {
+    "id": 31,
+    "category": "robotics",
+    "question": "Why does costmap inflation fail in real-world environments?"
+  },
+  {
+    "id": 32,
+    "category": "robotics",
+    "question": "How can a beginner debug costmap inflation?"
+  },
+  {
+    "id": 33,
+    "category": "robotics",
+    "question": "What are the common causes of error in costmap inflation?"
+  },
+  {
+    "id": 34,
+    "category": "robotics",
+    "question": "How can costmap inflation improve autonomous robot performance?"
+  },
+  {
+    "id": 35,
+    "category": "robotics",
+    "question": "What are the limitations of costmap inflation?"
+  },
+  {
+    "id": 36,
+    "category": "robotics",
+    "question": "Why does path planning fail in real-world environments?"
+  },
+  {
+    "id": 37,
+    "category": "robotics",
+    "question": "How can a beginner debug path planning?"
+  },
+  {
+    "id": 38,
+    "category": "robotics",
+    "question": "What are the common causes of error in path planning?"
+  },
+  {
+    "id": 39,
+    "category": "robotics",
+    "question": "How can path planning improve autonomous robot performance?"
+  },
+  {
+    "id": 40,
+    "category": "robotics",
+    "question": "What are the limitations of path planning?"
+  },
+  {
+    "id": 41,
+    "category": "robotics",
+    "question": "Why does loop closure fail in real-world environments?"
+  },
+  {
+    "id": 42,
+    "category": "robotics",
+    "question": "How can a beginner debug loop closure?"
+  },
+  {
+    "id": 43,
+    "category": "robotics",
+    "question": "What are the common causes of error in loop closure?"
+  },
+  {
+    "id": 44,
+    "category": "robotics",
+    "question": "How can loop closure improve autonomous robot performance?"
+  },
+  {
+    "id": 45,
+    "category": "robotics",
+    "question": "What are the limitations of loop closure?"
+  },
+  {
+    "id": 46,
+    "category": "robotics",
+    "question": "Why does robot navigation fail in real-world environments?"
+  },
+  {
+    "id": 47,
+    "category": "robotics",
+    "question": "How can a beginner debug robot navigation?"
+  },
+  {
+    "id": 48,
+    "category": "robotics",
+    "question": "What are the common causes of error in robot navigation?"
+  },
+  {
+    "id": 49,
+    "category": "robotics",
+    "question": "How can robot navigation improve autonomous robot performance?"
+  },
+  {
+    "id": 50,
+    "category": "robotics",
+    "question": "What are the limitations of robot navigation?"
+  },
+  {
+    "id": 51,
+    "category": "robotics",
+    "question": "Why does IMU drift fail in real-world environments?"
+  },
+  {
+    "id": 52,
+    "category": "robotics",
+    "question": "How can a beginner debug IMU drift?"
+  },
+  {
+    "id": 53,
+    "category": "robotics",
+    "question": "What are the common causes of error in IMU drift?"
+  },
+  {
+    "id": 54,
+    "category": "robotics",
+    "question": "How can IMU drift improve autonomous robot performance?"
+  },
+  {
+    "id": 55,
+    "category": "robotics",
+    "question": "What are the limitations of IMU drift?"
+  },
+  {
+    "id": 56,
+    "category": "robotics",
+    "question": "Why does ROS2 navigation fail in real-world environments?"
+  },
+  {
+    "id": 57,
+    "category": "robotics",
+    "question": "How can a beginner debug ROS2 navigation?"
+  },
+  {
+    "id": 58,
+    "category": "robotics",
+    "question": "What are the common causes of error in ROS2 navigation?"
+  },
+  {
+    "id": 59,
+    "category": "robotics",
+    "question": "How can ROS2 navigation improve autonomous robot performance?"
+  },
+  {
+    "id": 60,
+    "category": "robotics",
+    "question": "What are the limitations of ROS2 navigation?"
+  },
+  {
+    "id": 61,
+    "category": "robotics",
+    "question": "Why does dynamic obstacle avoidance fail in real-world environments?"
+  },
+  {
+    "id": 62,
+    "category": "robotics",
+    "question": "How can a beginner debug dynamic obstacle avoidance?"
+  },
+  {
+    "id": 63,
+    "category": "robotics",
+    "question": "What are the common causes of error in dynamic obstacle avoidance?"
+  },
+  {
+    "id": 64,
+    "category": "robotics",
+    "question": "How can dynamic obstacle avoidance improve autonomous robot performance?"
+  },
+  {
+    "id": 65,
+    "category": "robotics",
+    "question": "What are the limitations of dynamic obstacle avoidance?"
+  },
+  {
+    "id": 66,
+    "category": "robotics",
+    "question": "Why does robot localization fail in real-world environments?"
+  },
+  {
+    "id": 67,
+    "category": "robotics",
+    "question": "How can a beginner debug robot localization?"
+  },
+  {
+    "id": 68,
+    "category": "robotics",
+    "question": "What are the common causes of error in robot localization?"
+  },
+  {
+    "id": 69,
+    "category": "robotics",
+    "question": "How can robot localization improve autonomous robot performance?"
+  },
+  {
+    "id": 70,
+    "category": "robotics",
+    "question": "What are the limitations of robot localization?"
+  },
+  {
+    "id": 71,
+    "category": "robotics",
+    "question": "Why does sensor calibration fail in real-world environments?"
+  },
+  {
+    "id": 72,
+    "category": "robotics",
+    "question": "How can a beginner debug sensor calibration?"
+  },
+  {
+    "id": 73,
+    "category": "robotics",
+    "question": "What are the common causes of error in sensor calibration?"
+  },
+  {
+    "id": 74,
+    "category": "robotics",
+    "question": "How can sensor calibration improve autonomous robot performance?"
+  },
+  {
+    "id": 75,
+    "category": "robotics",
+    "question": "What are the limitations of sensor calibration?"
+  },
+  {
+    "id": 76,
+    "category": "robotics",
+    "question": "Why does map resolution fail in real-world environments?"
+  },
+  {
+    "id": 77,
+    "category": "robotics",
+    "question": "How can a beginner debug map resolution?"
+  },
+  {
+    "id": 78,
+    "category": "robotics",
+    "question": "What are the common causes of error in map resolution?"
+  },
+  {
+    "id": 79,
+    "category": "robotics",
+    "question": "How can map resolution improve autonomous robot performance?"
+  },
+  {
+    "id": 80,
+    "category": "robotics",
+    "question": "What are the limitations of map resolution?"
+  },
+  {
+    "id": 81,
+    "category": "robotics",
+    "question": "Why does wheel encoder faults fail in real-world environments?"
+  },
+  {
+    "id": 82,
+    "category": "robotics",
+    "question": "How can a beginner debug wheel encoder faults?"
+  },
+  {
+    "id": 83,
+    "category": "robotics",
+    "question": "What are the common causes of error in wheel encoder faults?"
+  },
+  {
+    "id": 84,
+    "category": "robotics",
+    "question": "How can wheel encoder faults improve autonomous robot performance?"
+  },
+  {
+    "id": 85,
+    "category": "robotics",
+    "question": "What are the limitations of wheel encoder faults?"
+  },
+  {
+    "id": 86,
+    "category": "robotics",
+    "question": "Why does robot footprint fail in real-world environments?"
+  },
+  {
+    "id": 87,
+    "category": "robotics",
+    "question": "How can a beginner debug robot footprint?"
+  },
+  {
+    "id": 88,
+    "category": "robotics",
+    "question": "What are the common causes of error in robot footprint?"
+  },
+  {
+    "id": 89,
+    "category": "robotics",
+    "question": "How can robot footprint improve autonomous robot performance?"
+  },
+  {
+    "id": 90,
+    "category": "robotics",
+    "question": "What are the limitations of robot footprint?"
+  },
+  {
+    "id": 91,
+    "category": "robotics",
+    "question": "Why does global planner fail in real-world environments?"
+  },
+  {
+    "id": 92,
+    "category": "robotics",
+    "question": "How can a beginner debug global planner?"
+  },
+  {
+    "id": 93,
+    "category": "robotics",
+    "question": "What are the common causes of error in global planner?"
+  },
+  {
+    "id": 94,
+    "category": "robotics",
+    "question": "How can global planner improve autonomous robot performance?"
+  },
+  {
+    "id": 95,
+    "category": "robotics",
+    "question": "What are the limitations of global planner?"
+  },
+  {
+    "id": 96,
+    "category": "robotics",
+    "question": "Why does local planner fail in real-world environments?"
+  },
+  {
+    "id": 97,
+    "category": "robotics",
+    "question": "How can a beginner debug local planner?"
+  },
+  {
+    "id": 98,
+    "category": "robotics",
+    "question": "What are the common causes of error in local planner?"
+  },
+  {
+    "id": 99,
+    "category": "robotics",
+    "question": "How can local planner improve autonomous robot performance?"
+  },
+  {
+    "id": 100,
+    "category": "robotics",
+    "question": "What are the limitations of local planner?"
+  },
+  {
+    "id": 101,
+    "category": "robotics",
+    "question": "Why does TF frames fail in real-world environments?"
+  },
+  {
+    "id": 102,
+    "category": "robotics",
+    "question": "How can a beginner debug TF frames?"
+  },
+  {
+    "id": 103,
+    "category": "robotics",
+    "question": "What are the common causes of error in TF frames?"
+  },
+  {
+    "id": 104,
+    "category": "robotics",
+    "question": "How can TF frames improve autonomous robot performance?"
+  },
+  {
+    "id": 105,
+    "category": "robotics",
+    "question": "What are the limitations of TF frames?"
+  },
+  {
+    "id": 106,
+    "category": "robotics",
+    "question": "Why does occupancy grid fail in real-world environments?"
+  },
+  {
+    "id": 107,
+    "category": "robotics",
+    "question": "How can a beginner debug occupancy grid?"
+  },
+  {
+    "id": 108,
+    "category": "robotics",
+    "question": "What are the common causes of error in occupancy grid?"
+  },
+  {
+    "id": 109,
+    "category": "robotics",
+    "question": "How can occupancy grid improve autonomous robot performance?"
+  },
+  {
+    "id": 110,
+    "category": "robotics",
+    "question": "What are the limitations of occupancy grid?"
+  },
+  {
+    "id": 111,
+    "category": "robotics",
+    "question": "Why does camera-based navigation fail in real-world environments?"
+  },
+  {
+    "id": 112,
+    "category": "robotics",
+    "question": "How can a beginner debug camera-based navigation?"
+  },
+  {
+    "id": 113,
+    "category": "robotics",
+    "question": "What are the common causes of error in camera-based navigation?"
+  },
+  {
+    "id": 114,
+    "category": "robotics",
+    "question": "How can camera-based navigation improve autonomous robot performance?"
+  },
+  {
+    "id": 115,
+    "category": "robotics",
+    "question": "What are the limitations of camera-based navigation?"
+  },
+  {
+    "id": 116,
+    "category": "robotics",
+    "question": "Why does GPS-denied navigation fail in real-world environments?"
+  },
+  {
+    "id": 117,
+    "category": "robotics",
+    "question": "How can a beginner debug GPS-denied navigation?"
+  },
+  {
+    "id": 118,
+    "category": "robotics",
+    "question": "What are the common causes of error in GPS-denied navigation?"
+  },
+  {
+    "id": 119,
+    "category": "robotics",
+    "question": "How can GPS-denied navigation improve autonomous robot performance?"
+  },
+  {
+    "id": 120,
+    "category": "robotics",
+    "question": "What are the limitations of GPS-denied navigation?"
+  },
+  {
+    "id": 121,
+    "category": "robotics",
+    "question": "Why does multi-sensor fusion fail in real-world environments?"
+  },
+  {
+    "id": 122,
+    "category": "robotics",
+    "question": "How can a beginner debug multi-sensor fusion?"
+  },
+  {
+    "id": 123,
+    "category": "robotics",
+    "question": "What are the common causes of error in multi-sensor fusion?"
+  },
+  {
+    "id": 124,
+    "category": "robotics",
+    "question": "How can multi-sensor fusion improve autonomous robot performance?"
+  },
+  {
+    "id": 125,
+    "category": "robotics",
+    "question": "What are the limitations of multi-sensor fusion?"
+  },
+  {
+    "id": 126,
+    "category": "daily",
+    "question": "How can a beginner choose between different ride-sharing apps?"
+  },
+  {
+    "id": 127,
+    "category": "daily",
+    "question": "What risks should I consider while using ride-sharing apps?"
+  },
+  {
+    "id": 128,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using ride-sharing apps?"
+  },
+  {
+    "id": 129,
+    "category": "daily",
+    "question": "Why do people get different results when using ride-sharing apps?"
+  },
+  {
+    "id": 130,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with ride-sharing apps?"
+  },
+  {
+    "id": 131,
+    "category": "daily",
+    "question": "How can a beginner choose between different food delivery apps?"
+  },
+  {
+    "id": 132,
+    "category": "daily",
+    "question": "What risks should I consider while using food delivery apps?"
+  },
+  {
+    "id": 133,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using food delivery apps?"
+  },
+  {
+    "id": 134,
+    "category": "daily",
+    "question": "Why do people get different results when using food delivery apps?"
+  },
+  {
+    "id": 135,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with food delivery apps?"
+  },
+  {
+    "id": 136,
+    "category": "daily",
+    "question": "How can a beginner choose between different mobile GPS apps?"
+  },
+  {
+    "id": 137,
+    "category": "daily",
+    "question": "What risks should I consider while using mobile GPS apps?"
+  },
+  {
+    "id": 138,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using mobile GPS apps?"
+  },
+  {
+    "id": 139,
+    "category": "daily",
+    "question": "Why do people get different results when using mobile GPS apps?"
+  },
+  {
+    "id": 140,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with mobile GPS apps?"
+  },
+  {
+    "id": 141,
+    "category": "daily",
+    "question": "How can a beginner choose between different online privacy?"
+  },
+  {
+    "id": 142,
+    "category": "daily",
+    "question": "What risks should I consider while using online privacy?"
+  },
+  {
+    "id": 143,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using online privacy?"
+  },
+  {
+    "id": 144,
+    "category": "daily",
+    "question": "Why do people get different results when using online privacy?"
+  },
+  {
+    "id": 145,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with online privacy?"
+  },
+  {
+    "id": 146,
+    "category": "daily",
+    "question": "How can a beginner choose between different screen time reduction?"
+  },
+  {
+    "id": 147,
+    "category": "daily",
+    "question": "What risks should I consider while using screen time reduction?"
+  },
+  {
+    "id": 148,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using screen time reduction?"
+  },
+  {
+    "id": 149,
+    "category": "daily",
+    "question": "Why do people get different results when using screen time reduction?"
+  },
+  {
+    "id": 150,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with screen time reduction?"
+  },
+  {
+    "id": 151,
+    "category": "daily",
+    "question": "How can a beginner choose between different digital notes?"
+  },
+  {
+    "id": 152,
+    "category": "daily",
+    "question": "What risks should I consider while using digital notes?"
+  },
+  {
+    "id": 153,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using digital notes?"
+  },
+  {
+    "id": 154,
+    "category": "daily",
+    "question": "Why do people get different results when using digital notes?"
+  },
+  {
+    "id": 155,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with digital notes?"
+  },
+  {
+    "id": 156,
+    "category": "daily",
+    "question": "How can a beginner choose between different cloud storage?"
+  },
+  {
+    "id": 157,
+    "category": "daily",
+    "question": "What risks should I consider while using cloud storage?"
+  },
+  {
+    "id": 158,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using cloud storage?"
+  },
+  {
+    "id": 159,
+    "category": "daily",
+    "question": "Why do people get different results when using cloud storage?"
+  },
+  {
+    "id": 160,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with cloud storage?"
+  },
+  {
+    "id": 161,
+    "category": "daily",
+    "question": "How can a beginner choose between different public Wi-Fi?"
+  },
+  {
+    "id": 162,
+    "category": "daily",
+    "question": "What risks should I consider while using public Wi-Fi?"
+  },
+  {
+    "id": 163,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using public Wi-Fi?"
+  },
+  {
+    "id": 164,
+    "category": "daily",
+    "question": "Why do people get different results when using public Wi-Fi?"
+  },
+  {
+    "id": 165,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with public Wi-Fi?"
+  },
+  {
+    "id": 166,
+    "category": "daily",
+    "question": "How can a beginner choose between different mobile battery usage?"
+  },
+  {
+    "id": 167,
+    "category": "daily",
+    "question": "What risks should I consider while using mobile battery usage?"
+  },
+  {
+    "id": 168,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using mobile battery usage?"
+  },
+  {
+    "id": 169,
+    "category": "daily",
+    "question": "Why do people get different results when using mobile battery usage?"
+  },
+  {
+    "id": 170,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with mobile battery usage?"
+  },
+  {
+    "id": 171,
+    "category": "daily",
+    "question": "How can a beginner choose between different online course selection?"
+  },
+  {
+    "id": 172,
+    "category": "daily",
+    "question": "What risks should I consider while using online course selection?"
+  },
+  {
+    "id": 173,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using online course selection?"
+  },
+  {
+    "id": 174,
+    "category": "daily",
+    "question": "Why do people get different results when using online course selection?"
+  },
+  {
+    "id": 175,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with online course selection?"
+  },
+  {
+    "id": 176,
+    "category": "daily",
+    "question": "How can a beginner choose between different fake reviews?"
+  },
+  {
+    "id": 177,
+    "category": "daily",
+    "question": "What risks should I consider while using fake reviews?"
+  },
+  {
+    "id": 178,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using fake reviews?"
+  },
+  {
+    "id": 179,
+    "category": "daily",
+    "question": "Why do people get different results when using fake reviews?"
+  },
+  {
+    "id": 180,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with fake reviews?"
+  },
+  {
+    "id": 181,
+    "category": "daily",
+    "question": "How can a beginner choose between different app permissions?"
+  },
+  {
+    "id": 182,
+    "category": "daily",
+    "question": "What risks should I consider while using app permissions?"
+  },
+  {
+    "id": 183,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using app permissions?"
+  },
+  {
+    "id": 184,
+    "category": "daily",
+    "question": "Why do people get different results when using app permissions?"
+  },
+  {
+    "id": 185,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with app permissions?"
+  },
+  {
+    "id": 186,
+    "category": "daily",
+    "question": "How can a beginner choose between different QR payments?"
+  },
+  {
+    "id": 187,
+    "category": "daily",
+    "question": "What risks should I consider while using QR payments?"
+  },
+  {
+    "id": 188,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using QR payments?"
+  },
+  {
+    "id": 189,
+    "category": "daily",
+    "question": "Why do people get different results when using QR payments?"
+  },
+  {
+    "id": 190,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with QR payments?"
+  },
+  {
+    "id": 191,
+    "category": "daily",
+    "question": "How can a beginner choose between different online shopping?"
+  },
+  {
+    "id": 192,
+    "category": "daily",
+    "question": "What risks should I consider while using online shopping?"
+  },
+  {
+    "id": 193,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using online shopping?"
+  },
+  {
+    "id": 194,
+    "category": "daily",
+    "question": "Why do people get different results when using online shopping?"
+  },
+  {
+    "id": 195,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with online shopping?"
+  },
+  {
+    "id": 196,
+    "category": "daily",
+    "question": "How can a beginner choose between different password managers?"
+  },
+  {
+    "id": 197,
+    "category": "daily",
+    "question": "What risks should I consider while using password managers?"
+  },
+  {
+    "id": 198,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using password managers?"
+  },
+  {
+    "id": 199,
+    "category": "daily",
+    "question": "Why do people get different results when using password managers?"
+  },
+  {
+    "id": 200,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with password managers?"
+  },
+  {
+    "id": 201,
+    "category": "daily",
+    "question": "How can a beginner choose between different study planning?"
+  },
+  {
+    "id": 202,
+    "category": "daily",
+    "question": "What risks should I consider while using study planning?"
+  },
+  {
+    "id": 203,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using study planning?"
+  },
+  {
+    "id": 204,
+    "category": "daily",
+    "question": "Why do people get different results when using study planning?"
+  },
+  {
+    "id": 205,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with study planning?"
+  },
+  {
+    "id": 206,
+    "category": "daily",
+    "question": "How can a beginner choose between different phone storage?"
+  },
+  {
+    "id": 207,
+    "category": "daily",
+    "question": "What risks should I consider while using phone storage?"
+  },
+  {
+    "id": 208,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using phone storage?"
+  },
+  {
+    "id": 209,
+    "category": "daily",
+    "question": "Why do people get different results when using phone storage?"
+  },
+  {
+    "id": 210,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with phone storage?"
+  },
+  {
+    "id": 211,
+    "category": "daily",
+    "question": "How can a beginner choose between different browser extensions?"
+  },
+  {
+    "id": 212,
+    "category": "daily",
+    "question": "What risks should I consider while using browser extensions?"
+  },
+  {
+    "id": 213,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using browser extensions?"
+  },
+  {
+    "id": 214,
+    "category": "daily",
+    "question": "Why do people get different results when using browser extensions?"
+  },
+  {
+    "id": 215,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with browser extensions?"
+  },
+  {
+    "id": 216,
+    "category": "daily",
+    "question": "How can a beginner choose between different file backup?"
+  },
+  {
+    "id": 217,
+    "category": "daily",
+    "question": "What risks should I consider while using file backup?"
+  },
+  {
+    "id": 218,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using file backup?"
+  },
+  {
+    "id": 219,
+    "category": "daily",
+    "question": "Why do people get different results when using file backup?"
+  },
+  {
+    "id": 220,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with file backup?"
+  },
+  {
+    "id": 221,
+    "category": "daily",
+    "question": "How can a beginner choose between different navigation apps?"
+  },
+  {
+    "id": 222,
+    "category": "daily",
+    "question": "What risks should I consider while using navigation apps?"
+  },
+  {
+    "id": 223,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using navigation apps?"
+  },
+  {
+    "id": 224,
+    "category": "daily",
+    "question": "Why do people get different results when using navigation apps?"
+  },
+  {
+    "id": 225,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with navigation apps?"
+  },
+  {
+    "id": 226,
+    "category": "daily",
+    "question": "How can a beginner choose between different mobile data usage?"
+  },
+  {
+    "id": 227,
+    "category": "daily",
+    "question": "What risks should I consider while using mobile data usage?"
+  },
+  {
+    "id": 228,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using mobile data usage?"
+  },
+  {
+    "id": 229,
+    "category": "daily",
+    "question": "Why do people get different results when using mobile data usage?"
+  },
+  {
+    "id": 230,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with mobile data usage?"
+  },
+  {
+    "id": 231,
+    "category": "daily",
+    "question": "How can a beginner choose between different app updates?"
+  },
+  {
+    "id": 232,
+    "category": "daily",
+    "question": "What risks should I consider while using app updates?"
+  },
+  {
+    "id": 233,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using app updates?"
+  },
+  {
+    "id": 234,
+    "category": "daily",
+    "question": "Why do people get different results when using app updates?"
+  },
+  {
+    "id": 235,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with app updates?"
+  },
+  {
+    "id": 236,
+    "category": "daily",
+    "question": "How can a beginner choose between different student productivity?"
+  },
+  {
+    "id": 237,
+    "category": "daily",
+    "question": "What risks should I consider while using student productivity?"
+  },
+  {
+    "id": 238,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using student productivity?"
+  },
+  {
+    "id": 239,
+    "category": "daily",
+    "question": "Why do people get different results when using student productivity?"
+  },
+  {
+    "id": 240,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with student productivity?"
+  },
+  {
+    "id": 241,
+    "category": "daily",
+    "question": "How can a beginner choose between different online scams?"
+  },
+  {
+    "id": 242,
+    "category": "daily",
+    "question": "What risks should I consider while using online scams?"
+  },
+  {
+    "id": 243,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using online scams?"
+  },
+  {
+    "id": 244,
+    "category": "daily",
+    "question": "Why do people get different results when using online scams?"
+  },
+  {
+    "id": 245,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with online scams?"
+  },
+  {
+    "id": 246,
+    "category": "daily",
+    "question": "How can a beginner choose between different safe downloads?"
+  },
+  {
+    "id": 247,
+    "category": "daily",
+    "question": "What risks should I consider while using safe downloads?"
+  },
+  {
+    "id": 248,
+    "category": "daily",
+    "question": "How can I improve safety and privacy while using safe downloads?"
+  },
+  {
+    "id": 249,
+    "category": "daily",
+    "question": "Why do people get different results when using safe downloads?"
+  },
+  {
+    "id": 250,
+    "category": "daily",
+    "question": "What practical steps can improve my experience with safe downloads?"
+  },
+  {
+    "id": 251,
+    "category": "ambiguous",
+    "question": "How can I improve tracking accuracy?"
+  },
+  {
+    "id": 252,
+    "category": "ambiguous",
+    "question": "Why is my system drifting over time?"
+  },
+  {
+    "id": 253,
+    "category": "ambiguous",
+    "question": "How do I reduce latency?"
+  },
+  {
+    "id": 254,
+    "category": "ambiguous",
+    "question": "What is the best way to reach my destination?"
+  },
+  {
+    "id": 255,
+    "category": "ambiguous",
+    "question": "How can I improve mapping reliability?"
+  },
+  {
+    "id": 256,
+    "category": "ambiguous",
+    "question": "Why does my navigation fail after an update?"
+  },
+  {
+    "id": 257,
+    "category": "ambiguous",
+    "question": "How can I detect fake signals?"
+  },
+  {
+    "id": 258,
+    "category": "ambiguous",
+    "question": "What should I do when localization is wrong?"
+  },
+  {
+    "id": 259,
+    "category": "ambiguous",
+    "question": "How do I choose the best sensor?"
+  },
+  {
+    "id": 260,
+    "category": "ambiguous",
+    "question": "Why does the assistant give wrong context?"
+  },
+  {
+    "id": 261,
+    "category": "ambiguous",
+    "question": "How can I reduce noise in my system?"
+  },
+  {
+    "id": 262,
+    "category": "ambiguous",
+    "question": "Why does my app show unstable position?"
+  },
+  {
+    "id": 263,
+    "category": "ambiguous",
+    "question": "How do I recover after losing the map?"
+  },
+  {
+    "id": 264,
+    "category": "ambiguous",
+    "question": "What should I check when the route looks wrong?"
+  },
+  {
+    "id": 265,
+    "category": "ambiguous",
+    "question": "How can I make the system more reliable?"
+  },
+  {
+    "id": 266,
+    "category": "ambiguous",
+    "question": "Why does my model behave differently in real use?"
+  },
+  {
+    "id": 267,
+    "category": "ambiguous",
+    "question": "How can I improve response quality?"
+  },
+  {
+    "id": 268,
+    "category": "ambiguous",
+    "question": "What should I do if the output is inconsistent?"
+  },
+  {
+    "id": 269,
+    "category": "ambiguous",
+    "question": "How can I avoid wrong recommendations?"
+  },
+  {
+    "id": 270,
+    "category": "ambiguous",
+    "question": "How should I evaluate performance?"
+  },
+  {
+    "id": 271,
+    "category": "ambiguous",
+    "question": "How can I improve tracking accuracy?"
+  },
+  {
+    "id": 272,
+    "category": "ambiguous",
+    "question": "Why is my system drifting over time?"
+  },
+  {
+    "id": 273,
+    "category": "ambiguous",
+    "question": "How do I reduce latency?"
+  },
+  {
+    "id": 274,
+    "category": "ambiguous",
+    "question": "What is the best way to reach my destination?"
+  },
+  {
+    "id": 275,
+    "category": "ambiguous",
+    "question": "How can I improve mapping reliability?"
+  },
+  {
+    "id": 276,
+    "category": "ambiguous",
+    "question": "Why does my navigation fail after an update?"
+  },
+  {
+    "id": 277,
+    "category": "ambiguous",
+    "question": "How can I detect fake signals?"
+  },
+  {
+    "id": 278,
+    "category": "ambiguous",
+    "question": "What should I do when localization is wrong?"
+  },
+  {
+    "id": 279,
+    "category": "ambiguous",
+    "question": "How do I choose the best sensor?"
+  },
+  {
+    "id": 280,
+    "category": "ambiguous",
+    "question": "Why does the assistant give wrong context?"
+  },
+  {
+    "id": 281,
+    "category": "ambiguous",
+    "question": "How can I reduce noise in my system?"
+  },
+  {
+    "id": 282,
+    "category": "ambiguous",
+    "question": "Why does my app show unstable position?"
+  },
+  {
+    "id": 283,
+    "category": "ambiguous",
+    "question": "How do I recover after losing the map?"
+  },
+  {
+    "id": 284,
+    "category": "ambiguous",
+    "question": "What should I check when the route looks wrong?"
+  },
+  {
+    "id": 285,
+    "category": "ambiguous",
+    "question": "How can I make the system more reliable?"
+  },
+  {
+    "id": 286,
+    "category": "ambiguous",
+    "question": "Why does my model behave differently in real use?"
+  },
+  {
+    "id": 287,
+    "category": "ambiguous",
+    "question": "How can I improve response quality?"
+  },
+  {
+    "id": 288,
+    "category": "ambiguous",
+    "question": "What should I do if the output is inconsistent?"
+  },
+  {
+    "id": 289,
+    "category": "ambiguous",
+    "question": "How can I avoid wrong recommendations?"
+  },
+  {
+    "id": 290,
+    "category": "ambiguous",
+    "question": "How should I evaluate performance?"
+  },
+  {
+    "id": 291,
+    "category": "ambiguous",
+    "question": "How can I improve tracking accuracy?"
+  },
+  {
+    "id": 292,
+    "category": "ambiguous",
+    "question": "Why is my system drifting over time?"
+  },
+  {
+    "id": 293,
+    "category": "ambiguous",
+    "question": "How do I reduce latency?"
+  },
+  {
+    "id": 294,
+    "category": "ambiguous",
+    "question": "What is the best way to reach my destination?"
+  },
+  {
+    "id": 295,
+    "category": "ambiguous",
+    "question": "How can I improve mapping reliability?"
+  },
+  {
+    "id": 296,
+    "category": "ambiguous",
+    "question": "Why does my navigation fail after an update?"
+  },
+  {
+    "id": 297,
+    "category": "ambiguous",
+    "question": "How can I detect fake signals?"
+  },
+  {
+    "id": 298,
+    "category": "ambiguous",
+    "question": "What should I do when localization is wrong?"
+  },
+  {
+    "id": 299,
+    "category": "ambiguous",
+    "question": "How do I choose the best sensor?"
+  },
+  {
+    "id": 300,
+    "category": "ambiguous",
+    "question": "Why does the assistant give wrong context?"
+  },
+  {
+    "id": 301,
+    "category": "ambiguous",
+    "question": "How can I reduce noise in my system?"
+  },
+  {
+    "id": 302,
+    "category": "ambiguous",
+    "question": "Why does my app show unstable position?"
+  },
+  {
+    "id": 303,
+    "category": "ambiguous",
+    "question": "How do I recover after losing the map?"
+  },
+  {
+    "id": 304,
+    "category": "ambiguous",
+    "question": "What should I check when the route looks wrong?"
+  },
+  {
+    "id": 305,
+    "category": "ambiguous",
+    "question": "How can I make the system more reliable?"
+  },
+  {
+    "id": 306,
+    "category": "ambiguous",
+    "question": "Why does my model behave differently in real use?"
+  },
+  {
+    "id": 307,
+    "category": "ambiguous",
+    "question": "How can I improve response quality?"
+  },
+  {
+    "id": 308,
+    "category": "ambiguous",
+    "question": "What should I do if the output is inconsistent?"
+  },
+  {
+    "id": 309,
+    "category": "ambiguous",
+    "question": "How can I avoid wrong recommendations?"
+  },
+  {
+    "id": 310,
+    "category": "ambiguous",
+    "question": "How should I evaluate performance?"
+  },
+  {
+    "id": 311,
+    "category": "ambiguous",
+    "question": "How can I improve tracking accuracy?"
+  },
+  {
+    "id": 312,
+    "category": "ambiguous",
+    "question": "Why is my system drifting over time?"
+  },
+  {
+    "id": 313,
+    "category": "ambiguous",
+    "question": "How do I reduce latency?"
+  },
+  {
+    "id": 314,
+    "category": "ambiguous",
+    "question": "What is the best way to reach my destination?"
+  },
+  {
+    "id": 315,
+    "category": "ambiguous",
+    "question": "How can I improve mapping reliability?"
+  },
+  {
+    "id": 316,
+    "category": "ambiguous",
+    "question": "Why does my navigation fail after an update?"
+  },
+  {
+    "id": 317,
+    "category": "ambiguous",
+    "question": "How can I detect fake signals?"
+  },
+  {
+    "id": 318,
+    "category": "ambiguous",
+    "question": "What should I do when localization is wrong?"
+  },
+  {
+    "id": 319,
+    "category": "ambiguous",
+    "question": "How do I choose the best sensor?"
+  },
+  {
+    "id": 320,
+    "category": "ambiguous",
+    "question": "Why does the assistant give wrong context?"
+  },
+  {
+    "id": 321,
+    "category": "ambiguous",
+    "question": "How can I reduce noise in my system?"
+  },
+  {
+    "id": 322,
+    "category": "ambiguous",
+    "question": "Why does my app show unstable position?"
+  },
+  {
+    "id": 323,
+    "category": "ambiguous",
+    "question": "How do I recover after losing the map?"
+  },
+  {
+    "id": 324,
+    "category": "ambiguous",
+    "question": "What should I check when the route looks wrong?"
+  },
+  {
+    "id": 325,
+    "category": "ambiguous",
+    "question": "How can I make the system more reliable?"
+  },
+  {
+    "id": 326,
+    "category": "ambiguous",
+    "question": "Why does my model behave differently in real use?"
+  },
+  {
+    "id": 327,
+    "category": "ambiguous",
+    "question": "How can I improve response quality?"
+  },
+  {
+    "id": 328,
+    "category": "ambiguous",
+    "question": "What should I do if the output is inconsistent?"
+  },
+  {
+    "id": 329,
+    "category": "ambiguous",
+    "question": "How can I avoid wrong recommendations?"
+  },
+  {
+    "id": 330,
+    "category": "ambiguous",
+    "question": "How should I evaluate performance?"
+  },
+  {
+    "id": 331,
+    "category": "ambiguous",
+    "question": "How can I improve tracking accuracy?"
+  },
+  {
+    "id": 332,
+    "category": "ambiguous",
+    "question": "Why is my system drifting over time?"
+  },
+  {
+    "id": 333,
+    "category": "ambiguous",
+    "question": "How do I reduce latency?"
+  },
+  {
+    "id": 334,
+    "category": "ambiguous",
+    "question": "What is the best way to reach my destination?"
+  },
+  {
+    "id": 335,
+    "category": "ambiguous",
+    "question": "How can I improve mapping reliability?"
+  },
+  {
+    "id": 336,
+    "category": "ambiguous",
+    "question": "Why does my navigation fail after an update?"
+  },
+  {
+    "id": 337,
+    "category": "ambiguous",
+    "question": "How can I detect fake signals?"
+  },
+  {
+    "id": 338,
+    "category": "ambiguous",
+    "question": "What should I do when localization is wrong?"
+  },
+  {
+    "id": 339,
+    "category": "ambiguous",
+    "question": "How do I choose the best sensor?"
+  },
+  {
+    "id": 340,
+    "category": "ambiguous",
+    "question": "Why does the assistant give wrong context?"
+  },
+  {
+    "id": 341,
+    "category": "ambiguous",
+    "question": "How can I reduce noise in my system?"
+  },
+  {
+    "id": 342,
+    "category": "ambiguous",
+    "question": "Why does my app show unstable position?"
+  },
+  {
+    "id": 343,
+    "category": "ambiguous",
+    "question": "How do I recover after losing the map?"
+  },
+  {
+    "id": 344,
+    "category": "ambiguous",
+    "question": "What should I check when the route looks wrong?"
+  },
+  {
+    "id": 345,
+    "category": "ambiguous",
+    "question": "How can I make the system more reliable?"
+  },
+  {
+    "id": 346,
+    "category": "ambiguous",
+    "question": "Why does my model behave differently in real use?"
+  },
+  {
+    "id": 347,
+    "category": "ambiguous",
+    "question": "How can I improve response quality?"
+  },
+  {
+    "id": 348,
+    "category": "ambiguous",
+    "question": "What should I do if the output is inconsistent?"
+  },
+  {
+    "id": 349,
+    "category": "ambiguous",
+    "question": "How can I avoid wrong recommendations?"
+  },
+  {
+    "id": 350,
+    "category": "ambiguous",
+    "question": "How should I evaluate performance?"
+  },
+  {
+    "id": 351,
+    "category": "mixed",
+    "question": "Earlier we discussed SLAM. Now explain ride-sharing apps without mixing the two domains."
+  },
+  {
+    "id": 352,
+    "category": "mixed",
+    "question": "Compare SLAM and ride-sharing apps while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 353,
+    "category": "mixed",
+    "question": "Can ride-sharing apps directly improve SLAM? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 354,
+    "category": "mixed",
+    "question": "After discussing SLAM, answer a beginner question about ride-sharing apps without contamination."
+  },
+  {
+    "id": 355,
+    "category": "mixed",
+    "question": "Earlier we discussed SLAM. Now explain food delivery apps without mixing the two domains."
+  },
+  {
+    "id": 356,
+    "category": "mixed",
+    "question": "Compare SLAM and food delivery apps while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 357,
+    "category": "mixed",
+    "question": "Can food delivery apps directly improve SLAM? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 358,
+    "category": "mixed",
+    "question": "After discussing SLAM, answer a beginner question about food delivery apps without contamination."
+  },
+  {
+    "id": 359,
+    "category": "mixed",
+    "question": "Earlier we discussed SLAM. Now explain screen time without mixing the two domains."
+  },
+  {
+    "id": 360,
+    "category": "mixed",
+    "question": "Compare SLAM and screen time while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 361,
+    "category": "mixed",
+    "question": "Can screen time directly improve SLAM? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 362,
+    "category": "mixed",
+    "question": "After discussing SLAM, answer a beginner question about screen time without contamination."
+  },
+  {
+    "id": 363,
+    "category": "mixed",
+    "question": "Earlier we discussed SLAM. Now explain mobile GPS without mixing the two domains."
+  },
+  {
+    "id": 364,
+    "category": "mixed",
+    "question": "Compare SLAM and mobile GPS while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 365,
+    "category": "mixed",
+    "question": "Can mobile GPS directly improve SLAM? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 366,
+    "category": "mixed",
+    "question": "After discussing SLAM, answer a beginner question about mobile GPS without contamination."
+  },
+  {
+    "id": 367,
+    "category": "mixed",
+    "question": "Earlier we discussed SLAM. Now explain online privacy without mixing the two domains."
+  },
+  {
+    "id": 368,
+    "category": "mixed",
+    "question": "Compare SLAM and online privacy while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 369,
+    "category": "mixed",
+    "question": "Can online privacy directly improve SLAM? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 370,
+    "category": "mixed",
+    "question": "After discussing SLAM, answer a beginner question about online privacy without contamination."
+  },
+  {
+    "id": 371,
+    "category": "mixed",
+    "question": "Earlier we discussed SLAM. Now explain digital notes without mixing the two domains."
+  },
+  {
+    "id": 372,
+    "category": "mixed",
+    "question": "Compare SLAM and digital notes while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 373,
+    "category": "mixed",
+    "question": "Can digital notes directly improve SLAM? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 374,
+    "category": "mixed",
+    "question": "After discussing SLAM, answer a beginner question about digital notes without contamination."
+  },
+  {
+    "id": 375,
+    "category": "mixed",
+    "question": "Earlier we discussed SLAM. Now explain public Wi-Fi without mixing the two domains."
+  },
+  {
+    "id": 376,
+    "category": "mixed",
+    "question": "Compare SLAM and public Wi-Fi while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 377,
+    "category": "mixed",
+    "question": "Can public Wi-Fi directly improve SLAM? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 378,
+    "category": "mixed",
+    "question": "After discussing SLAM, answer a beginner question about public Wi-Fi without contamination."
+  },
+  {
+    "id": 379,
+    "category": "mixed",
+    "question": "Earlier we discussed SLAM. Now explain cloud storage without mixing the two domains."
+  },
+  {
+    "id": 380,
+    "category": "mixed",
+    "question": "Compare SLAM and cloud storage while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 381,
+    "category": "mixed",
+    "question": "Can cloud storage directly improve SLAM? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 382,
+    "category": "mixed",
+    "question": "After discussing SLAM, answer a beginner question about cloud storage without contamination."
+  },
+  {
+    "id": 383,
+    "category": "mixed",
+    "question": "Earlier we discussed SLAM. Now explain phone battery drain without mixing the two domains."
+  },
+  {
+    "id": 384,
+    "category": "mixed",
+    "question": "Compare SLAM and phone battery drain while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 385,
+    "category": "mixed",
+    "question": "Can phone battery drain directly improve SLAM? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 386,
+    "category": "mixed",
+    "question": "After discussing SLAM, answer a beginner question about phone battery drain without contamination."
+  },
+  {
+    "id": 387,
+    "category": "mixed",
+    "question": "Earlier we discussed SLAM. Now explain navigation apps without mixing the two domains."
+  },
+  {
+    "id": 388,
+    "category": "mixed",
+    "question": "Compare SLAM and navigation apps while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 389,
+    "category": "mixed",
+    "question": "Can navigation apps directly improve SLAM? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 390,
+    "category": "mixed",
+    "question": "After discussing SLAM, answer a beginner question about navigation apps without contamination."
+  },
+  {
+    "id": 391,
+    "category": "mixed",
+    "question": "Earlier we discussed LiDAR. Now explain ride-sharing apps without mixing the two domains."
+  },
+  {
+    "id": 392,
+    "category": "mixed",
+    "question": "Compare LiDAR and ride-sharing apps while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 393,
+    "category": "mixed",
+    "question": "Can ride-sharing apps directly improve LiDAR? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 394,
+    "category": "mixed",
+    "question": "After discussing LiDAR, answer a beginner question about ride-sharing apps without contamination."
+  },
+  {
+    "id": 395,
+    "category": "mixed",
+    "question": "Earlier we discussed LiDAR. Now explain food delivery apps without mixing the two domains."
+  },
+  {
+    "id": 396,
+    "category": "mixed",
+    "question": "Compare LiDAR and food delivery apps while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 397,
+    "category": "mixed",
+    "question": "Can food delivery apps directly improve LiDAR? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 398,
+    "category": "mixed",
+    "question": "After discussing LiDAR, answer a beginner question about food delivery apps without contamination."
+  },
+  {
+    "id": 399,
+    "category": "mixed",
+    "question": "Earlier we discussed LiDAR. Now explain screen time without mixing the two domains."
+  },
+  {
+    "id": 400,
+    "category": "mixed",
+    "question": "Compare LiDAR and screen time while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 401,
+    "category": "mixed",
+    "question": "Can screen time directly improve LiDAR? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 402,
+    "category": "mixed",
+    "question": "After discussing LiDAR, answer a beginner question about screen time without contamination."
+  },
+  {
+    "id": 403,
+    "category": "mixed",
+    "question": "Earlier we discussed LiDAR. Now explain mobile GPS without mixing the two domains."
+  },
+  {
+    "id": 404,
+    "category": "mixed",
+    "question": "Compare LiDAR and mobile GPS while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 405,
+    "category": "mixed",
+    "question": "Can mobile GPS directly improve LiDAR? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 406,
+    "category": "mixed",
+    "question": "After discussing LiDAR, answer a beginner question about mobile GPS without contamination."
+  },
+  {
+    "id": 407,
+    "category": "mixed",
+    "question": "Earlier we discussed LiDAR. Now explain online privacy without mixing the two domains."
+  },
+  {
+    "id": 408,
+    "category": "mixed",
+    "question": "Compare LiDAR and online privacy while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 409,
+    "category": "mixed",
+    "question": "Can online privacy directly improve LiDAR? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 410,
+    "category": "mixed",
+    "question": "After discussing LiDAR, answer a beginner question about online privacy without contamination."
+  },
+  {
+    "id": 411,
+    "category": "mixed",
+    "question": "Earlier we discussed LiDAR. Now explain digital notes without mixing the two domains."
+  },
+  {
+    "id": 412,
+    "category": "mixed",
+    "question": "Compare LiDAR and digital notes while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 413,
+    "category": "mixed",
+    "question": "Can digital notes directly improve LiDAR? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 414,
+    "category": "mixed",
+    "question": "After discussing LiDAR, answer a beginner question about digital notes without contamination."
+  },
+  {
+    "id": 415,
+    "category": "mixed",
+    "question": "Earlier we discussed LiDAR. Now explain public Wi-Fi without mixing the two domains."
+  },
+  {
+    "id": 416,
+    "category": "mixed",
+    "question": "Compare LiDAR and public Wi-Fi while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 417,
+    "category": "mixed",
+    "question": "Can public Wi-Fi directly improve LiDAR? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 418,
+    "category": "mixed",
+    "question": "After discussing LiDAR, answer a beginner question about public Wi-Fi without contamination."
+  },
+  {
+    "id": 419,
+    "category": "mixed",
+    "question": "Earlier we discussed LiDAR. Now explain cloud storage without mixing the two domains."
+  },
+  {
+    "id": 420,
+    "category": "mixed",
+    "question": "Compare LiDAR and cloud storage while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 421,
+    "category": "mixed",
+    "question": "Can cloud storage directly improve LiDAR? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 422,
+    "category": "mixed",
+    "question": "After discussing LiDAR, answer a beginner question about cloud storage without contamination."
+  },
+  {
+    "id": 423,
+    "category": "mixed",
+    "question": "Earlier we discussed LiDAR. Now explain phone battery drain without mixing the two domains."
+  },
+  {
+    "id": 424,
+    "category": "mixed",
+    "question": "Compare LiDAR and phone battery drain while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 425,
+    "category": "mixed",
+    "question": "Can phone battery drain directly improve LiDAR? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 426,
+    "category": "mixed",
+    "question": "After discussing LiDAR, answer a beginner question about phone battery drain without contamination."
+  },
+  {
+    "id": 427,
+    "category": "mixed",
+    "question": "Earlier we discussed LiDAR. Now explain navigation apps without mixing the two domains."
+  },
+  {
+    "id": 428,
+    "category": "mixed",
+    "question": "Compare LiDAR and navigation apps while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 429,
+    "category": "mixed",
+    "question": "Can navigation apps directly improve LiDAR? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 430,
+    "category": "mixed",
+    "question": "After discussing LiDAR, answer a beginner question about navigation apps without contamination."
+  },
+  {
+    "id": 431,
+    "category": "mixed",
+    "question": "Earlier we discussed robot localization. Now explain ride-sharing apps without mixing the two domains."
+  },
+  {
+    "id": 432,
+    "category": "mixed",
+    "question": "Compare robot localization and ride-sharing apps while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 433,
+    "category": "mixed",
+    "question": "Can ride-sharing apps directly improve robot localization? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 434,
+    "category": "mixed",
+    "question": "After discussing robot localization, answer a beginner question about ride-sharing apps without contamination."
+  },
+  {
+    "id": 435,
+    "category": "mixed",
+    "question": "Earlier we discussed robot localization. Now explain food delivery apps without mixing the two domains."
+  },
+  {
+    "id": 436,
+    "category": "mixed",
+    "question": "Compare robot localization and food delivery apps while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 437,
+    "category": "mixed",
+    "question": "Can food delivery apps directly improve robot localization? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 438,
+    "category": "mixed",
+    "question": "After discussing robot localization, answer a beginner question about food delivery apps without contamination."
+  },
+  {
+    "id": 439,
+    "category": "mixed",
+    "question": "Earlier we discussed robot localization. Now explain screen time without mixing the two domains."
+  },
+  {
+    "id": 440,
+    "category": "mixed",
+    "question": "Compare robot localization and screen time while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 441,
+    "category": "mixed",
+    "question": "Can screen time directly improve robot localization? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 442,
+    "category": "mixed",
+    "question": "After discussing robot localization, answer a beginner question about screen time without contamination."
+  },
+  {
+    "id": 443,
+    "category": "mixed",
+    "question": "Earlier we discussed robot localization. Now explain mobile GPS without mixing the two domains."
+  },
+  {
+    "id": 444,
+    "category": "mixed",
+    "question": "Compare robot localization and mobile GPS while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 445,
+    "category": "mixed",
+    "question": "Can mobile GPS directly improve robot localization? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 446,
+    "category": "mixed",
+    "question": "After discussing robot localization, answer a beginner question about mobile GPS without contamination."
+  },
+  {
+    "id": 447,
+    "category": "mixed",
+    "question": "Earlier we discussed robot localization. Now explain online privacy without mixing the two domains."
+  },
+  {
+    "id": 448,
+    "category": "mixed",
+    "question": "Compare robot localization and online privacy while clearly separating robotics and daily-life meanings."
+  },
+  {
+    "id": 449,
+    "category": "mixed",
+    "question": "Can online privacy directly improve robot localization? Explain whether the relationship is direct, indirect, or unsupported."
+  },
+  {
+    "id": 450,
+    "category": "mixed",
+    "question": "After discussing robot localization, answer a beginner question about online privacy without contamination."
+  },
+  {
+    "id": 451,
+    "category": "unverifiable",
+    "question": "Explain Quantum Mesh Localization."
+  },
+  {
+    "id": 452,
+    "category": "unverifiable",
+    "question": "What is the role of Quantum Mesh Localization in robotics?"
+  },
+  {
+    "id": 453,
+    "category": "unverifiable",
+    "question": "Explain Recursive HyperSLAM."
+  },
+  {
+    "id": 454,
+    "category": "unverifiable",
+    "question": "What is the role of Recursive HyperSLAM in robotics?"
+  },
+  {
+    "id": 455,
+    "category": "unverifiable",
+    "question": "Explain Adaptive Cosmic Navigation Networks."
+  },
+  {
+    "id": 456,
+    "category": "unverifiable",
+    "question": "What is the role of Adaptive Cosmic Navigation Networks in robotics?"
+  },
+  {
+    "id": 457,
+    "category": "unverifiable",
+    "question": "Explain Temporal Flux Mapping."
+  },
+  {
+    "id": 458,
+    "category": "unverifiable",
+    "question": "What is the role of Temporal Flux Mapping in robotics?"
+  },
+  {
+    "id": 459,
+    "category": "unverifiable",
+    "question": "Explain NeuroFusion-X Autonomous Planning."
+  },
+  {
+    "id": 460,
+    "category": "unverifiable",
+    "question": "What is the role of NeuroFusion-X Autonomous Planning in robotics?"
+  },
+  {
+    "id": 461,
+    "category": "unverifiable",
+    "question": "Explain Quantum Odometry Fusion."
+  },
+  {
+    "id": 462,
+    "category": "unverifiable",
+    "question": "What is the role of Quantum Odometry Fusion in robotics?"
+  },
+  {
+    "id": 463,
+    "category": "unverifiable",
+    "question": "Explain Neural Cosmic SLAM."
+  },
+  {
+    "id": 464,
+    "category": "unverifiable",
+    "question": "What is the role of Neural Cosmic SLAM in robotics?"
+  },
+  {
+    "id": 465,
+    "category": "unverifiable",
+    "question": "Explain HyperGraph Emotion Localization."
+  },
+  {
+    "id": 466,
+    "category": "unverifiable",
+    "question": "What is the role of HyperGraph Emotion Localization in robotics?"
+  },
+  {
+    "id": 467,
+    "category": "unverifiable",
+    "question": "Explain Zero-Gravity Particle Mapping."
+  },
+  {
+    "id": 468,
+    "category": "unverifiable",
+    "question": "What is the role of Zero-Gravity Particle Mapping in robotics?"
+  },
+  {
+    "id": 469,
+    "category": "unverifiable",
+    "question": "Explain Astro-LiDAR Drift Correction."
+  },
+  {
+    "id": 470,
+    "category": "unverifiable",
+    "question": "What is the role of Astro-LiDAR Drift Correction in robotics?"
+  },
+  {
+    "id": 471,
+    "category": "unverifiable",
+    "question": "Explain Recursive Meta-Robot Awareness."
+  },
+  {
+    "id": 472,
+    "category": "unverifiable",
+    "question": "What is the role of Recursive Meta-Robot Awareness in robotics?"
+  },
+  {
+    "id": 473,
+    "category": "unverifiable",
+    "question": "Explain Temporal Sensor Dream Fusion."
+  },
+  {
+    "id": 474,
+    "category": "unverifiable",
+    "question": "What is the role of Temporal Sensor Dream Fusion in robotics?"
+  },
+  {
+    "id": 475,
+    "category": "unverifiable",
+    "question": "Explain Synthetic Intuition Navigation."
+  },
+  {
+    "id": 476,
+    "category": "unverifiable",
+    "question": "What is the role of Synthetic Intuition Navigation in robotics?"
+  },
+  {
+    "id": 477,
+    "category": "unverifiable",
+    "question": "Explain Self-Healing Quantum Costmaps."
+  },
+  {
+    "id": 478,
+    "category": "unverifiable",
+    "question": "What is the role of Self-Healing Quantum Costmaps in robotics?"
+  },
+  {
+    "id": 479,
+    "category": "unverifiable",
+    "question": "Explain Bio-Spiritual Robot Localization."
+  },
+  {
+    "id": 480,
+    "category": "unverifiable",
+    "question": "What is the role of Bio-Spiritual Robot Localization in robotics?"
+  },
+  {
+    "id": 481,
+    "category": "unverifiable",
+    "question": "Explain Emotion-Aware SLAM Matrix."
+  },
+  {
+    "id": 482,
+    "category": "unverifiable",
+    "question": "What is the role of Emotion-Aware SLAM Matrix in robotics?"
+  },
+  {
+    "id": 483,
+    "category": "unverifiable",
+    "question": "Explain DreamNet Path Optimizer."
+  },
+  {
+    "id": 484,
+    "category": "unverifiable",
+    "question": "What is the role of DreamNet Path Optimizer in robotics?"
+  },
+  {
+    "id": 485,
+    "category": "unverifiable",
+    "question": "Explain Cosmic Particle Odometry."
+  },
+  {
+    "id": 486,
+    "category": "unverifiable",
+    "question": "What is the role of Cosmic Particle Odometry in robotics?"
+  },
+  {
+    "id": 487,
+    "category": "unverifiable",
+    "question": "Explain Quantum Semantic Wheel Fusion."
+  },
+  {
+    "id": 488,
+    "category": "unverifiable",
+    "question": "What is the role of Quantum Semantic Wheel Fusion in robotics?"
+  },
+  {
+    "id": 489,
+    "category": "unverifiable",
+    "question": "Explain HyperReality Navigation Stack."
+  },
+  {
+    "id": 490,
+    "category": "unverifiable",
+    "question": "What is the role of HyperReality Navigation Stack in robotics?"
+  },
+  {
+    "id": 491,
+    "category": "unverifiable",
+    "question": "Explain NeuroMagnetic ROS Planner."
+  },
+  {
+    "id": 492,
+    "category": "unverifiable",
+    "question": "What is the role of NeuroMagnetic ROS Planner in robotics?"
+  },
+  {
+    "id": 493,
+    "category": "unverifiable",
+    "question": "Explain Time-Reversal Localization Filter."
+  },
+  {
+    "id": 494,
+    "category": "unverifiable",
+    "question": "What is the role of Time-Reversal Localization Filter in robotics?"
+  },
+  {
+    "id": 495,
+    "category": "unverifiable",
+    "question": "Explain Self-Aware Occupancy Grid."
+  },
+  {
+    "id": 496,
+    "category": "unverifiable",
+    "question": "What is the role of Self-Aware Occupancy Grid in robotics?"
+  },
+  {
+    "id": 497,
+    "category": "unverifiable",
+    "question": "Explain AstroVision SLAM Engine."
+  },
+  {
+    "id": 498,
+    "category": "unverifiable",
+    "question": "What is the role of AstroVision SLAM Engine in robotics?"
+  },
+  {
+    "id": 499,
+    "category": "unverifiable",
+    "question": "Explain Recursive Intuition Mapping."
+  },
+  {
+    "id": 500,
+    "category": "unverifiable",
+    "question": "What is the role of Recursive Intuition Mapping in robotics?"
+  }
+]

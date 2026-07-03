@@ -1,0 +1,452 @@
+[
+  {
+    "id": "mem-01",
+    "suite": "memory_recall",
+    "attribute": "name",
+    "save": "My name is Asha.",
+    "recall": "What is my name?",
+    "expected": "Asha",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-02",
+    "suite": "memory_recall",
+    "attribute": "city",
+    "save": "Remember that I live in Chennai.",
+    "recall": "Where do I live?",
+    "expected": "Chennai",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-03",
+    "suite": "memory_recall",
+    "attribute": "favorite_app",
+    "save": "My favorite app is Zomato.",
+    "recall": "What is my favorite app?",
+    "expected": "Zomato",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-04",
+    "suite": "memory_recall",
+    "attribute": "favorite_robot",
+    "save": "My favorite robot is Nao.",
+    "recall": "Which robot do I like?",
+    "expected": "Nao",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-05",
+    "suite": "memory_recall",
+    "attribute": "field_of_study",
+    "save": "Remember that I study embedded systems.",
+    "recall": "What do I study?",
+    "expected": "embedded systems",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-06",
+    "suite": "memory_recall",
+    "attribute": "preferred_language",
+    "save": "My preferred language is Malayalam.",
+    "recall": "What is my preferred language?",
+    "expected": "Malayalam",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-07",
+    "suite": "memory_recall",
+    "attribute": "operating_system",
+    "save": "My operating system is Linux Mint.",
+    "recall": "What is my operating system?",
+    "expected": "Linux Mint",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-08",
+    "suite": "memory_recall",
+    "attribute": "name",
+    "save": "My name is Arun.",
+    "recall": "What is my name?",
+    "expected": "Arun",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-09",
+    "suite": "memory_recall",
+    "attribute": "city",
+    "save": "Remember that I live in Chennai.",
+    "recall": "Where do I live?",
+    "expected": "Chennai",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-10",
+    "suite": "memory_recall",
+    "attribute": "favorite_app",
+    "save": "My favorite app is Zomato.",
+    "recall": "What is my favorite app?",
+    "expected": "Zomato",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-11",
+    "suite": "memory_recall",
+    "attribute": "favorite_robot",
+    "save": "My favorite robot is Nao.",
+    "recall": "Which robot do I like?",
+    "expected": "Nao",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-12",
+    "suite": "memory_recall",
+    "attribute": "field_of_study",
+    "save": "Remember that I study embedded systems.",
+    "recall": "What do I study?",
+    "expected": "embedded systems",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-13",
+    "suite": "memory_recall",
+    "attribute": "preferred_language",
+    "save": "My preferred language is Malayalam.",
+    "recall": "What is my preferred language?",
+    "expected": "Malayalam",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-14",
+    "suite": "memory_recall",
+    "attribute": "operating_system",
+    "save": "My operating system is Linux Mint.",
+    "recall": "What is my operating system?",
+    "expected": "Linux Mint",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-15",
+    "suite": "memory_recall",
+    "attribute": "name",
+    "save": "My name is Isha.",
+    "recall": "What is my name?",
+    "expected": "Isha",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-16",
+    "suite": "memory_recall",
+    "attribute": "city",
+    "save": "Remember that I live in Chennai.",
+    "recall": "Where do I live?",
+    "expected": "Chennai",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-17",
+    "suite": "memory_recall",
+    "attribute": "favorite_app",
+    "save": "My favorite app is Zomato.",
+    "recall": "What is my favorite app?",
+    "expected": "Zomato",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-18",
+    "suite": "memory_recall",
+    "attribute": "favorite_robot",
+    "save": "My favorite robot is Nao.",
+    "recall": "Which robot do I like?",
+    "expected": "Nao",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-19",
+    "suite": "memory_recall",
+    "attribute": "field_of_study",
+    "save": "Remember that I study embedded systems.",
+    "recall": "What do I study?",
+    "expected": "embedded systems",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-20",
+    "suite": "memory_recall",
+    "attribute": "preferred_language",
+    "save": "My preferred language is Malayalam.",
+    "recall": "What is my preferred language?",
+    "expected": "Malayalam",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-21",
+    "suite": "memory_recall",
+    "attribute": "operating_system",
+    "save": "My operating system is Linux Mint.",
+    "recall": "What is my operating system?",
+    "expected": "Linux Mint",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-22",
+    "suite": "memory_recall",
+    "attribute": "name",
+    "save": "My name is Dev.",
+    "recall": "What is my name?",
+    "expected": "Dev",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-23",
+    "suite": "memory_recall",
+    "attribute": "city",
+    "save": "Remember that I live in Chennai.",
+    "recall": "Where do I live?",
+    "expected": "Chennai",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-24",
+    "suite": "memory_recall",
+    "attribute": "favorite_app",
+    "save": "My favorite app is Zomato.",
+    "recall": "What is my favorite app?",
+    "expected": "Zomato",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-25",
+    "suite": "memory_recall",
+    "attribute": "favorite_robot",
+    "save": "My favorite robot is Nao.",
+    "recall": "Which robot do I like?",
+    "expected": "Nao",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-26",
+    "suite": "memory_recall",
+    "attribute": "field_of_study",
+    "save": "Remember that I study embedded systems.",
+    "recall": "What do I study?",
+    "expected": "embedded systems",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-27",
+    "suite": "memory_recall",
+    "attribute": "preferred_language",
+    "save": "My preferred language is Malayalam.",
+    "recall": "What is my preferred language?",
+    "expected": "Malayalam",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-28",
+    "suite": "memory_recall",
+    "attribute": "operating_system",
+    "save": "My operating system is Linux Mint.",
+    "recall": "What is my operating system?",
+    "expected": "Linux Mint",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-29",
+    "suite": "memory_recall",
+    "attribute": "name",
+    "save": "My name is Nila.",
+    "recall": "What is my name?",
+    "expected": "Nila",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-30",
+    "suite": "memory_recall",
+    "attribute": "city",
+    "save": "Remember that I live in Chennai.",
+    "recall": "Where do I live?",
+    "expected": "Chennai",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-31",
+    "suite": "memory_recall",
+    "attribute": "favorite_app",
+    "save": "My favorite app is Zomato.",
+    "recall": "What is my favorite app?",
+    "expected": "Zomato",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-32",
+    "suite": "memory_recall",
+    "attribute": "favorite_robot",
+    "save": "My favorite robot is Nao.",
+    "recall": "Which robot do I like?",
+    "expected": "Nao",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-33",
+    "suite": "memory_recall",
+    "attribute": "field_of_study",
+    "save": "Remember that I study embedded systems.",
+    "recall": "What do I study?",
+    "expected": "embedded systems",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-34",
+    "suite": "memory_recall",
+    "attribute": "preferred_language",
+    "save": "My preferred language is Malayalam.",
+    "recall": "What is my preferred language?",
+    "expected": "Malayalam",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-35",
+    "suite": "memory_recall",
+    "attribute": "operating_system",
+    "save": "My operating system is Linux Mint.",
+    "recall": "What is my operating system?",
+    "expected": "Linux Mint",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-36",
+    "suite": "memory_recall",
+    "attribute": "name",
+    "save": "My name is Kabir.",
+    "recall": "What is my name?",
+    "expected": "Kabir",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-37",
+    "suite": "memory_recall",
+    "attribute": "city",
+    "save": "Remember that I live in Chennai.",
+    "recall": "Where do I live?",
+    "expected": "Chennai",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-38",
+    "suite": "memory_recall",
+    "attribute": "favorite_app",
+    "save": "My favorite app is Zomato.",
+    "recall": "What is my favorite app?",
+    "expected": "Zomato",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-39",
+    "suite": "memory_recall",
+    "attribute": "favorite_robot",
+    "save": "My favorite robot is Nao.",
+    "recall": "Which robot do I like?",
+    "expected": "Nao",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-40",
+    "suite": "memory_recall",
+    "attribute": "field_of_study",
+    "save": "Remember that I study embedded systems.",
+    "recall": "What do I study?",
+    "expected": "embedded systems",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-41",
+    "suite": "memory_recall",
+    "attribute": "preferred_language",
+    "save": "My preferred language is Malayalam.",
+    "recall": "What is my preferred language?",
+    "expected": "Malayalam",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-42",
+    "suite": "memory_recall",
+    "attribute": "operating_system",
+    "save": "My operating system is Linux Mint.",
+    "recall": "What is my operating system?",
+    "expected": "Linux Mint",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-43",
+    "suite": "memory_recall",
+    "attribute": "name",
+    "save": "My name is Meera.",
+    "recall": "What is my name?",
+    "expected": "Meera",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-44",
+    "suite": "memory_recall",
+    "attribute": "city",
+    "save": "Remember that I live in Chennai.",
+    "recall": "Where do I live?",
+    "expected": "Chennai",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-45",
+    "suite": "memory_recall",
+    "attribute": "favorite_app",
+    "save": "My favorite app is Zomato.",
+    "recall": "What is my favorite app?",
+    "expected": "Zomato",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-46",
+    "suite": "memory_recall",
+    "attribute": "favorite_robot",
+    "save": "My favorite robot is Nao.",
+    "recall": "Which robot do I like?",
+    "expected": "Nao",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-47",
+    "suite": "memory_recall",
+    "attribute": "field_of_study",
+    "save": "Remember that I study embedded systems.",
+    "recall": "What do I study?",
+    "expected": "embedded systems",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-48",
+    "suite": "memory_recall",
+    "attribute": "preferred_language",
+    "save": "My preferred language is Malayalam.",
+    "recall": "What is my preferred language?",
+    "expected": "Malayalam",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-49",
+    "suite": "memory_recall",
+    "attribute": "operating_system",
+    "save": "My operating system is Linux Mint.",
+    "recall": "What is my operating system?",
+    "expected": "Linux Mint",
+    "filler_turns": 30
+  },
+  {
+    "id": "mem-50",
+    "suite": "memory_recall",
+    "attribute": "name",
+    "save": "My name is Ravi.",
+    "recall": "What is my name?",
+    "expected": "Ravi",
+    "filler_turns": 30
+  }
+]

@@ -1,0 +1,2454 @@
+[
+  {
+    "text": "Explain SLAM",
+    "label": "robotics"
+  },
+  {
+    "text": "Explain Kalman Filter",
+    "label": "robotics"
+  },
+  {
+    "text": "Explain PID controller",
+    "label": "robotics"
+  },
+  {
+    "text": "What is robot localization?",
+    "label": "robotics"
+  },
+  {
+    "text": "Explain sensor fusion",
+    "label": "robotics"
+  },
+  {
+    "text": "Suggest food apps",
+    "label": "daily"
+  },
+  {
+    "text": "Recommend travel apps",
+    "label": "daily"
+  },
+  {
+    "text": "Give workout plan",
+    "label": "daily"
+  },
+  {
+    "text": "Suggest study tips",
+    "label": "daily"
+  },
+  {
+    "text": "My name is Rahul",
+    "label": "personal"
+  },
+  {
+    "text": "Remember I like coffee",
+    "label": "personal"
+  },
+  {
+    "text": "I prefer tea",
+    "label": "personal"
+  },
+  {
+    "text": "My hobby is coding",
+    "label": "personal"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain Kalman Filter",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain Kalman Filter and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My hobby is coding and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "What is robot localization? and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Suggest food apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and What is robot localization?",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain PID controller and Give workout plan",
+    "label": "mixed"
+  },
+  {
+    "text": "My name is Rahul and Explain SLAM",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "Remember I like coffee and Explain PID controller",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain SLAM and Suggest study tips",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and Explain sensor fusion",
+    "label": "mixed"
+  },
+  {
+    "text": "Explain sensor fusion and Recommend travel apps",
+    "label": "mixed"
+  },
+  {
+    "text": "I prefer tea and What is robot localization?",
+    "label": "mixed"
+  }
+]

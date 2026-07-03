@@ -1,0 +1,61 @@
+Control Systems Basics
+
+What is a Control System?
+A control system is a system designed to regulate the behavior of another system to achieve a desired output. Control systems are widely used in robotics to ensure accurate and stable operation.
+
+Open-Loop Control
+An open-loop control system performs actions without using feedback from the output. It does not correct errors automatically. For example, running a motor for a fixed amount of time without checking its position is open-loop control.
+
+Closed-Loop Control
+A closed-loop control system uses feedback from sensors to compare the actual output with the desired output. It continuously adjusts its actions to minimize error.
+
+Feedback
+Feedback is information about the current state of a system that is used to improve performance. Negative feedback is commonly used to stabilize robotic systems.
+
+Error
+Error is the difference between the desired setpoint and the actual output of a system. Control algorithms attempt to reduce this error.
+
+PID Controller
+PID stands for Proportional-Integral-Derivative. A PID controller combines three control actions to minimize error and improve system performance.
+
+Proportional Control (P)
+The proportional term produces an output proportional to the current error. Increasing proportional gain improves responsiveness but excessive gain may cause oscillations.
+
+Integral Control (I)
+The integral term accumulates past errors over time and helps eliminate steady-state error. Excessive integral gain can cause instability.
+
+Derivative Control (D)
+The derivative term predicts future error by measuring the rate of change of the error. It improves stability and reduces overshoot.
+
+PID Equation
+The control output of a PID controller is calculated using proportional, integral, and derivative components. The gains Kp, Ki, and Kd determine the influence of each term.
+
+Setpoint
+The setpoint is the desired value that the control system attempts to achieve, such as maintaining a specific speed or position.
+
+Overshoot
+Overshoot occurs when the system exceeds the desired setpoint before settling.
+
+Steady-State Error
+Steady-state error is the remaining error after the system has reached stable operation.
+
+Rise Time
+Rise time is the time required for the system output to move from a low value to the desired setpoint.
+
+Settling Time
+Settling time is the time required for the output to remain within an acceptable range around the setpoint.
+
+PID Tuning
+PID tuning is the process of selecting appropriate values for Kp, Ki, and Kd to achieve the desired performance.
+
+Ziegler-Nichols Method
+The Ziegler-Nichols method is a commonly used PID tuning technique based on experimentally determining controller gains.
+
+Feedforward Control
+Feedforward control anticipates disturbances and adjusts the control action before errors occur. It is often combined with feedback control.
+
+Control Stability
+A stable control system returns to equilibrium after disturbances. Instability may result in oscillations or divergence.
+
+Applications in Robotics
+Control systems are used in robotic arms, mobile robots, drones, autonomous vehicles, balancing robots, and industrial automation systems.
