@@ -11,7 +11,8 @@ from chatbot_system_c import chatbot_system_c
 
 
 ROOT_DIR = Path(__file__).resolve().parent
-BENCHMARK_PATH = ROOT_DIR / "benchmark_500.json"
+BENCHMARK_PATH = ROOT_DIR / "benchmarks" / "benchmark_500.json"
+LEGACY_BENCHMARK_PATH = ROOT_DIR / "benchmark_500.json"
 SKIPPED_PATH = ROOT_DIR / "skipped_questions.json"
 
 EXPECTED_CATEGORY_MINIMUMS = {
@@ -50,6 +51,12 @@ def load_benchmark(path):
     if not isinstance(data, list):
         raise ValueError("Expected benchmark_500.json to contain a list.")
     return data
+
+
+def resolve_benchmark_path():
+    if BENCHMARK_PATH.exists():
+        return BENCHMARK_PATH
+    return LEGACY_BENCHMARK_PATH
 
 
 def question_text(item):
@@ -171,7 +178,8 @@ def run_filter_validation_cases():
 
 
 def main():
-    benchmark = load_benchmark(BENCHMARK_PATH)
+    benchmark_path = resolve_benchmark_path()
+    benchmark = load_benchmark(benchmark_path)
     total = len(benchmark)
 
     valid_items, skipped_items = filter_valid_benchmark_questions(benchmark)
@@ -181,7 +189,7 @@ def main():
     category_counts = Counter(category(item) for item in valid_items)
 
     print("Pre-benchmark check")
-    print(f"Benchmark file: {BENCHMARK_PATH}")
+    print(f"Benchmark file: {benchmark_path}")
     print(f"Total questions: {total}")
     print(f"Valid questions: {len(valid_items)}")
     print(f"Skipped/malformed questions: {len(skipped_items)}")

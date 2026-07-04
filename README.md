@@ -13,7 +13,7 @@ committed.
   entry points.
 - `research_core.py`, `llm_runtime.py`, `intent_model.py`: shared runtime,
   retrieval, memory, and intent-classifier integration.
-- `evaluator/`, `benchmark_500.json`, `testing_combined.json`: benchmark and
+- `evaluator/`, `benchmarks/`: benchmark and
   research evaluation tools.
 - `data/intent_dataset.json`, `training/train_intent.py`: intent-classifier
   dataset and training script.

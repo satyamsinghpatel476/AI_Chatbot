@@ -37,6 +37,10 @@ testing_combined.csv
 
 # Local runtime state; completed research archives remain available.
 evaluator/results/results.json
+voice_assistant_website/chrome_profile/
+voice_assistant_website/server.pid
+voice_assistant_website/server.log
+voice_assistant_website/launcher.log
 memory/system_a_interactions.json
 memory/system_b_interactions.json
 memory/system_b_facts.json

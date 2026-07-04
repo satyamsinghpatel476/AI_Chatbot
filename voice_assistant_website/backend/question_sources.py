@@ -12,10 +12,14 @@ from .pdf_auto_questions import extract_questions_from_pdf_result
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 OFFICIAL_RESULTS_PATH = PROJECT_ROOT / "evaluator" / "results" / "results.json"
 BENCHMARK_JSON_CANDIDATES = (
+    PROJECT_ROOT / "benchmarks" / "benchmark_500.json",
     PROJECT_ROOT / "benchmark_500.json",
     PROJECT_ROOT / "evaluator" / "benchmark_500.json",
 )
-BENCHMARK_PDF_CANDIDATE = PROJECT_ROOT / "benchmark_500.pdf"
+BENCHMARK_PDF_CANDIDATES = (
+    PROJECT_ROOT / "benchmarks" / "benchmark_500.pdf",
+    PROJECT_ROOT / "benchmark_500.pdf",
+)
 
 
 def configure_project_runtime() -> None:
@@ -140,17 +144,18 @@ def load_official_benchmark_questions() -> tuple[list[dict[str, Any]], dict[str,
                 "category_counts": _category_counts(questions),
             }
 
-    if BENCHMARK_PDF_CANDIDATE.exists():
-        result = extract_questions_from_pdf_result(BENCHMARK_PDF_CANDIDATE)
-        questions = result["questions"]
-        return questions, {
-            "question_source": "official_benchmark_pdf",
-            "source_path": str(BENCHMARK_PDF_CANDIDATE),
-            "extraction_mode": "official_benchmark_pdf",
-            "loaded_message": f"Loaded {len(questions)} questions from benchmark_500.pdf",
-            "category_counts": _category_counts(questions),
-            **{key: value for key, value in result.items() if key != "questions"},
-        }
+    for path in BENCHMARK_PDF_CANDIDATES:
+        if path.exists():
+            result = extract_questions_from_pdf_result(path)
+            questions = result["questions"]
+            return questions, {
+                "question_source": "official_benchmark_pdf",
+                "source_path": str(path),
+                "extraction_mode": "official_benchmark_pdf",
+                "loaded_message": f"Loaded {len(questions)} questions from {path.name}",
+                "category_counts": _category_counts(questions),
+                **{key: value for key, value in result.items() if key != "questions"},
+            }
 
     questions = _load_evaluator_auto_questions()
     return questions, {

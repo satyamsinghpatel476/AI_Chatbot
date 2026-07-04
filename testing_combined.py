@@ -1,6 +1,15 @@
 import re
 import json
 import csv
+from pathlib import Path
+
+
+OUTPUT_DIR = Path(__file__).resolve().parent / "benchmarks"
+
+
+def output_path(filename):
+    OUTPUT_DIR.mkdir(exist_ok=True)
+    return OUTPUT_DIR / filename
 
 
 questions = [
@@ -293,11 +302,12 @@ benchmark_items = [
 ]
 
 
-def generate_pdf(path="testing_combined.pdf"):
+def generate_pdf(path=None):
     from reportlab.lib.styles import getSampleStyleSheet
     from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 
-    pdf = SimpleDocTemplate(path)
+    path = path or output_path("testing_combined.pdf")
+    pdf = SimpleDocTemplate(str(path))
     styles = getSampleStyleSheet()
 
     content = [
@@ -316,13 +326,15 @@ def generate_pdf(path="testing_combined.pdf"):
     print(f"PDF Created: {path}")
 
 
-def generate_json(path="testing_combined.json"):
+def generate_json(path=None):
+    path = path or output_path("testing_combined.json")
     with open(path, "w", encoding="utf-8") as f:
         json.dump(benchmark_items, f, indent=2, ensure_ascii=False)
     print(f"JSON Created: {path}")
 
 
-def generate_csv(path="testing_combined.csv"):
+def generate_csv(path=None):
+    path = path or output_path("testing_combined.csv")
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
             f,

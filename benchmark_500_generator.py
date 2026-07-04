@@ -1,8 +1,16 @@
 import json, csv
+from pathlib import Path
+
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 
+OUTPUT_DIR = Path(__file__).resolve().parent / "benchmarks"
 questions = []
+
+
+def output_path(filename):
+    OUTPUT_DIR.mkdir(exist_ok=True)
+    return OUTPUT_DIR / filename
 
 def add(category, text):
     questions.append({
@@ -142,17 +150,17 @@ for term in fake_terms:
 questions = questions[:500]
 
 def save_json():
-    with open("benchmark_500.json", "w", encoding="utf-8") as f:
+    with open(output_path("benchmark_500.json"), "w", encoding="utf-8") as f:
         json.dump(questions, f, indent=2, ensure_ascii=False)
 
 def save_csv():
-    with open("benchmark_500.csv", "w", newline="", encoding="utf-8") as f:
+    with open(output_path("benchmark_500.csv"), "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=["id", "category", "question"])
         writer.writeheader()
         writer.writerows(questions)
 
 def save_pdf():
-    pdf = SimpleDocTemplate("benchmark_500.pdf")
+    pdf = SimpleDocTemplate(str(output_path("benchmark_500.pdf")))
     styles = getSampleStyleSheet()
     content = [
         Paragraph("500 Question Benchmark Dataset", styles["Title"]),
