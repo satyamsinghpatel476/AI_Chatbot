@@ -49,6 +49,43 @@ Open:
 http://127.0.0.1:8000
 ```
 
+## Ubuntu Desktop Launcher
+
+The folder includes:
+
+```text
+voice_assistant_website/run_voice_assistant_app.sh
+voice_assistant_website/stop_voice_assistant.sh
+voice_assistant_website/VoiceAssistant.desktop
+```
+
+To enable the launcher:
+
+```bash
+chmod +x ~/ai_robotics_assistant/voice_assistant_website/run_voice_assistant_app.sh
+chmod +x ~/ai_robotics_assistant/voice_assistant_website/stop_voice_assistant.sh
+chmod +x ~/ai_robotics_assistant/voice_assistant_website/VoiceAssistant.desktop
+cp ~/ai_robotics_assistant/voice_assistant_website/VoiceAssistant.desktop ~/Desktop/
+```
+
+Then right-click the desktop icon and choose **Allow Launching**.
+
+Double-click **Local Multi-Domain Assistant** from the Desktop. The launcher
+opens without a visible terminal, activates `~/ai_robotics_assistant/env`,
+starts `voice_assistant_website/app.py` in the background, and opens Google
+Chrome app mode at:
+
+```text
+http://127.0.0.1:8000
+```
+
+Closing the Chrome app window stops the backend automatically. To stop it
+manually:
+
+```bash
+~/ai_robotics_assistant/voice_assistant_website/stop_voice_assistant.sh
+```
+
 ## Features
 
 - Anime assistant image with speaking animation.

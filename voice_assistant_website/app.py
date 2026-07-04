@@ -1,17 +1,29 @@
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import uvicorn
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from backend.cleanup import cleanup_temp_uploads, register_cleanup
-from backend.evaluator_bridge import bridge_status, evaluate_answer, mark_demo_evaluation
+from backend.evaluator_bridge import bridge_status, evaluate_answers, mark_demo_evaluation
+from backend.live_results_summarizer import (
+    compute_official_results_summary,
+    official_entries_to_history,
+    load_official_results,
+    official_results_available,
+    official_results_count,
+)
 from backend.metrics import build_csv, build_pdf, compute_session_metrics
 from backend.pdf_auto_questions import extract_questions_from_pdf_result
+from backend.question_sources import (
+    load_official_benchmark_questions,
+    load_official_results_questions,
+)
 from backend.rag_temp import main_project_rag_status
 from backend.rag_temp import save_and_extract_upload
 from backend.rag_temp import safe_filename
@@ -39,6 +51,8 @@ class AutoPdfRunRequest(BaseModel):
     count: int | str | None = None
     position: str = "start"
     research_evaluation_mode: bool = False
+    benchmark_compatible_live_run: bool = False
+    keep_temporary_rag: bool = False
 
 
 class AutoPdfRunOneRequest(BaseModel):
@@ -49,6 +63,17 @@ class AutoPdfRunOneRequest(BaseModel):
     pdf_question_number: int | None = None
     pdf_category: str | None = None
     research_evaluation_mode: bool = False
+    benchmark_compatible_live_run: bool = False
+    state_reset_applied: bool = False
+    question_source: str | None = None
+
+
+class ResearchQuestionSourceRequest(BaseModel):
+    source: str
+
+
+class BenchmarkLiveResetRequest(BaseModel):
+    keep_temporary_rag: bool = False
 
 
 def _delete_auto_pdf_uploads(paths: list[str]) -> None:
@@ -140,7 +165,42 @@ def _auto_pdf_response_payload(questions: list[dict]) -> dict:
         "category_counts": metadata.get("category_counts", {}),
         "extraction_mode": metadata.get("extraction_mode"),
         "fallback_used": metadata.get("fallback_used", False),
+        "question_source": metadata.get("question_source") or "uploaded_pdf",
+        "source_path": metadata.get("source_path"),
+        "loaded_message": metadata.get("loaded_message"),
     }
+
+
+def _store_research_questions(questions: list[dict], metadata: dict) -> dict:
+    stored_questions = session_store.set_auto_pdf_questions(
+        questions,
+        filename=str(metadata.get("question_source") or "research_questions"),
+        stored_filename=str(metadata.get("source_path") or ""),
+        stored_path=str(metadata.get("source_path") or ""),
+        extraction_metadata=metadata,
+    )
+    return _auto_pdf_response_payload(stored_questions)
+
+
+def _prepare_benchmark_compatible_live_run(*, keep_temporary_rag: bool) -> dict:
+    session_store.clear_live_state(keep_temporary_rag=keep_temporary_rag)
+    if not keep_temporary_rag:
+        cleanup_temp_uploads(TEMP_UPLOAD_DIR)
+    os.environ["EXPERIMENT_SEED"] = "0"
+    os.environ["DISABLE_LLM_CACHE"] = "1"
+    os.environ["BENCHMARK_FORCE_LLM"] = "1"
+    os.environ["BENCHMARK_DISABLE_DETERMINISTIC_SHORTCUTS"] = "1"
+    return {
+        "state_reset_applied": True,
+        "keep_temporary_rag": keep_temporary_rag,
+        "experiment_seed": os.environ.get("EXPERIMENT_SEED"),
+        "disable_llm_cache": os.environ.get("DISABLE_LLM_CACHE"),
+        "note": "Website live evaluation uses isolated session reset but does not delete permanent project memory.",
+    }
+
+
+def _official_history() -> list[dict]:
+    return official_entries_to_history(load_official_results())
 
 
 def _error_answers(system_choice: str, message: str) -> dict[str, dict]:
@@ -193,8 +253,20 @@ def _apply_evaluation_mode(
     )
     expected_intent = metadata.get("expected_intent") or question_type
     evaluation_mode = "research" if research_evaluation_mode else "demo"
+    research_evaluations: dict[str, dict] = {}
+    if research_evaluation_mode:
+        for system_key, answer in answers.items():
+            if isinstance(answer, dict):
+                answer.setdefault("metadata", {})["system"] = system_key
+        research_evaluations = evaluate_answers(
+            question,
+            answers,
+            metadata=metadata,
+            question_type=question_type,
+            expected_intent=expected_intent,
+        )
 
-    for answer in answers.values():
+    for system_key, answer in answers.items():
         if not isinstance(answer, dict):
             continue
         answer_metadata = answer.setdefault("metadata", {})
@@ -207,13 +279,7 @@ def _apply_evaluation_mode(
         answer["evaluation_mode"] = evaluation_mode
 
         if research_evaluation_mode:
-            evaluation = evaluate_answer(
-                question,
-                str(answer.get("response") or ""),
-                metadata=answer_metadata,
-                question_type=question_type,
-                expected_intent=expected_intent,
-            )
+            evaluation = research_evaluations.get(system_key, {})
             _merge_evaluation(answer, evaluation)
         else:
             if question_type and question_type != "unknown":
@@ -243,8 +309,11 @@ async def index() -> FileResponse:
 
 
 @app.get("/api/health")
-async def health(research_mode_enabled: bool = False) -> dict:
-    health = health_status()
+async def health(
+    research_mode_enabled: bool = False,
+    probe_system_imports: bool = False,
+) -> dict:
+    health = health_status(probe_imports=probe_system_imports)
     history = session_store.get_history()
     metrics = compute_session_metrics(history)
     rag_status = main_project_rag_status(validate_import=True)
@@ -269,17 +338,25 @@ async def health(research_mode_enabled: bool = False) -> dict:
         "main_rag_read_only": rag_status["main_rag_read_only"],
         "main_rag_test_query_result_count": rag_status["main_rag_test_query_result_count"],
         "main_rag_error": rag_status["main_rag_error"],
+        "main_rag_relevance_gate_enabled": rag_status["main_rag_relevance_gate_enabled"],
+        "main_rag_max_chars": rag_status["main_rag_max_chars"],
+        "main_rag_mixed_max_chars": rag_status["main_rag_mixed_max_chars"],
         "temp_uploads_path": str(TEMP_UPLOAD_DIR),
         "temp_files_count": temp_files_count,
         "temp_rag_active": temp_files_count > 0,
         "temporary_rag_active": temp_files_count > 0,
         "research_evaluation_supported": bridge.get("research_evaluation_supported", False),
         "evaluator_bridge_available": bridge.get("evaluator_bridge_available", False),
+        "evaluator_exact_import_available": bridge.get("evaluator_exact_import_available", False),
+        "evaluator_bridge_method": bridge.get("evaluator_bridge_method"),
         "research_evaluation_method": (
             bridge.get("research_evaluation_method")
             if research_mode_enabled
             else bridge.get("demo_evaluation_method", "demo_metrics")
         ),
+        "official_results_available": official_results_available(),
+        "official_results_count": official_results_count(),
+        "live_session_count": len(history),
         "research_mode_currently_enabled": research_mode_enabled,
         "note": "Main project RAG is read-only. Temporary website RAG is session-only.",
     })
@@ -351,17 +428,61 @@ async def auto_pdf_extract(file: UploadFile = File(...)) -> dict:
         stored_filename=stored_name,
         stored_path=str(stored_path),
         extraction_metadata={
-            key: value
-            for key, value in extraction_result.items()
-            if key != "questions"
+            "question_source": "uploaded_pdf",
+            "source_path": str(stored_path),
+            **{
+                key: value
+                for key, value in extraction_result.items()
+                if key != "questions"
+            },
         },
     )
     return _auto_pdf_response_payload(stored_questions)
 
 
+@app.post("/api/load_research_questions")
+async def load_research_questions(request: ResearchQuestionSourceRequest) -> dict:
+    source = request.source.strip().lower()
+    try:
+        if source == "official_results":
+            questions, metadata = load_official_results_questions()
+        elif source == "official_benchmark":
+            questions, metadata = load_official_benchmark_questions()
+        else:
+            raise HTTPException(
+                status_code=400,
+                detail="Question source must be uploaded_pdf, official_benchmark, or official_results.",
+            )
+    except HTTPException:
+        raise
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=f"Question source not found: {exc}") from exc
+    except Exception as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Could not load research questions: {type(exc).__name__}: {exc}",
+        ) from exc
+    return _store_research_questions(questions, metadata)
+
+
+@app.post("/api/benchmark_live_reset")
+async def benchmark_live_reset(request: BenchmarkLiveResetRequest) -> dict:
+    return {
+        "ok": True,
+        **_prepare_benchmark_compatible_live_run(
+            keep_temporary_rag=request.keep_temporary_rag,
+        ),
+    }
+
+
 @app.post("/api/auto_pdf_run")
 async def auto_pdf_run(request: AutoPdfRunRequest) -> dict:
     system_for_runtime = _normalize_system_choice(request.system)
+    reset_info = None
+    if request.benchmark_compatible_live_run:
+        reset_info = _prepare_benchmark_compatible_live_run(
+            keep_temporary_rag=request.keep_temporary_rag,
+        )
 
     position = request.position.strip().lower()
     if position not in {"start", "middle", "end"}:
@@ -400,6 +521,9 @@ async def auto_pdf_run(request: AutoPdfRunRequest) -> dict:
             "expected_intent": pdf_category,
             "display_question": display_question,
             "evaluation_mode": "research" if request.research_evaluation_mode else "demo",
+            "benchmark_compatible_live_run": request.benchmark_compatible_live_run,
+            "state_reset_applied": bool(reset_info),
+            "question_source": session_store.get_auto_pdf_metadata().get("question_source") or "uploaded_pdf",
         }
         _apply_evaluation_mode(
             answers,
@@ -430,6 +554,8 @@ async def auto_pdf_run(request: AutoPdfRunRequest) -> dict:
         "start_index": start_index,
         "end_index": end_index,
         "results": results,
+        "benchmark_compatible_live_run": request.benchmark_compatible_live_run,
+        "reset": reset_info,
     }
 
 
@@ -498,6 +624,13 @@ async def auto_pdf_run_one(request: AutoPdfRunOneRequest) -> dict:
     if display_question:
         metadata["display_question"] = display_question
     metadata["evaluation_mode"] = "research" if request.research_evaluation_mode else "demo"
+    metadata["benchmark_compatible_live_run"] = request.benchmark_compatible_live_run
+    metadata["state_reset_applied"] = request.state_reset_applied
+    metadata["question_source"] = (
+        request.question_source
+        or session_store.get_auto_pdf_metadata().get("question_source")
+        or "uploaded_pdf"
+    )
     _apply_evaluation_mode(
         answers,
         question,
@@ -518,6 +651,8 @@ async def auto_pdf_run_one(request: AutoPdfRunOneRequest) -> dict:
         "pdf_category": pdf_category,
         "source": "auto_pdf",
         "research_evaluation_mode": request.research_evaluation_mode,
+        "benchmark_compatible_live_run": request.benchmark_compatible_live_run,
+        "state_reset_applied": request.state_reset_applied,
         "answers": answers,
     }
 
@@ -565,7 +700,13 @@ async def auto_pdf_clear() -> dict:
 
 
 @app.get("/api/session_metrics")
-async def session_metrics() -> dict:
+async def session_metrics(mode: str = Query("live")) -> dict:
+    normalized_mode = mode.strip().lower()
+    if normalized_mode == "official":
+        try:
+            return compute_official_results_summary()
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail="Official results.json not found.") from exc
     return compute_session_metrics(session_store.get_history())
 
 
@@ -604,27 +745,43 @@ async def clear_session() -> dict:
 
 
 @app.get("/api/export_csv")
-async def export_csv() -> Response:
-    csv_text = build_csv(session_store.get_history())
+async def export_csv(mode: str = Query("live")) -> Response:
+    normalized_mode = mode.strip().lower()
+    if normalized_mode == "official":
+        history = _official_history()
+        metrics = compute_official_results_summary()
+        filename = "voice_assistant_official_results.csv"
+    else:
+        history = session_store.get_history()
+        metrics = compute_session_metrics(history)
+        filename = "voice_assistant_session_results.csv"
+    csv_text = build_csv(history, metrics)
     return Response(
         csv_text,
         media_type="text/csv",
         headers={
-            "Content-Disposition": "attachment; filename=voice_assistant_session_results.csv"
+            "Content-Disposition": f"attachment; filename={filename}"
         },
     )
 
 
 @app.get("/api/download_pdf")
-async def download_pdf() -> Response:
-    history = session_store.get_history()
-    metrics = compute_session_metrics(history)
+async def download_pdf(mode: str = Query("live")) -> Response:
+    normalized_mode = mode.strip().lower()
+    if normalized_mode == "official":
+        history = _official_history()
+        metrics = compute_official_results_summary()
+        filename = "voice_assistant_official_results_report.pdf"
+    else:
+        history = session_store.get_history()
+        metrics = compute_session_metrics(history)
+        filename = "voice_assistant_session_report.pdf"
     pdf_bytes = build_pdf(history, metrics)
     return Response(
         pdf_bytes,
         media_type="application/pdf",
         headers={
-            "Content-Disposition": "attachment; filename=voice_assistant_session_report.pdf"
+            "Content-Disposition": f"attachment; filename={filename}"
         },
     )
 

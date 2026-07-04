@@ -139,6 +139,15 @@ class SessionStore:
             self._auto_pdf_metadata.clear()
             return paths
 
+    def clear_live_state(self, *, keep_temporary_rag: bool = False) -> None:
+        """Reset live evaluation state without dropping loaded question sets."""
+        with self._lock:
+            self._history.clear()
+            if not keep_temporary_rag:
+                self._temporary_context = ""
+                self._temporary_documents.clear()
+                self._uploaded_files.clear()
+
     def clear(self) -> None:
         with self._lock:
             self._history.clear()

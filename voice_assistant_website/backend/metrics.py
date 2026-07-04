@@ -13,6 +13,8 @@ from reportlab.lib.pagesizes import landscape, letter
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
+from .live_results_summarizer import compute_live_summary
+
 
 SYSTEM_KEYS = ("A", "B", "C")
 SYSTEM_LABELS = {
@@ -114,9 +116,14 @@ def normalize_label(value: Any) -> str | None:
         "robotic": "robotics",
         "daily_life": "daily",
         "daily_digital_assistance": "daily",
+        "general_daily": "daily",
         "consumer": "daily",
         "cross_domain": "mixed",
         "mixed_domain": "mixed",
+        "robot": "robotics",
+        "robotics_support": "robotics",
+        "uncertain": "ambiguous",
+        "fake": "unverifiable",
         "unverified": "unverifiable",
         "personal_memory_save": "personal_save",
         "personal_memory_recall": "personal_recall",
@@ -242,12 +249,18 @@ def _row_from_answer(entry: dict[str, Any], system: str, answer: dict[str, Any])
         "cross_domain_robustness": _special_metric(answer, "cross_domain_robustness"),
         "intent_classification_accuracy": _special_metric(answer, "intent_classification_accuracy"),
         "domain_resolution_accuracy": _special_metric(answer, "domain_resolution_accuracy"),
+        "domain_resolution_accuracy_strict": _special_metric(answer, "domain_resolution_accuracy_strict"),
+        "domain_resolution_accuracy_relaxed": _special_metric(answer, "domain_resolution_accuracy_relaxed"),
         "predicted_intent": _nested_value(answer, "predicted_intent", "classified_intent", "intent"),
         "resolved_domain": _nested_value(answer, "resolved_domain", "domain"),
         "judge_rationale": _nested_value(answer, "judge_rationale", "rationale"),
         "evaluation_method": _nested_value(answer, "evaluation_method"),
         "evaluation_mode": _nested_value(answer, "evaluation_mode"),
         "requires_human_review": _nested_value(answer, "requires_human_review"),
+        "benchmark_compatible_live_run": bool(_nested_value(answer, "benchmark_compatible_live_run")),
+        "state_reset_applied": bool(_nested_value(answer, "state_reset_applied")),
+        "exact_evaluator_imported": bool(_nested_value(answer, "exact_evaluator_imported")),
+        "fallback_evaluator_used": bool(_nested_value(answer, "fallback_evaluator_used")),
         "dimension_scores": {
             dimension: _dimension_score(answer, dimension)
             for dimension in DIMENSIONS
@@ -428,67 +441,22 @@ def _evaluation_mode_summary(history: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def compute_session_metrics(history: list[dict[str, Any]]) -> dict[str, Any]:
-    systems = {
-        system: compute_system_metrics(history, system)
-        for system in SYSTEM_KEYS
-    }
-    summary_cards = {
-        "total_questions": len(history),
-        "total_responses": sum(metrics["count"] for metrics in systems.values()),
-        "main_rag_used_count": sum(
-            1
-            for entry in history
-            if any(
-                bool(_nested_value(answer, "main_rag_used"))
-                for answer in (entry.get("answers") or {}).values()
-                if isinstance(answer, dict)
-            )
-        ),
-        "temporary_rag_used_count": sum(
-            1
-            for entry in history
-            if any(
-                bool(_nested_value(answer, "temporary_rag_used"))
-                for answer in (entry.get("answers") or {}).values()
-                if isinstance(answer, dict)
-            )
-        ),
-        "best_accuracy_system": _winner(systems, ("avg_accuracy",), "max"),
-        "fastest_system": _winner(systems, ("avg_latency",), "min"),
-        "lowest_contamination_system": _winner(systems, ("contamination_count",), "min"),
-        "best_cross_domain_robustness_system": _winner(
-            systems,
-            ("special_metrics", "cross_domain_robustness"),
-            "max",
-        ),
-    }
-    evaluation_summary = _evaluation_mode_summary(history)
-    return {
-        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        **evaluation_summary,
-        "total_questions": len(history),
-        "total_system_responses": summary_cards["total_responses"],
-        "systems": systems,
-        "system_order": list(SYSTEM_KEYS),
-        "system_labels": SYSTEM_LABELS,
-        "system_colors": SYSTEM_COLORS,
-        "dimensions": list(DIMENSIONS),
-        "special_metrics": list(SPECIAL_METRICS),
-        "categories": available_categories(history),
-        "all_categories": [
-            {"key": category, "label": display_label(category)}
-            for category in CATEGORIES
-        ],
-        "summary_cards": summary_cards,
-        "comparison_table": _comparison_rows(systems),
-        "questions": question_summaries(history),
-    }
+    return compute_live_summary(history)
 
 
-def _iter_csv_rows(history: list[dict[str, Any]]):
+def _iter_csv_rows(history: list[dict[str, Any]], metrics: dict[str, Any] | None = None):
+    export_metadata = (metrics or {}).get("export_metadata", {})
     for row in collect_rows(history):
         dimension_scores = row["dimension_scores"]
         yield {
+            "export_evaluation_mode": export_metadata.get("evaluation_mode"),
+            "export_question_source": export_metadata.get("question_source"),
+            "export_question_count": export_metadata.get("question_count"),
+            "export_evaluator_method": export_metadata.get("evaluator_method"),
+            "export_exact_evaluator_imported": export_metadata.get("exact_evaluator_imported"),
+            "export_fallback_evaluator_used": export_metadata.get("fallback_evaluator_used"),
+            "export_main_rag_used": export_metadata.get("main_rag_used"),
+            "export_state_reset_applied": export_metadata.get("state_reset_applied"),
             "timestamp": row["timestamp"],
             "source": row["source"],
             "question": row["question"],
@@ -514,6 +482,8 @@ def _iter_csv_rows(history: list[dict[str, Any]]):
             "predicted_intent": row["predicted_intent"],
             "resolved_domain": row["resolved_domain"],
             "domain_resolution_accuracy": row["domain_resolution_accuracy"],
+            "domain_resolution_accuracy_strict": row["domain_resolution_accuracy_strict"],
+            "domain_resolution_accuracy_relaxed": row["domain_resolution_accuracy_relaxed"],
             "main_rag_used": row["main_rag_used"],
             "temporary_rag_used": row["temporary_rag_used"],
             "memory_recall": row["memory_recall"],
@@ -521,13 +491,26 @@ def _iter_csv_rows(history: list[dict[str, Any]]):
             "cross_domain_robustness": row["cross_domain_robustness"],
             "intent_classification_accuracy": row["intent_classification_accuracy"],
             "requires_human_review": row["requires_human_review"],
+            "benchmark_compatible_live_run": row["benchmark_compatible_live_run"],
+            "state_reset_applied": row["state_reset_applied"],
+            "exact_evaluator_imported": row["exact_evaluator_imported"],
+            "fallback_evaluator_used": row["fallback_evaluator_used"],
             "combined_context_chars": row["combined_context_chars"],
         }
 
 
-def build_csv(history: list[dict[str, Any]]) -> str:
+def build_csv(history: list[dict[str, Any]], metrics: dict[str, Any] | None = None) -> str:
+    metrics = metrics or compute_session_metrics(history)
     output = io.StringIO()
     columns = [
+        "export_evaluation_mode",
+        "export_question_source",
+        "export_question_count",
+        "export_evaluator_method",
+        "export_exact_evaluator_imported",
+        "export_fallback_evaluator_used",
+        "export_main_rag_used",
+        "export_state_reset_applied",
         "timestamp",
         "source",
         "question",
@@ -553,6 +536,8 @@ def build_csv(history: list[dict[str, Any]]) -> str:
         "predicted_intent",
         "resolved_domain",
         "domain_resolution_accuracy",
+        "domain_resolution_accuracy_strict",
+        "domain_resolution_accuracy_relaxed",
         "main_rag_used",
         "temporary_rag_used",
         "memory_recall",
@@ -560,11 +545,15 @@ def build_csv(history: list[dict[str, Any]]) -> str:
         "cross_domain_robustness",
         "intent_classification_accuracy",
         "requires_human_review",
+        "benchmark_compatible_live_run",
+        "state_reset_applied",
+        "exact_evaluator_imported",
+        "fallback_evaluator_used",
         "combined_context_chars",
     ]
     writer = csv.DictWriter(output, fieldnames=columns)
     writer.writeheader()
-    for row in _iter_csv_rows(history):
+    for row in _iter_csv_rows(history, metrics):
         writer.writerow(row)
     return output.getvalue()
 
@@ -707,6 +696,12 @@ def build_pdf(history: list[dict[str, Any]], metrics: dict[str, Any]) -> bytes:
         Paragraph("Local Multi-Domain AI Assistant", styles["Title"]),
         Paragraph(f"Session report generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", styles["Normal"]),
         Paragraph(f"Evaluation mode: {html.escape(str(metrics.get('evaluation_mode_label', 'N/A')))}", styles["Normal"]),
+        Paragraph(f"Question source: {html.escape(str(metrics.get('question_source', 'N/A')))}", styles["Normal"]),
+        Paragraph(f"Evaluator method: {html.escape(str(metrics.get('evaluation_method', 'N/A')))}", styles["Normal"]),
+        Paragraph(f"Exact evaluator imported: {html.escape(str(metrics.get('export_metadata', {}).get('exact_evaluator_imported', False)))}", styles["Normal"]),
+        Paragraph(f"Fallback evaluator used: {html.escape(str(metrics.get('export_metadata', {}).get('fallback_evaluator_used', False)))}", styles["Normal"]),
+        Paragraph(f"Main RAG used: {html.escape(str(metrics.get('export_metadata', {}).get('main_rag_used', False)))}", styles["Normal"]),
+        Paragraph(f"State reset applied: {html.escape(str(metrics.get('export_metadata', {}).get('state_reset_applied', False)))}", styles["Normal"]),
         Paragraph(html.escape(str(metrics.get("evaluation_message", ""))), styles["Normal"]),
         Paragraph(f"Manual questions count: {source_counts['manual_chat']}", styles["Normal"]),
         Paragraph(f"Auto PDF questions count: {source_counts['auto_pdf']}", styles["Normal"]),

@@ -218,6 +218,13 @@
         </div>
 
         <div class="pdf-auto-grid">
+          <label for="autoQuestionSource">Question Source</label>
+          <select id="autoQuestionSource">
+            <option value="uploaded_pdf" selected>Uploaded PDF</option>
+            <option value="official_benchmark">Official benchmark file</option>
+            <option value="official_results">Official results.json questions</option>
+          </select>
+
           <label for="autoPdfInput">PDF</label>
           <input id="autoPdfInput" type="file" accept=".pdf">
 
@@ -240,8 +247,24 @@
           </select>
         </div>
 
+        <div class="pdf-auto-options">
+          <label class="settings-toggle" for="benchmarkCompatibleRunToggle">
+            <input id="benchmarkCompatibleRunToggle" type="checkbox">
+            <span>Benchmark-compatible live run</span>
+          </label>
+          <label class="settings-toggle" for="keepTemporaryRagToggle">
+            <input id="keepTemporaryRagToggle" type="checkbox">
+            <span>Keep temporary RAG</span>
+          </label>
+          <p id="benchmarkRunWarning" class="pdf-warning" hidden>
+            Benchmark-compatible live run resets the website session before evaluation.
+          </p>
+        </div>
+
         <div class="pdf-auto-actions">
           <button id="autoPdfExtractButton" class="ghost-button" type="button">Extract Questions</button>
+          <button id="loadBenchmarkQuestionsButton" class="ghost-button" type="button">Load Benchmark Questions</button>
+          <button id="loadOfficialQuestionsButton" class="ghost-button" type="button">Load Official 420 Questions</button>
           <button id="autoPdfRunButton" class="primary-button" type="button">Auto Run</button>
           <button id="autoPdfStopButton" class="stop-auto-button" type="button" hidden>Stop Run</button>
         </div>
@@ -266,6 +289,13 @@
       </header>
 
       <div class="modal-actions">
+        <label class="dashboard-mode-control" for="dashboardModeSelect">
+          <span>Mode</span>
+          <select id="dashboardModeSelect">
+            <option value="live" selected>Live session</option>
+            <option value="official">Official results</option>
+          </select>
+        </label>
         <button class="ghost-button modal-forward-button" type="button" data-forward="exportCsvBtn">Export CSV</button>
         <button class="ghost-button modal-forward-button" type="button" data-forward="downloadPdfBtn">Download PDF</button>
       </div>

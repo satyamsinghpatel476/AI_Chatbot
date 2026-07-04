@@ -1324,6 +1324,15 @@ h3 {
   flex-wrap: wrap;
 }
 
+.pdf-auto-options {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
 .pdf-auto-progress {
   min-height: 22px;
   margin: 0;
@@ -1365,7 +1374,8 @@ h3 {
 }
 
 .category-counts span,
-.pdf-warning {
+.pdf-warning,
+.source-chip {
   display: inline-flex;
   width: fit-content;
   padding: 3px 7px;
@@ -1377,6 +1387,12 @@ h3 {
   color: var(--secondary);
   background: rgba(255, 255, 255, .05);
   border: 1px solid var(--border);
+}
+
+.source-chip {
+  color: #DDF9EA;
+  background: rgba(16, 163, 127, .10);
+  border: 1px solid rgba(16, 163, 127, .24);
 }
 
 .pdf-warning {
@@ -1413,9 +1429,30 @@ h3 {
 
 .modal-actions {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   gap: 8px;
   padding: 12px 16px 0;
+}
+
+.dashboard-mode-control {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.dashboard-mode-control select {
+  min-height: 34px;
+  padding: 6px 9px;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
 }
 
 .dashboard-mode-banner {

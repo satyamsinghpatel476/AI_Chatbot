@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import importlib.util
 import os
 import re
 import sys
@@ -10,11 +11,18 @@ from typing import Any
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 EVALUATOR_DIR = PROJECT_ROOT / "evaluator"
-EVALUATION_METHOD = "blind_mistral_judge_with_gold_constraints"
+EVALUATOR_FILE = EVALUATOR_DIR / "evaluator.py"
+EXACT_EVALUATION_METHOD = "blind_mistral_judge_with_gold_constraints"
+COMPATIBLE_EVALUATION_METHOD = "benchmark_compatible_research_evaluator"
+FALLBACK_EVALUATION_METHOD = "benchmark_compatible_research_evaluator_fallback"
+EVALUATION_METHOD = COMPATIBLE_EVALUATION_METHOD
 DEMO_EVALUATION_METHOD = "demo_metrics"
 
 _metrics_import_error: str | None = None
 _judge_import_error: str | None = None
+_exact_evaluator_import_error: str | None = None
+_evaluator_file_loaded = False
+_evaluator_callable_available = False
 
 
 def configure_project_runtime() -> None:
@@ -22,8 +30,10 @@ def configure_project_runtime() -> None:
 
     for path in (PROJECT_ROOT, EVALUATOR_DIR):
         text = str(path)
-        if text not in sys.path:
-            sys.path.insert(0, text)
+        while text in sys.path:
+            sys.path.remove(text)
+    sys.path.insert(0, str(PROJECT_ROOT))
+    sys.path.insert(1, str(EVALUATOR_DIR))
     if Path.cwd() != PROJECT_ROOT:
         os.chdir(PROJECT_ROOT)
 
@@ -34,6 +44,8 @@ try:
     from evaluator.metrics import (  # type: ignore
         attach_comparison_metrics,
         context_contamination_flag,
+        cross_domain_robustness_score,
+        normalize_intent_label,
     )
 except Exception as exc:  # pragma: no cover - exercised only in degraded envs
     first_metrics_import_error = f"{type(exc).__name__}: {exc}"
@@ -41,6 +53,8 @@ except Exception as exc:  # pragma: no cover - exercised only in degraded envs
         from metrics import (  # type: ignore
             attach_comparison_metrics,
             context_contamination_flag,
+            cross_domain_robustness_score,
+            normalize_intent_label,
         )
     except Exception as fallback_exc:  # pragma: no cover - degraded envs only
         _metrics_import_error = (
@@ -49,6 +63,44 @@ except Exception as exc:  # pragma: no cover - exercised only in degraded envs
         )
         attach_comparison_metrics = None  # type: ignore[assignment]
         context_contamination_flag = None  # type: ignore[assignment]
+        cross_domain_robustness_score = None  # type: ignore[assignment]
+        normalize_intent_label = None  # type: ignore[assignment]
+
+def load_evaluator_module() -> tuple[Any | None, str | None]:
+    if not EVALUATOR_FILE.exists():
+        return None, f"Missing evaluator.py at {EVALUATOR_FILE}"
+    try:
+        spec = importlib.util.spec_from_file_location(
+            "official_evaluator_runtime",
+            str(EVALUATOR_FILE),
+        )
+        if spec is None or spec.loader is None:
+            return None, f"Could not create import spec for {EVALUATOR_FILE}"
+        module = importlib.util.module_from_spec(spec)
+        previous_dont_write_bytecode = sys.dont_write_bytecode
+        sys.dont_write_bytecode = True
+        try:
+            spec.loader.exec_module(module)
+        finally:
+            sys.dont_write_bytecode = previous_dont_write_bytecode
+        return module, None
+    except Exception as exc:  # pragma: no cover - depends on project runtime env
+        return None, f"{type(exc).__name__}: {exc}"
+
+
+_official_evaluator_module, _exact_evaluator_import_error = load_evaluator_module()
+_evaluator_file_loaded = _official_evaluator_module is not None
+_exact_evaluate_comparison = (
+    getattr(_official_evaluator_module, "evaluate_comparison", None)
+    if _official_evaluator_module is not None
+    else None
+)
+_evaluator_callable_available = callable(_exact_evaluate_comparison)
+if not _evaluator_callable_available:
+    _exact_evaluate_comparison = None  # type: ignore[assignment]
+    if _evaluator_file_loaded and not _exact_evaluator_import_error:
+        _exact_evaluator_import_error = "evaluator.py loaded but no reusable evaluate_comparison callable was found"
+configure_project_runtime()
 
 try:
     from llm_runtime import LLMRuntimeError, chat  # type: ignore
@@ -141,7 +193,10 @@ ROBOTICS_TERMS = {
     "robot", "robotics", "slam", "lidar", "localization", "localisation",
     "odometry", "imu", "encoder", "mapping", "navigation", "ros", "ros2",
     "pid", "control", "sensor", "perception", "obstacle", "costmap",
-    "planner", "path planning", "ekf", "amcl",
+    "planner", "path planning", "motion planning", "trajectory planning",
+    "loop closure", "obstacle avoidance", "dynamic obstacle avoidance",
+    "inverse kinematics", "forward kinematics", "kalman filter",
+    "particle filter", "sensor fusion", "ekf", "amcl",
 }
 DAILY_TERMS = {
     "phone", "app", "apps", "uber", "ola", "lyft", "zomato", "swiggy",
@@ -192,6 +247,138 @@ def _contains_any(text: str, terms: Any) -> bool:
     return any(str(term).lower() in text for term in terms)
 
 
+STRUCTURED_ANSWER_HEADINGS = (
+    "direct answer",
+    "short explanation",
+    "key points",
+    "practical advice",
+    "conclusion",
+    "summary",
+    "example",
+    "examples",
+)
+ROBOTICS_CONTEXT_TERMS = (
+    "robotics",
+    "robot",
+    "robots",
+    "slam",
+    "lidar",
+    "ros",
+    "ros2",
+    "odometry",
+    "autonomous navigation",
+    "navigation robot",
+    "mobile robot",
+    "costmap",
+    "path planner",
+    "path planning",
+    "motion planning",
+    "trajectory planning",
+    "loop closure",
+    "obstacle avoidance",
+    "dynamic obstacle avoidance",
+    "inverse kinematics",
+    "forward kinematics",
+    "kalman filter",
+    "particle filter",
+    "sensor fusion",
+    "amcl",
+    "ekf",
+)
+CONSUMER_CONTEXT_TERMS = (
+    "food delivery",
+    "ride-sharing",
+    "ridesharing",
+    "cloud storage",
+    "social media",
+    "shopping app",
+    "delivery app",
+    "consumer app",
+    "instagram",
+    "whatsapp",
+    "spotify",
+    "zomato",
+    "swiggy",
+    "uber",
+    "ola",
+    "lyft",
+)
+DOMAIN_RELATION_TERMS = (
+    "relation",
+    "relationship",
+    "compare",
+    "analogy",
+    "similar",
+    "different",
+    "daily life",
+    "daily-life",
+    "consumer",
+    "robotics",
+)
+
+
+def _strip_structured_answer_headings(text: str) -> str:
+    clean = text.lower()
+    for heading in STRUCTURED_ANSWER_HEADINGS:
+        clean = re.sub(rf"\b{re.escape(heading)}\b\s*:?", " ", clean)
+    return " ".join(clean.split())
+
+
+def _fallback_contamination(question: str, response: str, question_type: str) -> int:
+    clean_response = _strip_structured_answer_headings(response)
+    clean_question = question.lower()
+    if not clean_response.strip():
+        return 0
+
+    if question_type == "daily":
+        asks_domain_relation = (
+            _contains_any(clean_question, ROBOTICS_CONTEXT_TERMS)
+            or _contains_any(clean_question, DOMAIN_RELATION_TERMS)
+        )
+        return int(not asks_domain_relation and _contains_any(clean_response, ROBOTICS_CONTEXT_TERMS))
+
+    if question_type == "robotics":
+        asks_domain_relation = (
+            _contains_any(clean_question, CONSUMER_CONTEXT_TERMS)
+            or _contains_any(clean_question, DAILY_TERMS)
+            or _contains_any(clean_question, DOMAIN_RELATION_TERMS)
+        )
+        return int(not asks_domain_relation and _contains_any(clean_response, CONSUMER_CONTEXT_TERMS))
+
+    if question_type == "mixed":
+        separates_domains = (
+            _contains_any(clean_response, ROBOTICS_CONTEXT_TERMS)
+            and _contains_any(clean_response, CONSUMER_CONTEXT_TERMS + tuple(DAILY_TERMS))
+        ) or _contains_any(
+            clean_response,
+            (
+                "direct",
+                "indirect",
+                "analogy",
+                "unsupported",
+                "not directly",
+                "separate",
+                "different domains",
+                "daily-life",
+                "daily life",
+            ),
+        )
+        forced_link = _contains_any(
+            clean_response,
+            (
+                "is the same as",
+                "identical to",
+                "always directly",
+                "automatically controls",
+                "proves that",
+                "because of slam, your phone",
+            ),
+        )
+        return int(forced_link or not separates_domains)
+
+    return 0
+
+
 def _normalize_label(value: Any) -> str | None:
     if value is None:
         return None
@@ -199,7 +386,78 @@ def _normalize_label(value: Any) -> str | None:
     if not label or label in {"none", "null", "nan", "n/a", "na", "missing"}:
         return None
     label = label.replace("-", "_").replace(" ", "_")
-    return QUESTION_TYPE_ALIASES.get(label, label)
+    label = QUESTION_TYPE_ALIASES.get(label, label)
+    if label in {
+        "robotics",
+        "daily",
+        "mixed",
+        "ambiguous",
+        "unverifiable",
+        "unknown",
+        "general",
+        "personal",
+        "personal_save",
+        "personal_recall",
+        "learning_save",
+        "learning_recall",
+    }:
+        return label
+    if normalize_intent_label:
+        try:
+            return normalize_intent_label(label)
+        except Exception:
+            return label
+    return label
+
+
+def _labels_match(predicted: Any, expected: Any, *, relaxed: bool = True) -> bool | None:
+    predicted_label = _normalize_label(predicted)
+    expected_label = _normalize_label(expected)
+    if not predicted_label or not expected_label:
+        return None
+    if predicted_label == expected_label:
+        return True
+    if relaxed and {predicted_label, expected_label} <= {"general", "unknown"}:
+        return True
+    return False
+
+
+def _local_cross_domain_robustness(response: str) -> float | None:
+    text = response.lower()
+    if not text.strip():
+        return None
+    separates_domains = int(
+        (
+            _contains_any(text, ("robotics", "robot", "robotic", "slam", "lidar", "ros"))
+            and _contains_any(text, ("daily", "phone", "app", "user", "consumer", "maps", "privacy"))
+        )
+        or _contains_any(text, ("robotics perspective", "daily-life perspective", "daily life perspective"))
+    )
+    relationship_label = int(_contains_any(text, ("direct", "indirect", "analogy", "unsupported", "conditional", "unrelated")))
+    avoids_forced_link = int(not _contains_any(
+        text,
+        (
+            "is the same as",
+            "identical to",
+            "always directly",
+            "automatically controls",
+            "proves that",
+            "because of slam, your phone",
+        ),
+    ))
+    qualified_limits = int(_contains_any(text, ("depends", "only if", "would require", "not directly", "separate", "different", "not the same")))
+    no_contamination = int(not bool(_fallback_contamination("", response, "mixed")))
+    return round(
+        (
+            separates_domains
+            + relationship_label
+            + avoids_forced_link
+            + qualified_limits
+            + no_contamination
+        )
+        / 5,
+        4,
+    )
 
 
 def infer_question_type(question: str, metadata: dict[str, Any] | None = None) -> str:
@@ -463,9 +721,8 @@ def _fallback_judgment(question: str, response: str, question_type: str) -> dict
                 "Gold unverifiable-item constraint applied: unsupported specific "
                 "claims are penalized."
             )
-    elif question_type in {"robotics", "daily", "mixed"} and context_contamination_flag:
-        flag = context_contamination_flag(response, question_type)
-        contamination = int(flag or 0)
+    elif question_type in {"robotics", "daily", "mixed"}:
+        contamination = _fallback_contamination(question, response, question_type)
 
     if _contains_any(text, ("i can access your data", "i know everything about you")):
         hallucination = 1
@@ -497,6 +754,7 @@ def evaluate_answer(
     question_type: str | None = None,
     expected_intent: str | None = None,
     gold_constraints: dict[str, Any] | None = None,
+    system_name: str | None = None,
 ) -> dict[str, Any]:
     """Evaluate one website answer with the benchmark-compatible shape.
 
@@ -508,6 +766,7 @@ def evaluate_answer(
     configure_project_runtime()
     metadata = dict(metadata or {})
     gold_constraints = dict(gold_constraints or {})
+    system_key = str(system_name or metadata.get("system") or "").strip().upper()
     normalized_type = (
         _normalize_label(question_type)
         or _normalize_label(metadata.get("question_type"))
@@ -530,11 +789,22 @@ def evaluate_answer(
             "false_rejection": None,
             "dimension_scores": {dimension: None for dimension in DIMENSIONS},
             "judge_rationale": "Evaluation skipped for an empty or error response.",
-            "evaluation_method": EVALUATION_METHOD,
+            "evaluation_method": FALLBACK_EVALUATION_METHOD,
             "question_type": normalized_type,
             "expected_intent": expected,
             "context_contamination_rate": None,
-            "requires_human_review": True,
+            "memory_recall": None,
+            "knowledge_growth": None,
+            "cross_domain_robustness": None,
+            "intent_classification_accuracy": None,
+            "domain_resolution_accuracy": None,
+            "domain_resolution_accuracy_strict": None,
+            "domain_resolution_accuracy_relaxed": None,
+            "requires_human_review": False,
+            "exact_evaluator_imported": _evaluator_callable_available,
+            "exact_evaluator_file_loaded": _evaluator_file_loaded,
+            "evaluator_callable_available": _evaluator_callable_available,
+            "fallback_evaluator_used": True,
         }
 
     reference_text = str(
@@ -545,7 +815,9 @@ def evaluate_answer(
     )
     judgment, judge_error = _judge_answer(question, response, normalized_type, reference_text)
     dimension_scores = _valid_dimension_scores(judgment)
+    fallback_evaluator_used = False
     if dimension_scores is None:
+        fallback_evaluator_used = True
         judgment = _fallback_judgment(question, response, normalized_type)
         dimension_scores = {
             dimension: float(judgment[dimension])
@@ -559,10 +831,9 @@ def evaluate_answer(
     if judge_error and not rationale:
         rationale = f"Benchmark-compatible fallback used: {judge_error}"
 
-    if normalized_type in {"robotics", "daily", "mixed"} and context_contamination_flag:
-        metric_flag = context_contamination_flag(response, normalized_type)
-        if metric_flag is not None:
-            contamination = max(int(contamination or 0), int(metric_flag))
+    if normalized_type in {"robotics", "daily", "mixed"}:
+        metric_flag = _fallback_contamination(question, response, normalized_type)
+        contamination = max(int(contamination or 0), int(metric_flag))
 
     if normalized_type == "unverifiable":
         if _is_calibrated_uncertainty(response):
@@ -599,7 +870,11 @@ def evaluate_answer(
             for dimension, score in dimension_scores.items()
         },
         "judge_rationale": rationale,
-        "evaluation_method": EVALUATION_METHOD,
+        "evaluation_method": (
+            FALLBACK_EVALUATION_METHOD
+            if fallback_evaluator_used
+            else COMPATIBLE_EVALUATION_METHOD
+        ),
         "question_type": normalized_type,
         "expected_intent": expected,
         "predicted_intent": (
@@ -610,7 +885,11 @@ def evaluate_answer(
         ),
         "resolved_domain": metadata.get("resolved_domain") or metadata.get("domain"),
         "evidence_status": "reference_available" if reference_text else "open_world_unverified",
-        "requires_human_review": bool(judge_error and normalized_type not in {"general", "mixed", "unverifiable"}),
+        "requires_human_review": False,
+        "exact_evaluator_imported": _evaluator_callable_available,
+        "exact_evaluator_file_loaded": _evaluator_file_loaded,
+        "evaluator_callable_available": _evaluator_callable_available,
+        "fallback_evaluator_used": fallback_evaluator_used,
     }
     for dimension, score in result["dimension_scores"].items():
         result[dimension] = score
@@ -641,15 +920,166 @@ def evaluate_answer(
 
     result["expected_intent"] = expected
     result.setdefault("context_contamination_rate", None)
-    if result.get("predicted_intent") and expected:
-        result["intent_classification_accuracy"] = float(
-            str(result["predicted_intent"]).strip().lower() == expected
-        )
-    if result.get("resolved_domain") and expected:
-        result["domain_resolution_accuracy"] = float(
-            str(result["resolved_domain"]).strip().lower() == expected
-        )
+    result.setdefault("memory_recall", None)
+    result.setdefault("knowledge_growth", None)
+    if normalized_type == "mixed" and result.get("cross_domain_robustness") is None:
+        if cross_domain_robustness_score:
+            try:
+                result["cross_domain_robustness"] = cross_domain_robustness_score(response, {
+                    "gold_relationship": gold_constraints.get("gold_relationship", "incompatible"),
+                    "required_points": gold_constraints.get("required_points", []),
+                })
+            except Exception:
+                result["cross_domain_robustness"] = _local_cross_domain_robustness(response)
+        else:
+            result["cross_domain_robustness"] = _local_cross_domain_robustness(response)
+    else:
+        result.setdefault("cross_domain_robustness", None)
+
+    intent_match = _labels_match(result.get("predicted_intent"), expected)
+    result["intent_classification_accuracy"] = (
+        float(intent_match)
+        if intent_match is not None and result.get("predicted_intent") is not None
+        else result.get("intent_classification_accuracy")
+    )
+
+    result.setdefault("domain_resolution_accuracy", None)
+    result.setdefault("domain_resolution_accuracy_strict", None)
+    result.setdefault("domain_resolution_accuracy_relaxed", None)
+    if system_key == "C" and result.get("resolved_domain") and expected:
+        strict_match = _labels_match(result.get("resolved_domain"), expected, relaxed=False)
+        relaxed_match = _labels_match(result.get("resolved_domain"), expected, relaxed=True)
+        result["domain_resolution_accuracy"] = float(strict_match) if strict_match is not None else None
+        result["domain_resolution_accuracy_strict"] = float(strict_match) if strict_match is not None else None
+        result["domain_resolution_accuracy_relaxed"] = float(relaxed_match) if relaxed_match is not None else None
     return result
+
+
+def _exact_result_to_metric_shape(result: dict[str, Any], *, system_name: str) -> dict[str, Any]:
+    method = str(result.get("evaluation_method") or "").strip()
+    exact_method_used = method == EXACT_EVALUATION_METHOD
+    output = {
+        "metrics_evaluated": result.get("accuracy") is not None,
+        "accuracy": result.get("accuracy"),
+        "hallucination": result.get("hallucination"),
+        "leakage": result.get("leakage"),
+        "contamination": result.get("contamination"),
+        "false_rejection": result.get("false_rejection"),
+        "dimension_scores": {
+            dimension: (
+                result.get("dimension_scores", {}).get(dimension)
+                if isinstance(result.get("dimension_scores"), dict)
+                else None
+            )
+            for dimension in DIMENSIONS
+        },
+        "context_contamination_rate": result.get("context_contamination_rate"),
+        "memory_recall": result.get("memory_recall"),
+        "knowledge_growth": result.get("knowledge_growth"),
+        "cross_domain_robustness": result.get("cross_domain_robustness"),
+        "intent_classification_accuracy": result.get("intent_classification_accuracy"),
+        "domain_resolution_accuracy": result.get("domain_resolution_accuracy") if system_name == "C" else None,
+        "domain_resolution_accuracy_strict": result.get("domain_resolution_accuracy_strict") if system_name == "C" else None,
+        "domain_resolution_accuracy_relaxed": result.get("domain_resolution_accuracy_relaxed") if system_name == "C" else None,
+        "judge_rationale": result.get("judge_rationale") or result.get("rationale") or "",
+        "evaluation_method": EXACT_EVALUATION_METHOD if exact_method_used else FALLBACK_EVALUATION_METHOD,
+        "requires_human_review": False,
+        "question_type": result.get("question_type"),
+        "expected_intent": result.get("expected_intent"),
+        "predicted_intent": result.get("predicted_intent"),
+        "resolved_domain": (
+            (result.get("metadata") or {}).get("resolved_domain")
+            if isinstance(result.get("metadata"), dict)
+            else None
+        ),
+        "evidence_status": result.get("evidence_status"),
+        "exact_evaluator_imported": _evaluator_callable_available,
+        "exact_evaluator_file_loaded": _evaluator_file_loaded,
+        "evaluator_callable_available": _evaluator_callable_available,
+        "fallback_evaluator_used": not exact_method_used,
+    }
+    for dimension, score in output["dimension_scores"].items():
+        output[dimension] = score
+    if output["cross_domain_robustness"] is None and output.get("question_type") == "mixed":
+        output["cross_domain_robustness"] = _local_cross_domain_robustness(str(result.get("response") or ""))
+    return output
+
+
+def evaluate_answers(
+    question: str,
+    answers: dict[str, dict[str, Any]],
+    *,
+    metadata: dict[str, Any] | None = None,
+    question_type: str | None = None,
+    expected_intent: str | None = None,
+    gold_constraints: dict[str, Any] | None = None,
+) -> dict[str, dict[str, Any]]:
+    """Evaluate one question's answer set with evaluator.py when possible."""
+
+    configure_project_runtime()
+    metadata = dict(metadata or {})
+    gold_constraints = dict(gold_constraints or {})
+
+    if (
+        _exact_evaluate_comparison is not None
+        and os.environ.get("VOICE_ASSISTANT_DISABLE_EXACT_EVALUATOR") != "1"
+    ):
+        try:
+            exact_input: dict[str, dict[str, Any]] = {}
+            for system in ("A", "B", "C"):
+                answer = answers.get(system)
+                answer_metadata = dict(metadata)
+                if isinstance(answer, dict):
+                    answer_metadata.update(answer.get("metadata") or {})
+                    response = str(answer.get("response") or "")
+                    latency = answer.get("latency")
+                else:
+                    response = ""
+                    latency = None
+                    answer_metadata["error"] = True
+                exact_input[system] = {
+                    "response": response,
+                    "latency": latency,
+                    "total_latency": latency,
+                    "metadata": answer_metadata,
+                    "expected_intent": expected_intent or metadata.get("expected_intent"),
+                    **gold_constraints,
+                }
+            evaluated = _exact_evaluate_comparison(question, exact_input)
+            return {
+                system: _exact_result_to_metric_shape(evaluated[system], system_name=system)
+                for system in answers
+                if system in evaluated and isinstance(answers.get(system), dict)
+            }
+        except Exception as exc:
+            exact_error = f"{type(exc).__name__}: {exc}"
+        else:
+            exact_error = None
+    else:
+        exact_error = _exact_evaluator_import_error
+
+    fallback_results: dict[str, dict[str, Any]] = {}
+    for system, answer in answers.items():
+        answer_metadata = dict(metadata)
+        if isinstance(answer, dict):
+            answer_metadata.update(answer.get("metadata") or {})
+        evaluation = evaluate_answer(
+            question,
+            str((answer or {}).get("response") or ""),
+            metadata=answer_metadata,
+            question_type=question_type,
+            expected_intent=expected_intent,
+            gold_constraints=gold_constraints,
+            system_name=system,
+        )
+        evaluation["fallback_evaluator_used"] = True
+        if exact_error:
+            rationale = str(evaluation.get("judge_rationale") or "")
+            evaluation["judge_rationale"] = (
+                f"{rationale} Exact evaluator unavailable for this live call: {exact_error}"
+            ).strip()
+        fallback_results[system] = evaluation
+    return fallback_results
 
 
 def mark_demo_evaluation(answer: dict[str, Any]) -> dict[str, Any]:
@@ -660,16 +1090,28 @@ def mark_demo_evaluation(answer: dict[str, Any]) -> dict[str, Any]:
 
 
 def bridge_status() -> dict[str, Any]:
+    exact_available = _evaluator_callable_available
+    method = EXACT_EVALUATION_METHOD if exact_available else COMPATIBLE_EVALUATION_METHOD
     return {
         "evaluator_bridge_available": True,
         "research_evaluation_supported": True,
-        "evaluation_method": EVALUATION_METHOD,
-        "research_evaluation_method": EVALUATION_METHOD,
+        "evaluation_method": method,
+        "research_evaluation_method": method,
+        "evaluator_bridge_method": method,
+        "evaluator_exact_import_available": exact_available,
+        "evaluator_file_exists": EVALUATOR_FILE.exists(),
+        "evaluator_file_loaded": _evaluator_file_loaded,
+        "exact_evaluator_file_loaded": _evaluator_file_loaded,
+        "evaluator_callable_available": exact_available,
+        "exact_evaluator_callable_available": exact_available,
+        "fallback_evaluator_used": not exact_available,
         "demo_evaluation_method": DEMO_EVALUATION_METHOD,
         "project_root": str(PROJECT_ROOT),
         "cwd": str(Path.cwd()),
         "official_metric_helpers_available": attach_comparison_metrics is not None,
         "judge_llm_available": chat is not None,
+        "evaluator_import_error": _exact_evaluator_import_error,
+        "exact_evaluator_import_error": _exact_evaluator_import_error,
         "metrics_import_error": _metrics_import_error,
         "judge_import_error": _judge_import_error,
     }

@@ -15,17 +15,23 @@ const voiceFallbackNote = document.getElementById("voiceFallbackNote");
 const uploadButton = document.getElementById("uploadButton");
 const fileInput = document.getElementById("fileInput");
 const uploadStatus = document.getElementById("uploadStatus");
+const autoQuestionSource = document.getElementById("autoQuestionSource");
 const autoPdfInput = document.getElementById("autoPdfInput");
 const autoPdfSystem = document.getElementById("autoPdfSystem");
 const autoPdfCount = document.getElementById("autoPdfCount");
 const autoPdfPosition = document.getElementById("autoPdfPosition");
 const autoPdfExtractButton = document.getElementById("autoPdfExtractButton");
+const loadBenchmarkQuestionsButton = document.getElementById("loadBenchmarkQuestionsButton");
+const loadOfficialQuestionsButton = document.getElementById("loadOfficialQuestionsButton");
 const autoPdfRunButton = document.getElementById("autoPdfRunButton");
 const autoPdfStopButton = document.getElementById("autoPdfStopButton");
 const autoPdfClearButton = document.getElementById("autoPdfClearButton");
 const autoPdfProgress = document.getElementById("autoPdfProgress");
 const autoPdfSummary = document.getElementById("autoPdfSummary");
 const autoPdfPreviewList = document.getElementById("autoPdfPreviewList");
+const benchmarkCompatibleRunToggle = document.getElementById("benchmarkCompatibleRunToggle");
+const keepTemporaryRagToggle = document.getElementById("keepTemporaryRagToggle");
+const benchmarkRunWarning = document.getElementById("benchmarkRunWarning");
 const researchModeToggle = document.getElementById("researchModeToggle");
 const researchModeNote = document.getElementById("researchModeNote");
 const dashboardButton = document.getElementById("metricsDashboardBtn");
@@ -34,6 +40,7 @@ const csvButton = document.getElementById("exportCsvBtn");
 const pdfButton = document.getElementById("downloadPdfBtn");
 const dashboardModal = document.getElementById("dashboardModal");
 const closeDashboardButton = document.getElementById("closeDashboardButton");
+const dashboardModeSelect = document.getElementById("dashboardModeSelect");
 const dashboardEvaluationBanner = document.getElementById("dashboardEvaluationBanner");
 const metricCards = document.getElementById("metricCards");
 const noSessionMessage = document.getElementById("noSessionMessage");
@@ -87,6 +94,8 @@ let charts = {};
 let autoPdfQuestions = [];
 let autoPdfRunning = false;
 let autoPdfStopRequested = false;
+let benchmarkStateResetApplied = false;
+let dashboardMode = "live";
 let historyCounter = 0;
 let lastSubmittedQuestion = "";
 let autoPdfExtractionInfo = {
@@ -96,6 +105,9 @@ let autoPdfExtractionInfo = {
   categoryCounts: {},
   extractionMode: null,
   fallbackUsed: false,
+  questionSource: "uploaded_pdf",
+  sourcePath: null,
+  loadedMessage: null,
 };
 let autoPdfSelectedRange = {
   selected: [],
@@ -138,6 +150,37 @@ function closeModal(modal) {
 
 function researchEvaluationEnabled() {
   return Boolean(researchModeToggle && researchModeToggle.checked);
+}
+
+function benchmarkCompatibleRunEnabled() {
+  return Boolean(benchmarkCompatibleRunToggle && benchmarkCompatibleRunToggle.checked);
+}
+
+function selectedQuestionSource() {
+  return autoQuestionSource ? autoQuestionSource.value : "uploaded_pdf";
+}
+
+function updateQuestionSourceControls() {
+  const source = selectedQuestionSource();
+  const uploadedPdf = source === "uploaded_pdf";
+  if (autoPdfInput) {
+    autoPdfInput.disabled = !uploadedPdf;
+  }
+  if (autoPdfExtractButton) {
+    autoPdfExtractButton.hidden = !uploadedPdf;
+  }
+  if (loadBenchmarkQuestionsButton) {
+    loadBenchmarkQuestionsButton.hidden = source !== "official_benchmark";
+  }
+  if (loadOfficialQuestionsButton) {
+    loadOfficialQuestionsButton.hidden = source !== "official_results";
+  }
+}
+
+function updateBenchmarkRunWarning() {
+  if (benchmarkRunWarning) {
+    benchmarkRunWarning.hidden = !benchmarkCompatibleRunEnabled();
+  }
 }
 
 function updateResearchModeNote() {
@@ -185,7 +228,7 @@ function closeSettingsModal() {
   closeModal(settingsModal);
 }
 
-function clearChatWorkspace(message = "Ready") {
+function clearChatWorkspace(message = "Ready", options = {}) {
   stopSpeech();
   if (isListening && recognition) {
     recognition.stop();
@@ -203,13 +246,31 @@ function clearChatWorkspace(message = "Ready") {
   resetHistoryList();
   resetQuestionInputHeight();
   closeUploadMenu();
-  closeResearchDrawer();
+  if (!options.keepResearchDrawer) {
+    closeResearchDrawer();
+  }
   setStatus(message);
 }
 
 if (researchModeToggle) {
   researchModeToggle.addEventListener("change", updateResearchModeNote);
   updateResearchModeNote();
+}
+
+if (autoQuestionSource) {
+  autoQuestionSource.addEventListener("change", () => {
+    updateQuestionSourceControls();
+    autoPdfProgress.textContent = "";
+  });
+  updateQuestionSourceControls();
+}
+
+if (benchmarkCompatibleRunToggle) {
+  benchmarkCompatibleRunToggle.addEventListener("change", () => {
+    benchmarkStateResetApplied = false;
+    updateBenchmarkRunWarning();
+  });
+  updateBenchmarkRunWarning();
 }
 
 if (systemSelect && settingsSystemSelect) {
@@ -316,6 +377,8 @@ function renderHealthStatus(data) {
     healthLine("System A", systems.A ? "Available" : "Not Available"),
     healthLine("System B", systems.B ? "Available" : "Not Available"),
     healthLine("System C", systems.C ? "Available" : "Not Available"),
+    healthLine("System health import probe", data.system_health_probe_imports),
+    healthLine("System health note", data.system_health_note || "N/A"),
     healthLine("Main RAG available", data.main_rag_available),
     healthLine("Main RAG source", data.main_rag_source || data.main_rag_path_detected || "N/A"),
     healthLine("Main RAG read only", data.main_rag_read_only),
@@ -324,8 +387,13 @@ function renderHealthStatus(data) {
     healthLine("Temporary RAG active", data.temp_rag_active),
     healthLine("Temp files count", data.temp_files_count),
     healthLine("Evaluator bridge", data.evaluator_bridge_available),
+    healthLine("Exact evaluator import", data.evaluator_exact_import_available),
+    healthLine("Evaluator bridge method", data.evaluator_bridge_method),
     healthLine("Research eval supported", data.research_evaluation_supported),
     healthLine("Research eval method", data.research_evaluation_method),
+    healthLine("Official results available", data.official_results_available),
+    healthLine("Official results count", data.official_results_count),
+    healthLine("Live session count", data.live_session_count),
     healthLine("Research mode currently enabled", data.research_mode_currently_enabled),
     healthLine("CWD", data.cwd),
     healthLine("Project root", data.project_root),
@@ -1284,11 +1352,11 @@ function autoPdfRangeSummary(range) {
     return "No PDF questions extracted.";
   }
   if (range.count >= range.total) {
-    return `Extracted ${range.total} questions. Selected all ${range.total} PDF questions.`;
+    return `Loaded ${range.total} questions. Selected all ${range.total} questions.`;
   }
   return (
-    `Extracted ${range.total} questions. ` +
-    `Selected PDF questions ${range.startIndex + 1}-${range.endIndex} of ${range.total}.`
+    `Loaded ${range.total} questions. ` +
+    `Selected questions ${range.startIndex + 1}-${range.endIndex} of ${range.total}.`
   );
 }
 
@@ -1300,6 +1368,8 @@ function refreshAutoPdfSelectionPreview() {
   );
   autoPdfSummary.innerHTML = `
     <span>${escapeHtml(autoPdfRangeSummary(autoPdfSelectedRange))}</span>
+    ${autoPdfExtractionInfo.loadedMessage ? `<span>${escapeHtml(autoPdfExtractionInfo.loadedMessage)}</span>` : ""}
+    ${autoPdfExtractionInfo.questionSource ? `<span class="source-chip">${escapeHtml(autoPdfExtractionInfo.questionSource)}</span>` : ""}
     ${categoryCountsHtml(autoPdfExtractionInfo.categoryCounts)}
     ${extractionWarningHtml()}
   `;
@@ -1320,6 +1390,9 @@ function renderAutoPdfPreview(data) {
       : {},
     extractionMode: data.extraction_mode || null,
     fallbackUsed: Boolean(data.fallback_used),
+    questionSource: data.question_source || "uploaded_pdf",
+    sourcePath: data.source_path || null,
+    loadedMessage: data.loaded_message || null,
   };
   refreshAutoPdfSelectionPreview();
 }
@@ -1340,12 +1413,61 @@ function resetAutoPdfUi(message = "") {
     categoryCounts: {},
     extractionMode: null,
     fallbackUsed: false,
+    questionSource: "uploaded_pdf",
+    sourcePath: null,
+    loadedMessage: null,
   };
   autoPdfInput.value = "";
   autoPdfCount.value = "10";
   autoPdfProgress.textContent = message;
   autoPdfSummary.textContent = "No PDF questions extracted.";
   autoPdfPreviewList.innerHTML = "";
+}
+
+async function loadResearchQuestionSource(source) {
+  const label = source === "official_results" ? "official results.json questions" : "official benchmark questions";
+  autoPdfProgress.textContent = `Loading ${label}...`;
+  const response = await fetch("/api/load_research_questions", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ source }),
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.detail || "Could not load research questions.");
+  }
+  renderAutoPdfPreview(data);
+  autoPdfProgress.textContent = data.loaded_message || `Loaded ${data.total_questions} questions.`;
+  if (source === "official_results" && data.total_questions === 420) {
+    autoPdfProgress.textContent = "Loaded 420 official evaluated questions from results.json";
+  }
+  return data;
+}
+
+async function prepareBenchmarkCompatibleRun() {
+  if (!benchmarkCompatibleRunEnabled()) {
+    benchmarkStateResetApplied = false;
+    return null;
+  }
+  autoPdfProgress.textContent = "Resetting website session for benchmark-compatible live run...";
+  const response = await fetch("/api/benchmark_live_reset", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      keep_temporary_rag: Boolean(keepTemporaryRagToggle && keepTemporaryRagToggle.checked),
+    }),
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.detail || "Benchmark-compatible reset failed.");
+  }
+  benchmarkStateResetApplied = Boolean(data.state_reset_applied);
+  clearChatWorkspace("Benchmark-compatible live run ready", { keepResearchDrawer: true });
+  if (!(keepTemporaryRagToggle && keepTemporaryRagToggle.checked)) {
+    uploadStatus.textContent = "";
+  }
+  autoPdfProgress.textContent = data.note || "Benchmark-compatible live run reset applied.";
+  return data;
 }
 
 async function runSingleAutoPdfQuestion(entry, system) {
@@ -1361,6 +1483,9 @@ async function runSingleAutoPdfQuestion(entry, system) {
       pdf_question_number: autoPdfQuestionNumber(entry),
       pdf_category: autoPdfCategory(entry),
       research_evaluation_mode: researchEvaluationEnabled(),
+      benchmark_compatible_live_run: benchmarkCompatibleRunEnabled(),
+      state_reset_applied: benchmarkStateResetApplied,
+      question_source: autoPdfExtractionInfo.questionSource || selectedQuestionSource(),
     }),
   });
   const data = await response.json();
@@ -1375,6 +1500,21 @@ function setAutoPdfRunningState(active) {
   autoPdfRunButton.disabled = active;
   autoPdfExtractButton.disabled = active;
   autoPdfClearButton.disabled = active;
+  if (loadBenchmarkQuestionsButton) {
+    loadBenchmarkQuestionsButton.disabled = active;
+  }
+  if (loadOfficialQuestionsButton) {
+    loadOfficialQuestionsButton.disabled = active;
+  }
+  if (autoQuestionSource) {
+    autoQuestionSource.disabled = active;
+  }
+  if (benchmarkCompatibleRunToggle) {
+    benchmarkCompatibleRunToggle.disabled = active;
+  }
+  if (keepTemporaryRagToggle) {
+    keepTemporaryRagToggle.disabled = active;
+  }
   autoPdfStopButton.hidden = !active;
   autoPdfStopButton.disabled = !active;
   autoPdfRunButton.textContent = active ? "Running..." : "Auto Run";
@@ -1409,6 +1549,10 @@ autoPdfPosition.addEventListener("change", () => {
 });
 
 autoPdfExtractButton.addEventListener("click", async () => {
+  if (selectedQuestionSource() !== "uploaded_pdf") {
+    autoPdfProgress.textContent = "Use the source load button for official benchmark questions.";
+    return;
+  }
   const file = autoPdfInput.files[0];
   if (!file) {
     autoPdfProgress.textContent = "Choose a PDF file first.";
@@ -1441,6 +1585,36 @@ autoPdfExtractButton.addEventListener("click", async () => {
   }
 });
 
+if (loadBenchmarkQuestionsButton) {
+  loadBenchmarkQuestionsButton.addEventListener("click", async () => {
+    loadBenchmarkQuestionsButton.disabled = true;
+    try {
+      await loadResearchQuestionSource("official_benchmark");
+      autoPdfCount.value = "all";
+      refreshAutoPdfSelectionPreview();
+    } catch (error) {
+      autoPdfProgress.textContent = error.message;
+    } finally {
+      loadBenchmarkQuestionsButton.disabled = false;
+    }
+  });
+}
+
+if (loadOfficialQuestionsButton) {
+  loadOfficialQuestionsButton.addEventListener("click", async () => {
+    loadOfficialQuestionsButton.disabled = true;
+    try {
+      await loadResearchQuestionSource("official_results");
+      autoPdfCount.value = "all";
+      refreshAutoPdfSelectionPreview();
+    } catch (error) {
+      autoPdfProgress.textContent = error.message;
+    } finally {
+      loadOfficialQuestionsButton.disabled = false;
+    }
+  });
+}
+
 autoPdfRunButton.addEventListener("click", async () => {
   if (autoPdfRunning) {
     return;
@@ -1456,11 +1630,19 @@ autoPdfRunButton.addEventListener("click", async () => {
     total: 0,
   };
   try {
-    if (!autoPdfQuestions.length) {
-      await loadAutoPdfQuestions();
+    if (benchmarkCompatibleRunEnabled() && !researchEvaluationEnabled()) {
+      researchModeToggle.checked = true;
+      updateResearchModeNote();
     }
     if (!autoPdfQuestions.length) {
-      throw new Error("Extract PDF questions before running.");
+      if (selectedQuestionSource() === "uploaded_pdf") {
+        await loadAutoPdfQuestions();
+      } else {
+        await loadResearchQuestionSource(selectedQuestionSource());
+      }
+    }
+    if (!autoPdfQuestions.length) {
+      throw new Error("Load or extract questions before running.");
     }
 
     selected = refreshAutoPdfSelectionPreview();
@@ -1481,6 +1663,8 @@ autoPdfRunButton.addEventListener("click", async () => {
     if (isListening && recognition) {
       recognition.stop();
     }
+
+    await prepareBenchmarkCompatibleRun();
 
     autoPdfStopRequested = false;
     setAutoPdfRunningState(true);
@@ -1532,7 +1716,7 @@ autoPdfRunButton.addEventListener("click", async () => {
     autoPdfProgress.textContent = autoPdfStopRequested
       ? `Stopped after ${processedCount}/${selectedCount} questions (${completedCount} completed).`
       : `Finished ${processedCount}/${selectedCount} questions (${completedCount} completed) ` +
-        `(PDF questions ${selected.startIndex + 1}-${selected.endIndex} of ${selected.total}).`;
+        `(questions ${selected.startIndex + 1}-${selected.endIndex} of ${selected.total}).`;
     setStatus("Ready");
   } catch (error) {
     autoPdfProgress.textContent = error.message;
@@ -1865,11 +2049,16 @@ function renderCharts(metrics) {
 }
 
 async function refreshDashboard() {
-  const response = await fetch("/api/session_metrics");
+  dashboardMode = dashboardModeSelect ? dashboardModeSelect.value : dashboardMode;
+  const response = await fetch(`/api/session_metrics?mode=${encodeURIComponent(dashboardMode)}`);
   const metrics = await response.json();
   if (dashboardEvaluationBanner) {
-    dashboardEvaluationBanner.textContent = `Evaluation mode: ${metrics.evaluation_mode_label || "N/A"}`;
-    dashboardEvaluationBanner.classList.toggle("research", String(metrics.evaluation_method || "").includes("blind_mistral"));
+    dashboardEvaluationBanner.textContent = metrics.evaluation_message
+      || `Evaluation mode: ${metrics.evaluation_mode_label || "N/A"}`;
+    dashboardEvaluationBanner.classList.toggle(
+      "research",
+      ["benchmark_live", "official"].includes(String(metrics.evaluation_mode || "")),
+    );
   }
   noSessionMessage.style.display = metrics.total_questions || metrics.evaluation_warning ? "block" : "none";
   noSessionMessage.textContent = metrics.total_questions
@@ -1885,6 +2074,15 @@ dashboardButton.addEventListener("click", async () => {
   openModal(dashboardModal);
   await refreshDashboard();
 });
+
+if (dashboardModeSelect) {
+  dashboardModeSelect.addEventListener("change", async () => {
+    dashboardMode = dashboardModeSelect.value;
+    if (dashboardModal.classList.contains("open")) {
+      await refreshDashboard();
+    }
+  });
+}
 
 closeDashboardButton.addEventListener("click", () => {
   closeModal(dashboardModal);
@@ -1911,6 +2109,7 @@ async function clearSession() {
     recognition.stop();
   }
   await fetch("/api/clear_session", { method: "POST" });
+  benchmarkStateResetApplied = false;
   clearChatWorkspace("Ready");
   fileInput.value = "";
   fileInput.accept = ".pdf,.txt,.csv,.docx,.json";
@@ -1933,12 +2132,14 @@ clearButton.addEventListener("click", clearSession);
 
 csvButton.addEventListener("click", () => {
   console.log("CSV export clicked");
-  window.location.href = "/api/export_csv";
+  const mode = dashboardModeSelect ? dashboardModeSelect.value : dashboardMode;
+  window.location.href = `/api/export_csv?mode=${encodeURIComponent(mode)}`;
 });
 
 pdfButton.addEventListener("click", () => {
   console.log("PDF download clicked");
-  window.location.href = "/api/download_pdf";
+  const mode = dashboardModeSelect ? dashboardModeSelect.value : dashboardMode;
+  window.location.href = `/api/download_pdf?mode=${encodeURIComponent(mode)}`;
 });
 
 window.addEventListener("beforeunload", stopSpeech);
