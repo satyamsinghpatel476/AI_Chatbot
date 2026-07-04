@@ -32,7 +32,7 @@ git branch -M main
 For a dashboard-only GitHub Pages repository:
 
 ```bash
-git add .gitignore .github web_page GITHUB_PAGES_DEPLOYMENT.md
+git add .gitignore .github web_page docs/GITHUB_PAGES_DEPLOYMENT.md
 git commit -m "Add GitHub Pages dashboard"
 ```
 

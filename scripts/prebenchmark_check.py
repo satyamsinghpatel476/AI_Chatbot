@@ -1,6 +1,11 @@
 import json
+import sys
 from collections import Counter
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
 
 from benchmark_hygiene import (
     filter_valid_benchmark_questions,
@@ -10,7 +15,6 @@ from benchmark_hygiene import (
 from chatbot_system_c import chatbot_system_c
 
 
-ROOT_DIR = Path(__file__).resolve().parent
 BENCHMARK_PATH = ROOT_DIR / "benchmarks" / "benchmark_500.json"
 LEGACY_BENCHMARK_PATH = ROOT_DIR / "benchmark_500.json"
 SKIPPED_PATH = ROOT_DIR / "skipped_questions.json"

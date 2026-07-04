@@ -19,6 +19,7 @@ env/
 venv/
 backups/*.tar.gz
 backups/
+local_artifacts/
 models/
 *.safetensors
 *.pt
@@ -32,6 +33,7 @@ evaluator/results/runs/
 *.pdf
 benchmark_500.csv
 testing_combined.csv
+benchmarks/*.csv
 * (Copy).py
 /Pasted image.png
 

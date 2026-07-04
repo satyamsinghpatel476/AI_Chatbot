@@ -2,13 +2,14 @@ import json
 from pathlib import Path
 
 
-SKIPPED_PATH = Path(__file__).resolve().parent / "skipped_questions.json"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SKIPPED_PATH = PROJECT_ROOT / "skipped_questions.json"
 
 
 def main():
     if not SKIPPED_PATH.exists():
         print(
-            "No skipped_questions.json found. Run prebenchmark_check.py "
+            "No skipped_questions.json found. Run scripts/prebenchmark_check.py "
             "or evaluator first."
         )
         return

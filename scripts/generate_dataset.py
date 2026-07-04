@@ -1,5 +1,9 @@
 import json
 import random
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 robotics = [
     "Explain SLAM", "Explain Kalman Filter", "Explain PID controller",
@@ -37,7 +41,7 @@ for _ in range(300):
     dataset.append({"text": q, "label": "mixed"})
 
 # Save
-with open("data/intent_dataset.json", "w") as f:
+with open(PROJECT_ROOT / "data" / "intent_dataset.json", "w") as f:
     json.dump(dataset, f, indent=2)
 
 print("🔥 Dataset generated")

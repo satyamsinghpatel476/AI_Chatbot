@@ -4,7 +4,8 @@ from pathlib import Path
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 
-OUTPUT_DIR = Path(__file__).resolve().parent / "benchmarks"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+OUTPUT_DIR = PROJECT_ROOT / "benchmarks"
 questions = []
 
 

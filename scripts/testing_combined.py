@@ -4,7 +4,8 @@ import csv
 from pathlib import Path
 
 
-OUTPUT_DIR = Path(__file__).resolve().parent / "benchmarks"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+OUTPUT_DIR = PROJECT_ROOT / "benchmarks"
 
 
 def output_path(filename):

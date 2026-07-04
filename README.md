@@ -15,6 +15,8 @@ committed.
   retrieval, memory, and intent-classifier integration.
 - `evaluator/`, `benchmarks/`: benchmark and
   research evaluation tools.
+- `scripts/`: standalone generators, checks, and maintenance scripts.
+- `docs/`, `reports/`: design notes, deployment notes, and research reports.
 - `data/intent_dataset.json`, `training/train_intent.py`: intent-classifier
   dataset and training script.
 - `rag/documents/`: local knowledge documents used by retrieval.
@@ -59,10 +61,11 @@ by git.
 ```bash
 python -m unittest discover tests
 python evaluator/evaluator.py --mode research --fast --limit 5 --smoke
+python scripts/prebenchmark_check.py
 streamlit run ui_app/app.py
 python -m http.server 8000 --directory web_page
 ```
 
 The repository includes a GitHub Actions workflow for publishing `web_page/`
 through GitHub Pages. See `web_page/README.md` and
-`GITHUB_PAGES_DEPLOYMENT.md` for details.
+`docs/GITHUB_PAGES_DEPLOYMENT.md` for details.

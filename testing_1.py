@@ -1,4 +1,14 @@
 import re
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+OUTPUT_DIR = PROJECT_ROOT / "benchmarks"
+
+
+def output_path(filename):
+    OUTPUT_DIR.mkdir(exist_ok=True)
+    return OUTPUT_DIR / filename
 
 
 questions = [
@@ -104,11 +114,12 @@ benchmark_items = [
 ]
 
 
-def generate_pdf(path="testing_1.pdf"):
+def generate_pdf(path=None):
     from reportlab.lib.styles import getSampleStyleSheet
     from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 
-    pdf = SimpleDocTemplate(path)
+    path = path or output_path("testing_1.pdf")
+    pdf = SimpleDocTemplate(str(path))
     styles = getSampleStyleSheet()
     content = [
         Paragraph("Testing 1 - Benchmark Questions", styles["Title"]),
