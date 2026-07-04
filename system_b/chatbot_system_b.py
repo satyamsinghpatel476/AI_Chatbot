@@ -12,6 +12,7 @@ from research_core import (
     select_facts,
     update_structured_memory,
 )
+from terminal_formatting import format_terminal_answer
 from system_b.grounding import (
     append_routed_interaction,
     classifier_guidance,
@@ -422,8 +423,10 @@ def _cli_value(value):
 
 def _print_cli_response(result, metadata_mode):
     response = result.get("response", "") if isinstance(result, dict) else result
-    print("\nSystem B:")
-    print(response)
+    print("\n------------------------------")
+    print("System B")
+    print("------------------------------")
+    print(format_terminal_answer(response))
 
     if metadata_mode and isinstance(result, dict):
         predicted_intent = result.get("predicted_intent")

@@ -20,6 +20,7 @@ from research_core import (
     select_facts,
     update_structured_memory,
 )
+from terminal_formatting import format_terminal_answer
 
 
 CLASSIFIER = get_intent_classifier()
@@ -2005,8 +2006,10 @@ def _cli_value(value):
 
 def _print_cli_response(result, metadata_mode):
     response = result.get("response", "") if isinstance(result, dict) else result
-    print("\nSystem C:")
-    print(response)
+    print("\n------------------------------")
+    print("System C")
+    print("------------------------------")
+    print(format_terminal_answer(response))
 
     if metadata_mode and isinstance(result, dict):
         predicted_intent = result.get("predicted_intent")

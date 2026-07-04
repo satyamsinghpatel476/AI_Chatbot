@@ -3,6 +3,6 @@ Type=Application
 Name=Local Multi-Domain Assistant
 Comment=Open Local Multi-Domain AI Assistant
 Exec=/home/satyam/ai_robotics_assistant/voice_assistant_website/run_voice_assistant_app.sh
-Icon=/home/satyam/ai_robotics_assistant/voice_assistant_website/frontend/assets/assistant.png
+Icon=/home/satyam/ai_robotics_assistant/voice_assistant_website/frontend/assets/logo.png
 Terminal=false
 Categories=Development;Education;AI;

@@ -85,6 +85,23 @@ const STANDARD_VOICE_OPTIONS = [
 ];
 const DEFAULT_STANDARD_VOICE = "american";
 const MAX_CHART_POINTS = 20;
+const LOGO_SRC = "/static/assets/logo.png?v=3";
+const DISPLAY_HEADINGS = [
+  "Direct Answer",
+  "Short Explanation",
+  "Explanation",
+  "Key Points",
+  "Practical Advice or Example",
+  "Practical Advice",
+  "Example",
+  "Important Difference",
+  "Final Conclusion",
+  "Conclusion",
+  "Robotics Perspective",
+  "Daily-Life Perspective",
+  "Relationship Type",
+];
+const DISPLAY_ABBREVIATIONS = ["e.g.", "i.e.", "etc.", "U.S.", "U.K.", "vs.", "Dr.", "Mr.", "Ms.", "Prof."];
 
 let recognition = null;
 let isListening = false;
@@ -235,7 +252,7 @@ function clearChatWorkspace(message = "Ready", options = {}) {
   }
   chatLog.innerHTML = `
     <div class="empty-state">
-      <div class="empty-orb" aria-hidden="true">AI</div>
+      <img src="${LOGO_SRC}" alt="Alya Local Multi-Domain Assistant" class="welcome-logo">
       <h2>How can I help?</h2>
       <p>Message Local Multi-Domain Assistant, use voice input, or add temporary file context.</p>
     </div>
@@ -661,16 +678,71 @@ function renderList(lines, ordered = false) {
   const items = lines.map((line) => {
     const item = ordered
       ? line.replace(/^\s*\d+\.\s+/, "")
-      : line.replace(/^\s*[-*]\s+/, "");
+      : line.replace(/^\s*[-*•]\s+/, "");
     return `<li>${renderInlineMarkdown(item)}</li>`;
   });
   return `<${tag}>${items.join("")}</${tag}>`;
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function answerHeadingPattern() {
+  return new RegExp(`^(${DISPLAY_HEADINGS.map(escapeRegExp).join("|")}):$`, "i");
+}
+
+function formatPlainAssistantMessageSegment(segment) {
+  if (!segment) {
+    return "";
+  }
+
+  const protectedAbbreviations = [];
+  let formatted = String(segment).replace(/\r\n/g, "\n");
+
+  DISPLAY_ABBREVIATIONS.forEach((abbreviation, index) => {
+    const token = `__DISPLAY_ABBR_${index}__`;
+    protectedAbbreviations.push([token, abbreviation]);
+    formatted = formatted.replace(new RegExp(escapeRegExp(abbreviation), "g"), token);
+  });
+
+  const headingExpression = new RegExp(`\\b(${DISPLAY_HEADINGS.map(escapeRegExp).join("|")}):\\s*`, "gi");
+  formatted = formatted.replace(headingExpression, (match, heading, offset, source) => {
+    const before = source.slice(0, offset);
+    const prefix = before && !/\n\s*$/.test(before) ? "\n\n" : "";
+    return `${prefix}${heading}:\n`;
+  });
+
+  formatted = formatted.replace(/([.!?])\s+(?=["'“‘(\[]?[A-Z0-9])/g, "$1\n");
+  formatted = formatted.replace(/(^|[^\n])\s+([1-5])\.\s+/g, "$1\n$2. ");
+  formatted = formatted.replace(/([:;.!?])\s+(-\s+(?=\S))/g, "$1\n$2");
+  formatted = formatted.replace(/(^|[^\n])\s+(•\s+)/g, "$1\n$2");
+
+  protectedAbbreviations.forEach(([token, abbreviation]) => {
+    formatted = formatted.replace(new RegExp(token, "g"), abbreviation);
+  });
+
+  return formatted
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+function formatAssistantMessageForDisplay(text) {
+  const parts = String(text || "").split(/(```[\s\S]*?```)/g);
+  return parts
+    .map((part) => (part.startsWith("```") ? part : formatPlainAssistantMessageSegment(part)))
+    .filter((part) => part)
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
 
 function renderMarkdown(text) {
   const lines = String(text || "").replace(/\r\n/g, "\n").split("\n");
   const html = [];
   let paragraph = [];
+  const headingPattern = answerHeadingPattern();
 
   const flushParagraph = () => {
     if (paragraph.length) {
@@ -685,6 +757,12 @@ function renderMarkdown(text) {
 
     if (!trimmed) {
       flushParagraph();
+      continue;
+    }
+
+    if (headingPattern.test(trimmed)) {
+      flushParagraph();
+      html.push(`<span class="answer-heading">${escapeHtml(trimmed)}</span>`);
       continue;
     }
 
@@ -713,10 +791,10 @@ function renderMarkdown(text) {
       continue;
     }
 
-    if (/^\s*[-*]\s+/.test(line)) {
+    if (/^\s*[-*•]\s+/.test(line)) {
       flushParagraph();
       const listLines = [line];
-      while (lines[index + 1] && /^\s*[-*]\s+/.test(lines[index + 1])) {
+      while (lines[index + 1] && /^\s*[-*•]\s+/.test(lines[index + 1])) {
         index += 1;
         listLines.push(lines[index]);
       }
@@ -1012,6 +1090,7 @@ function addResponseCard(systemKey, answer, sourceQuestion = lastSubmittedQuesti
   const responseText = answer.response || "";
   const latency = answer.latency ?? "N/A";
   const hasError = answer.metadata && answer.metadata.error;
+  const displayResponseText = hasError ? responseText : formatAssistantMessageForDisplay(responseText);
   const systemLabel = systemKey === "Error" ? "Error" : `System ${escapeHtml(systemKey)}`;
 
   card.innerHTML = `
@@ -1027,7 +1106,7 @@ function addResponseCard(systemKey, answer, sourceQuestion = lastSubmittedQuesti
           <span class="timestamp">${formatTimestamp()}</span>
         </div>
       </div>
-      <div class="answer-text ${hasError ? "error-text" : ""}">${renderMarkdown(responseText)}</div>
+      <div class="answer-text assistant-message-content ${hasError ? "error-text" : ""}">${renderMarkdown(displayResponseText)}</div>
       <div class="card-actions">
         <button class="ghost-button read-button" type="button">Read</button>
         <button class="ghost-button stop-button" type="button">Stop</button>

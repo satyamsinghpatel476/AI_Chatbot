@@ -180,6 +180,21 @@ h3 {
   gap: 12px;
 }
 
+.app-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.sidebar .app-logo,
+.sidebar-rail .app-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+}
+
 .rail-button,
 .rail-logo {
   position: relative;
@@ -205,9 +220,10 @@ h3 {
 }
 
 .rail-logo {
-  color: #061510;
-  background: var(--accent);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .22);
+  padding: 0;
+  color: var(--text);
+  background: transparent;
+  box-shadow: none;
 }
 
 .rail-button:hover {
@@ -297,8 +313,16 @@ h3 {
 .panel-brand {
   min-height: 44px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.panel-brand > div {
+  min-width: 0;
+}
+
+.panel-brand h1 {
+  max-width: 190px;
 }
 
 .eyebrow {
@@ -648,6 +672,12 @@ h3 {
   z-index: 1;
 }
 
+.assistant-stage .app-logo {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
 .assistant-fallback {
   width: 100%;
   height: 100%;
@@ -757,6 +787,14 @@ h3 {
   height: 54px;
   border-radius: 14px;
   box-shadow: var(--shadow-soft);
+}
+
+.welcome-logo {
+  width: 76px;
+  height: 76px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(16, 163, 127, 0.25);
 }
 
 .empty-state h2 {
@@ -911,6 +949,23 @@ h3 {
 .answer-text {
   color: var(--text);
   overflow-wrap: anywhere;
+}
+
+.assistant-message-content {
+  white-space: pre-wrap;
+  line-height: 1.65;
+}
+
+.answer-text.assistant-message-content p {
+  margin: 0 0 10px;
+}
+
+.assistant-message-content .answer-heading {
+  display: block;
+  color: var(--text);
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 4px;
 }
 
 .answer-text > *:first-child {

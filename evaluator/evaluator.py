@@ -31,6 +31,7 @@ from benchmark_hygiene import (
 )
 from llm_runtime import LLMRuntimeError, chat, prepare_uncached_benchmark_runtime
 from memory.semantic_memory import clear_memory as clear_semantic_memory
+from terminal_formatting import format_terminal_answer
 try:
     from evaluator.metrics import (
         attach_comparison_metrics,
@@ -1630,8 +1631,11 @@ def run_systems(question):
     for name in ["A", "B", "C"]:
         r = results[name]
 
-        print(f"\nSystem {name}")
-        print("Response:", r["response"])
+        print("\n------------------------------")
+        print(f"System {name}")
+        print("------------------------------")
+        print("Response:")
+        print(format_terminal_answer(r["response"]))
         print("Type:", r["question_type"])
         print("Accuracy:", r.get("accuracy"))
         print("Latency:", r.get("latency"))

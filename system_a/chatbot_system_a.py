@@ -8,6 +8,7 @@ from research_core import (
     complete_sentence_response,
     load_interactions,
 )
+from terminal_formatting import format_terminal_answer
 
 
 SYSTEM_PROMPT = """Continue the conversation and answer the latest user message.
@@ -65,8 +66,10 @@ def _cli_value(value):
 
 def _print_cli_response(result, metadata_mode):
     response = result.get("response", "") if isinstance(result, dict) else result
-    print("\nSystem A:")
-    print(response)
+    print("\n------------------------------")
+    print("System A")
+    print("------------------------------")
+    print(format_terminal_answer(response))
 
     if metadata_mode and isinstance(result, dict):
         predicted_intent = result.get("predicted_intent")

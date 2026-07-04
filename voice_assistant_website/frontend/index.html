@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Local Multi-Domain AI Assistant</title>
+  <link rel="icon" type="image/png" href="/static/assets/logo.png?v=3">
+  <link rel="shortcut icon" type="image/png" href="/static/assets/logo.png?v=3">
+  <link rel="apple-touch-icon" href="/static/assets/logo.png?v=3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +17,9 @@
   <div class="app-shell">
     <aside id="appSidebar" class="sidebar" aria-label="Conversation sidebar">
       <div class="sidebar-rail" aria-label="Sidebar shortcuts">
-        <button class="rail-logo" type="button" title="Local Assistant" aria-label="Local Assistant">AI</button>
+        <button class="rail-logo" type="button" title="Local Assistant" aria-label="Local Assistant">
+          <img src="/static/assets/logo.png?v=3" alt="Alya Local Multi-Domain Assistant" class="app-logo">
+        </button>
 
         <div class="rail-actions">
           <button id="newChatBtn" class="rail-button new-chat-btn" type="button" title="New Chat" aria-label="New Chat">
@@ -55,8 +60,11 @@
       <div class="sidebar-panel">
         <div class="sidebar-top">
           <div class="panel-brand">
-            <p class="eyebrow">Local Assistant</p>
-            <h1>Multi-Domain AI</h1>
+            <img src="/static/assets/logo.png?v=3" alt="Alya Local Multi-Domain Assistant" class="app-logo">
+            <div>
+              <p class="eyebrow">Local Assistant</p>
+              <h1>Local Multi-Domain Assistant</h1>
+            </div>
           </div>
 
           <label class="history-search" for="historySearch">
@@ -103,7 +111,7 @@
         <div class="assistant-identity">
           <div id="assistantStage" class="assistant-stage">
             <div class="assistant-glow"></div>
-            <img id="assistantImage" class="assistant-img" src="/static/assets/assistant.png" alt="AI assistant">
+            <img id="assistantImage" class="assistant-img app-logo" src="/static/assets/logo.png?v=3" alt="Alya Local Multi-Domain Assistant">
             <div id="assistantFallback" class="assistant-fallback" aria-hidden="true">
               <span>AI</span>
             </div>
@@ -129,7 +137,7 @@
       <section class="chat-panel" aria-label="Chat panel">
         <div id="chatLog" class="chat-log">
           <div class="empty-state">
-            <div class="empty-orb" aria-hidden="true">AI</div>
+            <img src="/static/assets/logo.png?v=3" alt="Alya Local Multi-Domain Assistant" class="welcome-logo">
             <h2>How can I help?</h2>
             <p>Message Local Multi-Domain Assistant, use voice input, or add temporary file context.</p>
           </div>
